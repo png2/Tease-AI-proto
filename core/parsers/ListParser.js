@@ -19,35 +19,68 @@ export class ListParser {
     parseFiles(files) {
         this._lines = [];
 
-        files.forEach((file)=> {
-            lineReader.eachLine(file, (line) => {
-                this._lines.push(ParseUtil.clearCRLF(line));
-            }).then(()=>{
-                this._readRandomLine();
+        var promisedFileParsers = this._createPromisedFileParsers(files);
+        Promise.all(promisedFileParsers).then((allFilesLines)=>{
+            allFilesLines.forEach((fileLines) => {
+                this._lines.push(...fileLines);
             });
+            this._next();
         });
     }
 
     _next() {
-        this._readRandomLine();
+        this._readRandomLineGroup();
     }
 
     /**
      * Read the next line of the file
      * @private
      */
-    _readRandomLine() {
-        var line = this._lines[RandomUtil.getRandomInteger(0,this._lines.length-1)];
-        this._parseLine(line);
+    _readRandomLineGroup() {
+        var lines = this._lines[RandomUtil.getRandomInteger(0,this._lines.length-1)];
+        this._parseLineGroup(lines);
     }
 
-    _parseLine(line) {
+    _parseLineGroup(lines) {
+        this.displayLines([...lines]);
+    }
 
-        line = line.trim();
-        this.uiDispatcher.displayText(line,()=> {
-            this._next();
+    displayLines(lines) {
+        var line = lines.shift();
+        this.uiDispatcher.displayText(line, ()=> {
+            if(lines.length > 0) {
+                this.displayLines(lines);
+            } else {
+                console.log("-------");
+                this._next();
+            }
         });
     }
 
+    _createPromisedFileParsers(files) {
+        var promises = [];
 
+        files.forEach((file)=>{
+            promises.push(new Promise((resolve,reject) => {
+                var lineCounter = 0;
+                var lines = [];
+                var modulo = 1;
+                if(file.endsWith("_2.txt")) modulo = 2;
+                if(file.endsWith("_3.txt")) modulo = 3;
+
+                lineReader.eachLine(file, (line) => {
+                    if(lineCounter%modulo == 0) {
+                        lines.push([ParseUtil.clearCRLF(line)]);
+                    } else {
+                        lines[lines.length-1].push(ParseUtil.clearCRLF(line));
+                    }
+                    lineCounter++;
+                }).then(()=>{
+                    resolve(lines);
+                });
+            }));
+        });
+
+        return promises;
+    }
 }
