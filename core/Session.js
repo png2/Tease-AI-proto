@@ -1,6 +1,7 @@
 import {Cycler} from './Cycler';
 import {State} from './State';
 import {ScriptParser} from './parsers/ScriptParser';
+import {ListParser} from './parsers/ListParser';
 import {CommandsProcessor} from './processors/CommandsProcessor';
 import {VariablesProcessor} from './processors/VariablesProcessor';
 import {VocabularyProcessor} from './processors/VocabularyProcessor';
@@ -37,9 +38,16 @@ export class Session {
                                 uiDispatcher,
                                 state);
 
+        var listParser = new ListParser(uiDispatcher);
+
         Session._loadModules(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state);
 
-        scriptParser.parseFile(file);
+        //scriptParser.parseFile(file);
+        listParser.parseFiles([
+           'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
+           'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
+           'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
+        ]);
 
         return state;
     }
@@ -50,7 +58,12 @@ export class Session {
      */
     static _loadModules(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
         FileUtil.walk('./modules',filePath => {
-            require(filePath)(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state);
+            var module = require(filePath);
+            if(module && module.register) {
+                module.register(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state)
+            } else {
+                console.log(`the module ${filePath} is not valid or do not have a 'register' export`)
+            }
         });
     }
 }

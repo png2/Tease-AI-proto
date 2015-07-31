@@ -1,34 +1,46 @@
 /**
  * All the things directly related to the Domme
  */
-module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
 
-    commandsProcessor.registerCommand('DommeLevelUp', (scriptParser, ui, settings, state, params)=> {
-        if(settings.domme.level < 5) {
-            settings.domme.level++;
-        }
-    });
+    commandsProcessor.registerCommand('DommeLevelUp', levelUp);
 
-    commandsProcessor.registerCommand('DommeLevelDown', (scriptParser, ui, settings, state, params)=> {
-        if(settings.domme.level > 0) {
-            settings.domme.level--;
-        }
-    });
+    commandsProcessor.registerCommand('DommeLevelDown', levelDown);
 
-    vocabularyProcessor.registerVocabularyFilter("DomLevel",(settings, state, params)=>{
-        return settings.domme.level;
-    });
+    vocabularyProcessor.registerVocabularyFilter("DomLevel", getDommeLevel);
 
-    vocabularyProcessor.registerVocabularyFilter("DomOrgasmRate",(settings,state,params)=>{
-       return settings.domme.orgasmChance + ' Allows';
-    });
+    vocabularyProcessor.registerVocabularyFilter("DomOrgasmRate", getDommeOrgasmRate);
 
-    vocabularyProcessor.registerVocabularyFilter("DomRuinRate",(settings,state,params)=>{
-        return settings.domme.ruinChance + ' Allows';
-    });
+    vocabularyProcessor.registerVocabularyFilter("DomRuinRate", getDommeRuinRate);
 
-    vocabularyProcessor.registerVocabularyFilter("DomHonorific",(settings,state,params)=>{
-        return settings.sub.honorific;
-    });
+    vocabularyProcessor.registerVocabularyFilter("DomHonorific", getDommeHonorific);
 
 };
+
+function levelUp(scriptParser, ui, settings, state, params) {
+    if(settings.domme.level < 5) {
+        settings.domme.level++;
+    }
+}
+
+function getDommeLevel(settings, state, params) {
+    return settings.domme.level;
+}
+
+function levelDown(scriptParser, ui, settings, state, params) {
+    if(settings.domme.level > 0) {
+        settings.domme.level--;
+    }
+}
+
+function getDommeOrgasmRate(vocabularyProcessor, settings,state,params) {
+    return settings.domme.orgasmChance + ' Allows';
+}
+
+function getDommeRuinRate(vocabularyProcessor, settings,state,params) {
+    return settings.domme.ruinChance + ' Allows';
+}
+
+function getDommeHonorific(vocabularyProcessor, settings,state,params) {
+    return settings.sub.honorific;
+}

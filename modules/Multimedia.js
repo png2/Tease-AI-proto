@@ -5,54 +5,21 @@ var fs = require('fs');
 /**
  * All the things managing the images, videos or audio
  */
-module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
 
-    uiDispatcher.on("displayImage",(path,callback) => {
-        state.temp.lastDisplayedImage = path;
-        if(callback) callback();
-    });
+    uiDispatcher.on("displayImage", storeLastDisplayedImage);
 
-    commandsProcessor.registerCommand('ShowImage', (scriptParser, ui, settings, state, params)=> {
-        if(params.length == 0) {
-            ui.trigger("displayImage", FileUtil.getRandomImageFromDirectory(settings.images.general));
-        } else if(params.length === 1) {
-            ui.trigger("displayImage",path.join(settings.appPath,"Images",params[0]));
-        } else {
-            ui.debug(`Invalid parameters for @ShowImage`);
-        }
-    });
+    commandsProcessor.registerCommand('ShowImage', showImage);
 
-    commandsProcessor.registerCommand('PlayVideo', (scriptParser, ui, settings, state, params)=> {
-        if(params.length === 1) {
-            triggerAndWaitForCompletion(scriptParser,ui,"playVideo",path.join(settings.appPath,"Video",params[0]));
-        } else {
-            ui.debug(`Invalid parameters for @PlayVideo`);
-        }
-    });
+    commandsProcessor.registerCommand('PlayVideo', playVideo);
 
-    commandsProcessor.registerCommand('PlayAudio', (scriptParser, ui, settings, state, params)=> {
-        if(params.length === 1) {
-            triggerAndWaitForCompletion(scriptParser,ui,"playAudio",path.join(settings.appPath,"Audio",params[0]));
-        } else {
-            ui.debug(`Invalid parameters for @PlayAudio`);
-        }
-    });
+    commandsProcessor.registerCommand('PlayAudio', playAudio);
 
-    commandsProcessor.registerCommand('LockImage', (scriptParser, ui, settings, state, params)=> {
-        state.temp.lockImage = true;
-    });
+    commandsProcessor.registerCommand('LockImage', activateLockImage);
 
-    commandsProcessor.registerCommand('UnlockImage', (scriptParser, ui, settings, state, params)=> {
-        state.temp.lockImage = false;
-    });
+    commandsProcessor.registerCommand('UnlockImage', deactivateLockImage);
 
-    commandsProcessor.registerCommand('DeleteLocalImage',(scriptParser, ui, settings, state, params)=> {
-        if(state.temp.lastDisplayedImage) {
-            fs.unlink(state.temp.lastDisplayedImage,function(){});
-        } else {
-            console.log("damn nothing to delete!!");
-        }
-    });
+    commandsProcessor.registerCommand('DeleteLocalImage',deleteLastDisplayedImage);
 
     var imagesCommands = [
         ['ShowLocalImage','general'],
@@ -71,13 +38,7 @@ module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, 
     ];
 
     imagesCommands.forEach((imageCommand)=>{
-        commandsProcessor.registerCommand(imageCommand[0], (scriptParser, ui, settings, state, params)=> {
-            if(params.length === 0) {
-                ui.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
-            } else {
-                ui.debug(`Invalid parameters for @${imageCommand[0]}`);
-            }
-        });
+        commandsProcessor.registerCommand(imageCommand[0], createImageCommand(imageCommand));
     });
 
     var videosCommands = [
@@ -86,15 +47,76 @@ module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, 
     ];
 
     videosCommands.forEach((videoCommand)=>{
-        commandsProcessor.registerCommand(videoCommand[0], (scriptParser, ui, settings, state, params)=> {
-            if(params.length === 0) {
-                triggerAndWaitForCompletion(scriptParser,ui,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
-            } else {
-                ui.debug(`Invalid parameters for @${videoCommand[0]}`);
-            }
-        });
+        commandsProcessor.registerCommand(videoCommand[0], createVideoCommand(videoCommand));
     });
 };
+
+function storeLastDisplayedImage(path,callback) {
+    state.temp.lastDisplayedImage = path;
+    if(callback) callback();
+}
+
+function showImage(scriptParser, ui, settings, state, params) {
+    if(params.length == 0) {
+        ui.trigger("displayImage", FileUtil.getRandomImageFromDirectory(settings.images.general));
+    } else if(params.length === 1) {
+        ui.trigger("displayImage",path.join(settings.appPath,"Images",params[0]));
+    } else {
+        ui.debug(`Invalid parameters for @ShowImage`);
+    }
+}
+
+function playVideo(scriptParser, ui, settings, state, params) {
+    if(params.length === 1) {
+        triggerAndWaitForCompletion(scriptParser,ui,"playVideo",path.join(settings.appPath,"Video",params[0]));
+    } else {
+        ui.debug(`Invalid parameters for @PlayVideo`);
+    }
+}
+
+function playAudio(scriptParser, ui, settings, state, params) {
+    if(params.length === 1) {
+        triggerAndWaitForCompletion(scriptParser,ui,"playAudio",path.join(settings.appPath,"Audio",params[0]));
+    } else {
+        ui.debug(`Invalid parameters for @PlayAudio`);
+    }
+}
+
+function deleteLastDisplayedImage(scriptParser, ui, settings, state, params) {
+    if(state.temp.lastDisplayedImage) {
+        fs.unlink(state.temp.lastDisplayedImage,function(){});
+    } else {
+        console.log("damn nothing to delete!!");
+    }
+}
+
+function activateLockImage(scriptParser, ui, settings, state, params) {
+    state.temp.lockImage = true;
+}
+
+function deactivateLockImage(scriptParser, ui, settings, state, params) {
+    state.temp.lockImage = false;
+}
+
+function createImageCommand(imageCommand) {
+    return (scriptParser, ui, settings, state, params) => {
+        if(params.length === 0) {
+            ui.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
+        } else {
+            ui.debug(`Invalid parameters for @${imageCommand[0]}`);
+        }
+    };
+}
+
+function createVideoCommand(videoCommand) {
+    return (scriptParser, ui, settings, state, params)=> {
+        if(params.length === 0) {
+            triggerAndWaitForCompletion(scriptParser,ui,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
+        } else {
+            ui.debug(`Invalid parameters for @${videoCommand[0]}`);
+        }
+    };
+}
 
 function triggerAndWaitForCompletion(scriptParser,ui,event, file) {
     scriptParser.wait();

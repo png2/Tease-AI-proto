@@ -1,7 +1,7 @@
 /**
  * Just to keep track of unimplemented things and make sure the programm doesn't crash when it encounter a valid but not implemented instruction
  */
-module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
     var todoCommands = [
         'ShowBlogImage',
         'LikeBlogImage',

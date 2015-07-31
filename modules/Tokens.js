@@ -1,7 +1,7 @@
 /**
  * Manage the tokens system
  */
-module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
     if(!state.persistent.tokens) {
         state.persistent.tokens = 0;
     }
@@ -17,22 +17,28 @@ module.exports = function(commandsProcessor, vocabularyProcessor, uiDispatcher, 
     ];
 
     tokensCommands.forEach((tokenCommand) => {
-        commandsProcessor.registerCommand(tokenCommand[0], (scriptParser, ui, settings, state, params)=> {
-            state.persistent.tokens += tokenCommand[1];
-        });
+        commandsProcessor.registerCommand(tokenCommand[0], createTokenCommand(tokenCommand));
     });
 
 
-    commandsProcessor.registerCommand('AddTokens', (scriptParser, ui, settings, state, params)=> {
-        if(params.length === 1) {
-            let tokens = parseInt(params[0],10);
-            if(!isNaN(tokens)) {
-                state.persistent.tokens += tokens;
-            } else {
-                ui.debug(`Invalid number of tokens : ${params[0]}`)
-            }
-        } else {
-            ui.debug('Invalid number of parameters for @AddTokens');
-        }
-    });
+    commandsProcessor.registerCommand('AddTokens', addToken);
 };
+
+function createTokenCommand(tokenCommand) {
+    return (scriptParser, ui, settings, state, params)=> {
+        state.persistent.tokens += tokenCommand[1];
+    };
+}
+
+function addToken(scriptParser, ui, settings, state, params) {
+    if(params.length === 1) {
+        let tokens = parseInt(params[0],10);
+        if(!isNaN(tokens)) {
+            state.persistent.tokens += tokens;
+        } else {
+            ui.debug(`Invalid number of tokens : ${params[0]}`)
+        }
+    } else {
+        ui.debug('Invalid number of parameters for @AddTokens');
+    }
+}
