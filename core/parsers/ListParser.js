@@ -12,6 +12,8 @@ export class ListParser {
         this.commandFiltersProcessor = commandFiltersProcessor;
         this.uiDispatcher = uiDispatcher;
         this.ignoredLine = false;
+
+        commandFiltersProcessor.setListParser(this);
     }
 
     /**
@@ -35,6 +37,7 @@ export class ListParser {
     }
 
     _next() {
+        console.log("-------");
         this.ignoredLine = false;
         this._readRandomLineGroup();
     }
@@ -56,6 +59,8 @@ export class ListParser {
 
         if(!this.ignoredLine ) {
             this.displayLines([...processedLines]);
+        } else {
+            this._next();
         }
     }
 
@@ -65,7 +70,6 @@ export class ListParser {
             if(lines.length > 0) {
                 this.displayLines(lines);
             } else {
-                console.log("-------");
                 this._next();
             }
         });
