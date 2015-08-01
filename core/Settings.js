@@ -53,7 +53,14 @@ export class Settings {
                 "Rarely":25,
                 "Sometimes":50,
                 "Often":75
-            }
+            },
+            strokingSpeeds:[
+                30,
+                60,
+                120,
+                180,
+                240
+            ]
         }
     }
 }
