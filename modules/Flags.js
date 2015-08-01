@@ -1,7 +1,7 @@
 /**
  * The flag system management
  */
-module.exports.register = function({commandsProcessor, state}) {
+module.exports.register = function({commandsProcessor, commandFiltersProcessor, state}) {
     state.persistent.flags = new Set();
     state.temp.flags = new Set();
 
@@ -12,6 +12,8 @@ module.exports.register = function({commandsProcessor, state}) {
     commandsProcessor.registerCommand('DeleteFlag', deleteFlag);
 
     commandsProcessor.registerCommand('CheckFlag', checkFlag);
+
+    commandFiltersProcessor.registerFilter('Flag', filterFlag);
 };
 
 function createNewFlag({ui, state}, params) {
@@ -58,5 +60,14 @@ function checkFlag({parser, uiDispatcher, state}, params) {
         }
     } else {
         uiDispatcher.debug("Missing mandatory argument(s) for @CheckFlag");
+    }
+}
+
+function filterFlag({state},params) {
+    if(params.length == 0) {
+        return state.persistent.flags.has(params[0])
+            || state.temp.flags.has(params[0]);
+    } else {
+        console.log('Filter flag needs only one argument');
     }
 }
