@@ -81,7 +81,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'SubCockSize',
         'SubEyes',
         'SubHair',
-        'SubName',
+        'SubName'
     ];
 
     todoVocab.forEach((value)=>{
