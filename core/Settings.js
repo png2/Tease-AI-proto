@@ -24,6 +24,14 @@ export class Settings {
             honorific: 'mistress',
             forceHonorific: true,
             forceCapitalizedHonorific: true,
+            hasChastity: false,
+            hasChastityPA: false,
+            hasChastitySpikes: false,
+            birthday:{
+                day:1,
+                month:1,
+                year:1980
+            },
             writingTask:{
                 min:1,
                 max:5
