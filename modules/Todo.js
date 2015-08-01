@@ -199,7 +199,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'TagFace',
         'TagFeet',
         'TagFullyDressed',
-        'TagGarmentCovering,
+        'TagGarmentCovering',
         'TagHalfDressed',
         'TagLegs',
         'TagMasturbating',
