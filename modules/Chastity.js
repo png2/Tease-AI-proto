@@ -1,18 +1,18 @@
 /**
  * All Chastity related things
  */
-module.exports.register = function({commandsProcessor, commandFiltersCommand}) {
+module.exports.register = function({commandsProcessor, commandFiltersProcessor}) {
     commandsProcessor.registerCommand('ChastityOn', chastityOn);
 
     commandsProcessor.registerCommand('ChastityOff', chastityOff);
 
-    commandFiltersCommand.registerFilter('HasChastity', filterHasChastity);
+    commandFiltersProcessor.registerFilter('HasChastity', filterHasChastity);
 
-    commandFiltersCommand.registerFilter('InChastity', filterInChastity);
+    commandFiltersProcessor.registerFilter('InChastity', filterInChastity);
 
-    commandFiltersCommand.registerFilter('ChastityPA', filterChastityPrinceAlbert);
+    commandFiltersProcessor.registerFilter('ChastityPA', filterChastityPrinceAlbert);
 
-    commandFiltersCommand.registerFilter('ChastitySpikes', filterChastitySpikes);
+    commandFiltersProcessor.registerFilter('ChastitySpikes', filterChastitySpikes);
 };
 
 function chastityOn({state}) {
