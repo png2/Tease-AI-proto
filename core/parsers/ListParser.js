@@ -12,7 +12,7 @@ export class ListParser {
         this.commandFiltersProcessor = commandFiltersProcessor;
         this.vocabularyProcessor = vocabularyProcessor;
         this.uiDispatcher = uiDispatcher;
-        this.ignoredLine = false;
+        this._ignoredLine = false;
 
         commandFiltersProcessor.setListParser(this);
     }
@@ -33,13 +33,29 @@ export class ListParser {
         });
     }
 
+    /**
+     * Stop the taunting
+     * @param stoppedCallback
+     */
+    stop(stoppedCallback) {
+        this._stopCallback = stoppedCallback;
+    }
+
+    /**
+     * Ignore the current line
+     */
     ignoreLine() {
-        this.ignoredLine = true;
+        this._ignoredLine = true;
     }
 
     _next() {
+        if(this._stopCallback) {
+            this._stopCallback();
+            return;
+        }
+
         console.log("-------");
-        this.ignoredLine = false;
+        this._ignoredLine = false;
         this._readRandomLineGroup();
     }
 
@@ -59,7 +75,7 @@ export class ListParser {
             processedLines.push(this.commandFiltersProcessor.processCommands(line));
         });
 
-        if(!this.ignoredLine ) {
+        if(!this._ignoredLine ) {
             this.displayLines([...processedLines]);
         } else {
             this._next();
