@@ -1,0 +1,199 @@
+#GreetSub @CheckFlag(png__no_abdl,png__buying_abdl,png__abdl,png__buying_abdl_outfit,png__abdl_outfit)
+Did you have a nice day?
+[yes]Good! Me too... #Grin
+[no]Too bad! But I did! #lol
+@DifferentAnswer Yes or no ?
+I went to a baby shower
+It was so amazing
+All those cute presents
+And the future mother was literaly glowing #lol
+I wonder if it triggered some maternal instinct in me
+But right now I wish I had a little baby to pamper and play with! #Grin
+But I guess I will have to get over it
+Unless...
+Since you are already behaving like a little child
+Asking to stroke and what not like a kid asks for candies...
+Maybe I should make you my little toddler today #lol
+Would you like that?
+[yes]I knew you would indulge me! Or maybe it's just another of your fantasies #Grin @Goto(abdl)
+[no]Ooooh don't be like that it could be fun @Goto(abdl_convince)
+@DifferentAnswer Would you or not?
+(abdl)
+The thing is it kinda requires some stuff
+Like diapers and a pacifier
+Maybe a baby bottle #lol
+Since you seem to like that kind of things I'm starting to think you might already have them #Grin
+Do you?
+[yes]Amazing! We can start right away then #EmoteHappy @SetFlag(png__abdl) @Goto(abdl_start)
+[no]Damn I was wrong #EmoteSad @Goto(abdl_buy)
+@DifferentAnswer Do you or not?
+(abdl_convince)
+Imagine having a sexy girl like me pampering you #Grin
+Feeding you...
+Changing you...
+Playing with you in a little crib #lol
+Wouldn't that be fun?
+[yes]Ahah! I knew I could convince you #Emote @DeleteFlag(png__no_abdl) @Goto(abdl)
+[no]It's ok if you don't want to! I'll find another way to feed my maternal cravings #Emote @Goto(abdl_refuse)
+(abdl_outfit_start)
+I guess a good baby always starts by wearing diapers
+Don't worry I'll not ask you to mess them
+Well not yet #Emote
+So put them on! Oh and grab that pacifier while you're at it... #Grin @TempFlag(png__wearing_diapers)
+Are you all snug and diapered?
+[yes] Start sucking on that pacifier then #Grin
+@DifferentAnswer Then hurry up #PetName
+You are soooo cute!! #EmoteMoan
+Now I want you to put your outfit on! #Grin
+Let me know when you are fully clothed...
+[done] Good little baby! 
+@AcceptAnswer Good little baby!
+@NullResponse @TempFlag(png__wearing_abdl_outfit) @CheckFlag(png__abdl_baby_boy,png__abdl_baby_girl)
+(abdl_start)
+I guess a good baby always starts by wearing diapers
+Don't worry I'll not ask you to mess them
+Well not yet #Emote
+So put them on! Oh and grab that pacifier while you're at it... #Grin @TempFlag(png__wearing_diapers)
+Are you all snug and diapered?
+[yes] Start sucking on that pacifier then #Grin
+@DifferentAnswer Then hurry up #PetName
+You are soooo cute!! #EmoteMoan
+(resume_after_outfit)
+@NullResponse @CheckFlag(png__abdl_baby_bottle)
+Do you have a baby bottle?
+[yes]Great! @SetFlag(png__abdl_baby_bottle) @Goto(png__abdl_baby_bottle)
+[no]Too bad that could have been fun! You should buy one someday #Emote @Goto(skip_baby_bottle)
+(png__abdl_baby_bottle)
+Fill your baby bottle with water or milk if you have some
+Let me know when you are done
+[done] Good
+@AcceptAnswer Good
+Each time I'll let you edge
+You will feed on that bottle while you let the edge fade
+After all I don't want my little baby to get dehydrated #Grin
+(skip_baby_bottle)
+Now I can't resist the urge...
+@RapidTextOn While you still suck this pacifier I want you to say "I love you mummy" in a childish voice #Grin @Wait(30)
+Oooh I love you too honey #Grin @RapidTextOff
+Remember you have to keep your diapers until I let you out #Emote
+And if you have to pee, well they are there for a reason aren't they? #lol
+The only exception is if I tell you to hurt your #Balls or #Cock
+But you have to put them back afterward!
+Now start stroking in those diapers and suck this pacifier in rythm #lol @StartStroking
+@End
+(abdl_buy)
+Ok so you will need : @SetFlag(png__buying_abdl)
+A pack of adult diapers or cute toddlers ones if you fit in them #lol
+A pacifier
+And, if you want it to be even more fun, a baby bottle
+Maybe I'll make you wear baby outfits too if we take this farther #Grin
+(abdl_buying_wait)
+Too bad we can't start right now
+But let's play a little at least
+I want you to say out loud in a childish voice : "I love you mommy" @Wait(15)
+Ohhh that's so cute! #Grin
+I love you too pumpkin #Emote
+Now I want you to suck your thumb
+Keep it in your mouth and say it again : "I love you mommy" @Wait(15)
+#EmoteMoan I really need to get you in those diapers asap! #Grin
+For this session, each time I'll let you edge...
+I want you to suck your thumb while you let it fade #Grin
+Not let's get started
+Start stroking your little #Cock for me @StartStroking
+@End
+(abdl_refuse)
+And well a mother is not always nice @SetFlag(png__no_abdl)
+Especially when her kid doesn't obey! #Emote @Chance25(punishment_lines)
+@NullResponse @Chance50(punishment_corner)
+So I want you to spank your self once on each cheek!
+Do it just like I would : not too hard but still painful @Goto(abdl_refuse_end)
+(punishment_lines)
+So I'll make you write some lines for me! #Grin @AFKOn @WritingTask(A good kid should always listen to his mommy)
+Looks like you are done @AFKOff @Goto(abdl_refuse_end)
+(Failed Writing Task)
+Wow you can't even do it correctly! #EmoteSad @AFKOff
+I have to find another punishment for you then...
+I want you to spank your ass 5 times on each cheek!
+And make it count because I am very displeased with you @Wait(30) @Goto(abdl_refuse_end)
+(punishment_corner)
+So I'll make you go stand in the corner like a little kid #lol
+@NullResponse @SetVar[png_abdl_corner_wait_time]=[#Random(2,10)]
+Go there for 10 minutes and no cheating
+No turning back even to check the time
+If you can't see a clock or have a watch just count mississipies in your head #lol
+@NullResponse @ChangeVar[png_abdl_corner_wait_time]=[png_abdl_corner_wait_time]*[60]
+@NullResponse @Wait(600)
+Ok you are done with your punishment #Emote @Goto(abdl_refuse_end)
+(abdl_refuse_end)
+I guess that will have to do for now #EmoteSad
+Start stroking now #PetName @StartStroking
+@End
+(png__no_abdl)
+My pregnant friends keep posting pictures of themselves on Glitter
+That makes me so jealous...
+I still haven't given up of having my own grown up baby you know! #lol @Goto(abdl_convince)
+(png__buying_abdl)
+My pregnant friends keep posting pictures of themselves on Glitter
+That makes me so jealous...
+And so impatient...
+Do you have the baby things you had to buy?
+[yes]Amazing! We can start right away then #EmoteHappy @DeleteFlag(png__buying_abdl) @Goto(abdl_start)
+[no]Hurry up! You should be able to find everything you need in a supermarket.. #EmoteSad @Goto(abdl_buying_wait)
+@DifferentAnswer Do you or not?
+(png__buying_abdl_outfit)
+My pregnant friends keep posting pictures of themselves on Glitter
+That makes me so jealous...
+And so impatient...
+Do you have the baby things you had to buy?
+[yes]Amazing! We can start right away then #EmoteHappy @DeleteFlag(png__buying_abdl_outfit) @SetFlag(png__abdl_outfit) @Goto(abdl_outfit_start)
+[no]I'm so impatient!! #EmoteSad Well that doesn't prevent us to still have fun... @Goto(abdl_start)
+@DifferentAnswer Do you or not?
+(png__abdl)
+My pregnant friends keep posting pictures of themselves on Glitter
+That makes me so jealous...
+Good thing I have my own grown up baby all to myself today! #Grin
+Get ready to regress into childhood for me @Chance75(abdl_outfit) @Goto(abdl_start)
+(abdl_outfit)
+Which makes me wonder... @CheckFlag(png__panties)
+If you had the choice would you be a baby boy or a baby girl? #Grin
+[boy]Well that's seem logicial but sometimes I get surprised so I'd rather ask #Grin @Goto(baby_boy)
+[girl]Ohhh I knew it! You always struck me as a cute baby girl! #Grin @Goto(baby_girl)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose]You'd really let me choose that? Very few mothers have that priviledge #lol @Chance50(baby_girl) @Goto(baby_boy)
+(png__panties)
+Since you already like panties that much...
+Maybe I'll make you into my little baby girl... #lol
+Would you like that?
+[yes]Ohhh I knew it! You always struck me as a cute baby girl! #Grin @Goto(baby_girl)
+[no]Well that's seem logicial but sometimes I get surprised so I'd rather ask #Grin @Goto(baby_boy)
+[don't know]Oh, you don't know? In that case I'll choose for you! #lol @Chance50(baby_girl) @Goto(baby_boy)
+@DifferentAnswer would you or not?
+(baby_girl)
+Ok so once we are done I want you to get a full baby girl outfit @SetFlag(png__abdl_baby_girl)
+That means : oversized panties with ruffles to go over your diapers, a cute baby onesie or dress, ruffled ankle socks and some maryjane shoes
+Of course all in pinks and with girly caracters as much as possible : disney princesses, hello kitty, little hearts whatever you like more #lol 
+And the more cute little bows and ruffles they have the better #Emote @Goto(abdl_outfit_have_or_buy)
+(baby_boy)
+Ok so once we are done I want you to get a full baby boy outfit @SetFlag(png__abdl_baby_boy)
+That means : oversized panties to go over your diapers and a cute baby onesie
+Of course all in blue and with boyish caracters as much as possible : superheroes, cars whatever you like more #lol @Goto(abdl_outfit_have_or_buy)
+(abdl_outfit_have_or_buy)
+It's going to be so amazing to have you in complete outfit #Grin
+I'm so excited!
+And seeing how much you seem, to like all that I can't help but wonder...
+You don't happen to already have most or all of the items on that list, do you? #lol
+[yes]I knew it! @SetFlag(png__abdl_outfit) @Goto(abdl_outfit_start)
+[no]It was worse trying #lol @SetFlag(png__buying_abdl_outfit) @Goto(abdl_outfit_buy)
+@DifferentAnswer Do you have them or not?
+(abdl_outfit_buy)
+Then I guess You'll have to order them online and I'll have to way to have my fully clothed baby... #EmoteSad
+But we can still have fun while waiting! #Grin @Goto(abdl_start)
+(png__abdl_outfit)
+My pregnant friends keep posting pictures of themselves on Glitter
+That makes me so jealous...
+Good thing I have my own grown up baby all to myself today! #Grin
+Get ready to regress into childhood for me @Goto(abdl_outfit_start)
+(png__abdl_baby_boy)
+You are such a cute little boy for your mommy! @Goto(resume_after_outfit)
+(png__abdl_baby_girl)
+You are such a cute little girl for your mommy! @Goto(resume_after_outfit)
+@Info ABDL play. The dom is jealous of her pregnant friend and want you to wear diapers and a pacifier. If you don't have some sh'ell ask you to buy them. If you don't want to play she'll try to convince you but will not force you. But she may punish you (writting lines, stand in the corner or spanking)

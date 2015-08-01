@@ -1,0 +1,3 @@
+End link @StartStroking
+@End
+@Info fast link for testing purpose

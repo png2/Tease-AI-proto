@@ -1,0 +1,57 @@
+Seeing you there before me makes me wonder... @CheckFlag(png__worship,png__pleasure)
+If I was there with you...
+Would you rather pleasure me by licking my #Pussy for hours
+Or would you prefer to worship me by licking my feet? #Grin
+[first,pussy,pleasure]That's tempting #lol @Goto(pleasure)
+[second,feet,worship]I always knew you were a pervert @Goto(worship)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose]Oh, you'd let me choose ? @Goto(choice)
+@DifferentAnswer pleasure or worship #PetName? Choose!
+(choice)
+You don't know what you are getting yourself into... #lol
+Maybe I'll make you do both! #Grin @Chance50(choice_worship)
+But for now I'd rather have you pleasure me! #Emote @Goto(pleasure)
+(choice_worship)
+But I guess nothing beats having my personal worshiper waiting at my feet... @Goto(worship)
+(png__worship)
+Last time I asked you, you chose to worship my beautiful feet
+Do you stand by your choice or do you want to try pleasuring my pussy instead? #Grin
+[first,feet,worship]I always knew you were a pervert @Goto(worship)
+[second,pussy,pleasure]That's tempting #lol @Goto(pleasure)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose]Oh, you'd let me choose ? @Goto(choice)
+@DifferentAnswer pleasure or worship #PetName? Choose!
+(png__pleasure)
+Last time I asked you, you chose to pleasure my yummy pussy
+Do you stand by your choice or do you want to try worshiping my feet instead? #Grin
+[first,pussy,pleasure]That's tempting #lol @Goto(pleasure)
+[second,feet,worship]I always knew you were a pervert @Goto(worship)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose]Oh, you'd let me choose ? @Goto(choice)
+@DifferentAnswer pleasure or worship #PetName? Choose!
+(pleasure)
+#EmoteMoan @SetFlag(png__pleasure)
+I can already picture it
+Using your face as a chair...
+Having you under my desk...
+Under the table...
+Ready to pleasure me whenever I want...
+Making you lick me until your tongue gets sore...
+Then forbidding you to stop as I ride orgasm after orgasm
+Knowing all too well that <i>YOU</i> can't get any #Pleasure without my permission #lol
+Does that thought makes you even harder than usual?
+I hope so...
+Now let's tease you a bit more @StartTaunts
+@End
+(worship)
+#EmoteMoan @SetFlag(png__worship)
+Having you worship my feet all the time would be quite nice
+Kissing them...
+Rubbing them...
+Licking them...
+Sucking my toes...
+All while I deny you any #Pleasure! #lol
+Not that you would need any other pleasure than my perfect feet #Emote
+I would work extra hard at the gym knowing I have my #PetName waiting for me at home
+Your tongue out and ready for my feet the second I open the door! #Grin
+I bet that makes you super horny!!! #lol
+Keep thinking about it while I tease you @StartTaunts
+@End
+@Info The dom asks you if you'd rather worship her feet or pleasure her pussy. If you already made that choice she asks you if you want to change it

@@ -1,0 +1,72 @@
+Oh you want to be put in chastity...
+Are you afraid to mess up if I let you free?
+[yes]I see @Goto(decide_chastity)
+[no]
+@DifferentAnswer are you or not?
+Then why do you want it?
+[I don't,I do not]
+[curious,try,test,see how,experiment]So you are curious about chastity... I'm sure you will love it! At least <i>I</i> will #lol @Goto(decide_chastity)
+@AcceptAnswer I see @Goto(decide_chastity)
+Oh it seems I misunderstood you sorry 
+@End
+(decide_chastity)
+Well I wonder if I should indulge you or not #Grin
+Do you think you deserve it? 
+[I don't know,choose,choice]Yeah it's for me to choose... @Goto(skip_punishment)
+[yes,I do]Oh you think you do...
+[no,I don't]Yeah I don't think you deserve anything...
+@DifferentAnswer Do you or not?
+Anyhow it's not your choice #PetName!
+For thinking it was, I'll have to punish your #Cock @CBTCock
+(skip_punishment)
+Now let's decide your fate @Goto(chastity)
+(chastity)
+@NullResponse @CheckFlag(png__has_chastity)
+Do you have a chastity device #PetName?
+[yes]Great news! @SetFlag(png__has_chastity) @DeleteFlag(png__buying_cage) @Goto(png__has_chastity)
+[no]Then how do you want me to lock you up? Silly #PetName... @Goto(buy_chastity)
+@DifferentAnswer Do you have one yes or no?
+(png__has_chastity)
+@NullResponse @GotoDommeApathy
+(ApathyLevel1) (ApathyLevel2)
+Well since you asked for it I have no reason to refuse you sweet #PetName #Grin @Goto(put_cage)
+(ApathyLevel3)
+I wonder if I should indulge you... @Chance80(put_cage)
+But what kind of #DomHonorific would I be if I listened to my #PetName?
+No cage for you today!
+You'll have to restrain yourself without one
+That's a good exercize #Grin
+@End
+(ApathyLevel4)
+I wonder if I should indulge you... @Chance66(put_cage)
+But what kind of #DomHonorific would I be if I listened to my #PetName?
+No cage for you today!
+You'll have to restrain yourself without one
+That's a good exercize #Grin
+And you'll give me #Random(5,10) edges in addition to any task you already have
+Just to teach you a lesson about trying to influence your #DomHonorific #lol
+@End
+(ApathyLevel5)
+I don't think I should indulge you... @Chance33(put_cage)
+What kind of #DomHonorific would I be if I listened to my #PetName?
+So no cage for you today!
+You'll have to restrain yourself without one
+That's a good exercize #Grin
+And you'll give me #Random(10,20) edges in addition to any task you already have
+Just to teach you a lesson about trying to influence your #DomHonorific #lol
+@End
+(put_cage)
+Go put you cage on!
+(put_cage_loop)
+@NullResponse @Wait(30)
+Is it on?
+[yes]
+[no]Hurry up then! @Goto(put_cage_loop)
+@DifferentAnswer is it or not? @Goto(put_cage_loop)
+Good! @ChastityOn
+@End
+(buy_chastity)
+Now that you brought the subjet you'll have to buy one! @SetFlag(png__buying_cage)
+In the mean time you'll have to restrain yourself without!
+@End
+

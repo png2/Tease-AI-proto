@@ -1,0 +1,88 @@
+We've finally reached my favorite part of teasing you
+#TimeToFindIfYouGetToCum
+Now let's see...
+Oh yeah, you're still locked in that cage aren't you? #Lol
+Oh well, I guess there's nothing else I can do
+You just won't be able to cum #GeneralTime
+And I was feeling so generous too #Grin
+Alright I'll give you a chance to at least get out of your cage!
+It's pretty simple
+But I doubt you'll like it #lol @GotoDommeApathy
+(ApathyLevel1)
+Before going to bed your will freeze you key in an ice cube @Goto(accept_or_not)
+(ApathyLevel2)
+Before going to bed your will freeze you key in a 33cl bottle of water @Goto(accept_or_not)
+(ApathyLevel3)
+Before going to bed your will freeze you key in a half a liter bottle of water @Goto(accept_or_not)
+(ApathyLevel4)
+Before going to bed your will freeze you key in a half a liter bottle of water 
+And freeze another half a liter bottle of water
+It needs to be the same bottle and I want you to wrap them in something so you cannot know which one contains the key
+Of course you'll be allowed to unfreeze the bottles only one at a time #Grin
+So maybe you'll be free after the first one, maybe you'll have to redo it a second time #lol 
+So before you choose the bottle you'll have to shuffle them until you don't know which one is the right one @Goto(accept_or_not)
+(ApathyLevel5)
+Before going to bed your will freeze you key in a 1 liter bottle of water 
+And freeze another 1L bottle of water
+It needs to be the same bottle and i want you to wrap them in something so you cannot know which one contains the key
+Of course you'll be allowed to unfreeze the bottles only one at a time #Grin
+So maybe you'll be free after the first one, maybe you'll have to redo it a second time #lol 
+So before you choose the bottle you'll have to shuffle them until you don't know which one is the right one @Goto(accept_or_not)
+(accept_or_not)
+You'll also have to make sure that the key stay out of reach until all the ice has melted...
+Since it needs some containers and a freezer are you technically able to do it?
+[yes]Good for you
+[no]Oh, I'm really sorry for you then but you just missed your chance @Goto(cant)
+@DifferentAnswer Can you do it or not?
+Well we are not done yet
+Anytime you want tomorrow, you'll get your frozen key out of the freezer
+Put it in something that'll catch the melting water
+And while you wait for it to melt I want you to watch some porn! #Grin
+That will keep your mind busy #lol
+Once all the ice has melted you can free your #Cock
+But you still can't stroke until our next session #Grin
+So do still want to get out? #Grin
+[yes]Oh, you are very brave... Or very very desperate to get out of this cage #lol
+[no]Well it's okay @Goto(refuse)
+@DifferentAnswer Do you want out or not?
+Now I'll trust you to keep your word since I can't be there to watch over you all the time #EmoteSad @ChastityOff
+But remember you promised to do it for me so no backing off now! @Goto(end)
+(refuse)
+That just means you are not desperate enough to be free
+(cant)
+I'll keep you locked a while longer then #Grin 
+I guess there's always next time
+Until then, you'll just have to keep that #Cock locked up for me @Goto(end)
+(end)
+@NullResponse @CheckFlag(png__wearing_nippleclamps)
+(end_clamps_checked)
+@NullResponse @CheckFlag(png__wearing_panties,png__wearing_diapers,png__wearing_abdl_outfit)
+(resume_wearing_checks)
+Cya
+@End
+(png__wearing_nippleclamps)
+Oh I almost forgot about those nipple clamps
+They must hurt like hell #Grin
+You know it will hurt even more when you take them off...
+Maybe I should be #Kind and make you keep them on instead #lol
+Alright Take them off now #Emote
+Massage your #Tits a bit to make them feel better @Goto(end_clamps_checked)
+(png__wearing_panties)
+@NullResponse @Chance15(stay_in_panties)
+And don't forget to take your panties off and wash them #PetName! @Goto(resume_wearing_checks)
+(png__wearing_diapers)(png__wearing_abdl_outfit)
+@NullResponse @Chance05(stay_in_diapers)
+You can take all your baby stuff off #PetName
+I hope you didn't dirty your diaper #Emote @Goto(resume_wearing_checks)
+(stay_in_diapers)
+Since I had so much fun seeing you in that baby getup
+I think I should keep you in it longer
+I want you to stay in it until you wet your diaper *evil*
+So, if you have to go, I suggest you drink a a lot of water to speed things up... #lol @Goto(resume_wearing_checks)
+(stay_in_panties)
+Since I had so much fun teasing you in those panties
+I think you should wear them a while longer
+I want you to keep them on until tomorrow morning
+#Yes that means all day at work if you have to and all night while sleeping #Grin
+oh and don't forget to wash them afterwards #PetName! #lol @Goto(resume_wearing_checks)
+@Info the dom will let you off chastity if you freeze the key and watch porn while you unfreeze it. Volume of water depends of apathy level

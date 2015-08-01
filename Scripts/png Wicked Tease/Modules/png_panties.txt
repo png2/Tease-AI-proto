@@ -1,0 +1,116 @@
+@NullResponse @CheckFlag(png__no_panties,png__buying_panties,png__already_asked_panties_delivered,png__panties,png__wearing_panties,png__wearing_diapers)
+I heard some men like to wear panties #SubWritingTaskMin
+That makes them feel horny
+Maybe I should make you do it #lol
+Think about it while you edge for me @Edge
+Enough thinking for now
+You know when I said that I heard that some men liked to wear panties...
+To be a little more honnest
+Anna told me about how she makes her husband wear panties for her #Emote
+And you know how I am... #Grin
+Well...
+You don't happen to have some panties around, do you? 
+[yes]Ohoh, did I just find another sexy side of my #PetName? @SetFlag(png__panties) @Goto(ask_wear_panties)
+[no]Damn that would have been so nice @Goto(buy_panties)
+@DifferentAnswer Do you or not ?
+(ask_wear_panties)
+Now that I know that you have some nearby I can't resist...
+Would you put them for me? #Grin
+[yes]That's so #Hot!! @Goto(wear_panties)
+[no]#EmoteSad @Goto(no_panties)
+@DifferentAnswer Will you or not ?
+(buy_panties)
+But we can change that easily...
+You just have to buy some later #Grin
+Either online or even better in a shop #lol
+That would be so #Hot!
+Will you buy some to please me #PetName?
+[yes]That's so sweet! I can't wait for you to have them @SetFlag(png__buying_panties)
+[no]It's ok, I won't force you... Yet #lol @SetFlag(png__no_panties)
+@DifferentAnswer Will you or not ?
+Now where were we? Oh yes...
+@End
+(no_panties)
+That's ok I won't force you to get some
+For now at least! #lol
+@End
+(png__wearing_panties)
+Are those panties wet yet? #lol
+I bet they are!
+You are so #Hot in them...
+I should just make you buy one pair for each day of the week! #Grin
+Feel your cock over the fabric
+You'll make a great pantyboy in no time #lol @Chance25(take_off_panties)
+@End
+(png__already_asked_panties_delivered)
+I can't believe those panties are not there yet!
+I was so rilled up just thinking about what I could do to you with them @Chance33(vent_frustration_pain)
+Maybe i should keep you on the edge until they arrived...
+That would not take them there faster but at least it would be funnier to wait like that #lol
+Edge for me #PetName @EdgeHold
+#LetTheEdgeFade
+But I guess you would die or go crazy before I have a chance to see you in them
+(png__no_panties)
+You know #PetName
+If you had been wearing panties right now I would probably have given you a lot of pleasure
+But since you refused I think I'll just hurt you instead #Grin @CBT
+I hope that will make you reconsider #lol
+@End
+(vent_frustration_pain)
+I guess I'll just have to vent this frustration otherwise now
+Like by hurting your cock a little! #lol @CBTCock
+I feel much better!
+@End
+(png__buying_panties)
+I was on the phone with Anna today @TempFlag(png__already_asked_panties_delivered)
+And I told her that you accepted to buy some panties just because I asked you to do so
+We couldn't stop laughing
+But that made me so #Horny
+If I am like that just talking about it
+Imagine when you'll wear them for me for real #Grin
+Which brings me to the important question...
+Have they been delivered?
+[yes]#HolyShit I can't wait any longer then! @SetFlag(png__panties) @DeleteFlag(png__buying_panties) @Goto(wear_panties)
+[no]Damn slow transporters they should all be punished!
+@DifferentAnswer Have they or not?
+Maybe I should make you go in a store instead of waiting #Grin
+Well then I guess I have no choice... 
+@End
+(png__panties)
+Making you #Stroke like that just reminded me...
+I hope you still have your panties #PetName
+Because... @Goto(wear_panties)
+(wear_panties)
+Put them on for me @TempFlag(png__wearing_panties)
+(panties_check_loop)
+@NullResponse @Wait(30)
+Are you wearing them?
+[yes]Alright let's start then
+@DifferentAnswer Hurry up or I'll make you wear them all day! #lol @Goto(panties_check_loop)
+I want you to caress your #Cock over the fabric
+Feel it grow as you do it
+#EmoteMoan so #Hot
+I want you to keep them until I ask you to take them off #PetName
+Who knows maybe You'll wear them until the end! #lol
+@End
+(take_off_panties)
+But for now I want you to take them off @DeleteFlag(png__wearing_panties) @Chance25(panties_gag)
+I don't want you to get addicted to the feeling yet... #Grin
+@End
+(panties_gag)
+And use them as a gag! #lol
+Yes put them all inside your mouth...
+I hope you haven't leaked too much in them #Grin @BookmarkModule
+@End
+How does those panties feel in your mouth?
+Is it sore yet? Dry maybe? #lol
+Take them off
+And don't forget to wash them later!
+Who knows when I'll make you use them again #Grin
+@End
+(png__wearing_diapers)
+Seeing you in those diapers make me wonder what else I sould make you wear...
+Maybe it will be panties next time #lol
+Start stroking while I continue to wonder what I'll do to you in the future #Grin @StartStroking
+@End
+@Info follow up on the panties theme depending if you are already wearing panties, waiting for them to arrive, refused to wear some or have never got the starting script about them

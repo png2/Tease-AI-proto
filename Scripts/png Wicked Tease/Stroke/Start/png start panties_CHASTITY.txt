@@ -1,0 +1,118 @@
+#GreetSub @CheckFlag(png__no_panties,png__buying_panties,png__panties)
+Did you have a nice day?
+[yes]Good! Me too... #Grin
+[no]Too bad! But I did! #lol
+@DifferentAnswer Yes or no ?
+I was out with some girl friends last night
+We were talking about things that make us #Horny #lol
+Anna talked about how she makes her husband wear panties for her #Emote
+And you know how I am... #Grin
+Well...
+You don't happen to have some panties around, do you? 
+[yes]Ohoh, did I just find another sexy side of my #PetName? @SetFlag(png__panties) @Goto(ask_wear_panties)
+[no]Damn that would have been so nice @Goto(buy_panties)
+@DifferentAnswer Do you or not ?
+(ask_wear_panties)
+Now that I know that you have some nearby I can't resist...
+Would you put them for me? #Grin
+[yes]That's so #Hot!! @Goto(wear_panties)
+[no]#EmoteSad @Goto(no_panties)
+@DifferentAnswer Will you or not ?
+(buy_panties)
+But we can change that easily...
+You just have to buy some later #Grin
+Either online or even better in a shop #lol
+That would be so #Hot!
+Will you buy some to please me #PetName?
+[yes]That's so sweet! I can't wait for you to have them @SetFlag(png__buying_panties) @Goto(end)
+[no]It's ok, I won't force you... Yet #lol @SetFlag(png__no_panties) @Goto(end)
+@DifferentAnswer Will you or not ?
+(wear_panties)
+Put them on for me @TempFlag(png__wearing_panties)
+(panties_check_loop)
+@NullResponse @Wait(30)
+Are you wearing them?
+[yes]Alright let's start then
+@DifferentAnswer Hurry up or I'll make you wear them all day! #lol @Goto(panties_check_loop)
+I want you to caress your #Cock over the fabric
+Feel it grow as you do it
+#EmoteMoan so #Hot
+I want to keep them until I ask you to take them off #PetName
+Who knows maybe You'll wear them until the end! #lol @Goto(end)
+(no_panties)
+That's ok I won't force you to get some
+For now at least! #lol @Goto(end)
+(end)
+Now let's see if we can make this cage even more unconfortable @StartTaunts
+@End
+(png__buying_panties)
+I was on the phone with Anna today @TempFlag(png__already_asked_panties_delivered)
+And I told her that you accepted to buy some panties just because I asked you to do so
+We couldn't stop laughing
+But that made me so #Horny
+If I am like that just talking about it
+Imagine when you'll wear them for me for real #Grin
+Which brings me to the important question...
+Have they been delivered?
+[yes]#HolyShit I can't wait any longer then! @SetFlag(png__panties) @DeleteFlag(png__buying_panties) @Goto(wear_panties)
+[no]Damn slow transporters they should all be punished! Well then I guess I have no choice...@Goto(end)
+@DifferentAnswer Have they or not?
+(png__no_panties)
+You know since the last time you refused to wear panties
+I had another talk with the girls
+And when I told them of our little chat
+They brought an interesting point...
+They think that you are refusing to wear panties because... @Chance25(convince_pain)
+You are not horny enough! @CheckFlag(png__has_chastity) @Chance50(convince_edge)
+But maybe it's just not your thing
+Or did you change your mind?
+[yes,changed]Amazing! @Goto(change_mind_panties)
+[no]At least I tried! #Emote @Goto(end)
+@DifferentAnswer Did you or not?
+(png__panties)
+I can't stop thinking about those panties of yours...
+Imagining you in them makes me so #Horny sometimes!
+I started dreaming of you wearing them all day
+At work...
+At the mall...
+At the restaurant...
+And of course in our little sessions! #Grin
+But we are not there yet #PetName
+Maybe one day I'll take you even further
+But for now @Goto(wear_panties)
+(png__has_chastity)
+Maybe I should put you into chastity until you accept to wear some for me... #Grin @Chance25(convince_chastity)
+But I guess that would ruin all the fun that we could have #GeneralTime @Goto(convince_edge)
+(convince_edge)
+So I'll just have to edge you a few time!
+Yes #PetName, edge for me #Now without any warm up! #lol @Edge
+#LetTheEdgeFade
+I don't think you are horny enough, so give me another one... @EdgeHold
+#LetTheEdgeFade
+Are you changing your mind?
+[yes,changed]Amazing! @Goto(change_mind_panties)
+[no]At least I tried! #Emote @Goto(end)
+@DifferentAnswer Are you or not?
+(convince_pain)
+I don't discipline you enough! #Grin
+So I have to recrify that #Now... @CBT
+Did that convince you? #Grin
+[yes,changed]Amazing! @Goto(change_mind_panties)
+[no]At least I tried! #Emote @Goto(end)
+@DifferentAnswer Did it or not?
+(convince_chastity)
+You know what that means?
+Go grab that #ChastityCage #Now
+And put it on!
+Let me now when you are done #PetName
+[yes,done,put,on]Good #PetName! But the fun for me is not over yet #EmoteHappy @TempFlag(png__panties_chastity_convince) @ChastityOn @StartTaunts
+[no]Then put it on #now! @LoopAnswer
+@DifferentAnswer Is it on or not?
+(change_mind_panties)
+I am so glad I convinced you! #EmoteHappy @DeleteFlag(png__no_panties)
+Now if only you already had some close by... #Grin
+You don't happen to have some, do you? 
+[yes]Ohoh, did I just find another sexy side of my #PetName? @SetFlag(png__panties) @Goto(ask_wear_panties)
+[no]Damn that would have been so nice  @SetFlag(png__buying_panties) @Goto(buy_panties)
+@DifferentAnswer Do you or not?
+@Info The dom tries to put you into panties but doesn't force yo if you don't want to

@@ -1,0 +1,54 @@
+@NullResponse @EdgingDecide
+#LetTheEdgeFade
+I don't think I authorized you to edge...
+We really need to work on your stamina @Chance33(punishment)
+Let's start by another edge! @EdgeNoHold
+#LetTheEdgeFade
+Now I'll keep you there a while longer #Grin
+Get to the edge @EdgeHold
+#LetTheEdgeFade
+And now the real deal...
+Let's see if you can survive a chain of edges #Grin @GotoDommeApathy
+(ApathyLevel1)
+Go on, edge for me @EdgeNoHold 
+Another one right away @EdgeNoHold 
+@NullResponse @Goto(edging_done)
+(ApathyLevel2)
+Go on, edge for me @EdgeNoHold 
+Another one right away @EdgeHold 
+@NullResponse @Goto(edging_done)
+(ApathyLevel3)
+Go on, edge for me @EdgeHold 
+Another one right away @EdgeNoHold 
+An another one! #Grin @EdgeHold  
+@NullResponse @Goto(edging_done)
+(ApathyLevel4)
+Go on, edge for me @EdgeHold 
+Another one right away @EdgeHold 
+An another one! #Grin @EdgeHold 
+Just to make sure let's do a fourth... @EdgeHold
+@NullResponse @Goto(edging_done)
+(ApathyLevel5)
+Go on, edge for me @EdgeHold 
+Another one right away @EdgeHold 
+An another one! #Grin @EdgeHold 
+Just to make sure let's do a fourth... @EdgeHold
+Did you think I would stop there? Get to the edge again #PetName! @EdgeHold
+Starting to learn to control that cock?
+To make sure give me another edge! @EdgeHold
+@NullResponse @Goto(edging_done)
+(edging_done)
+Still alive #PetName?
+[yes]Good, you would be no fun to me otherwise #lol
+@AcceptAnswer Well you seem alive enough to me #lol
+Did you make it without cumming?
+[yes]You see you can restrain yourself when you put your mind to it! #Grin
+[no]I guess you will need a lot more training... #EmoteSad @Goto(punishment)
+@DifferentAnswer Did you resist cumming or not?
+Enough training for now
+@End
+(punishment)
+But first we need to punish that #Cock! #Grin @CBTCock
+That will teach it some control #lol
+@End
+@Info Make you do some stamina training or CBT if you edge too early

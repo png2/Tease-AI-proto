@@ -1,0 +1,238 @@
+#StopStroking @StopStroking @CheckFlag(png__orgasms_limited,png_orgasms_limited_refused_redo)
+You know #PetName...
+There is something that makes me horny
+very very horny! #Grin
+And I guess it's your thing too otherwise you wouldn't be here...
+Know what it is?
+[denial,denying,deny]Yeah #PetName
+@AcceptAnswer No silly #PetName
+It's denying you your orgasms
+Especially when I know cumming is what you want the most in the world #Grin
+The pleasure I feel when I do is truly amazing
+@NullResponse @NullResponse @If[#OrgasmLockDate]=['later']Then(not_locked)
+And since you are restraining your orgasms for me I am very happy #Grin
+To reward you I'll let you edge #EmoteHappy 
+Go on edge for me @Edge
+Isn't it great to know that the number of orgasms you can have is limited?
+[yes]I see that we are on the same wavelength #lol
+[no]Then you'll need to get used to it because I ain't letting go of that control #lol
+@DifferentAnswer Do you like it or not?
+But in the end what you like is not even relevant
+Only the fact that I control you more each day #Grin
+@End
+(not_locked)
+Would you give me even more power over your orgasms #PetName?
+[yes]Great, that will be really fun #EmoteHappy
+[no]Ohh, are you scared I might never ever let you come? #lol @Goto(punishment)
+@DifferentAnswer yes or not? 
+I have another question for you, #PetName
+Have you ever restrained yourself from cumming for more than a week?
+[yes] Ohhh, impressive...
+[no] Oh we will need to work on that then @Goto(1week)
+@DifferentAnswer yes or no?
+More than 2 weeks?
+[yes]I'm started to be really impressed
+[no]It's not bad but I bet <i>I</i> can make you beat that @Goto(2weeks)
+@DifferentAnswer yes or no?
+Don't tell me you were able to refrain from having an orgasm for more than a month?
+[yes,I did]wow! @Goto(long denial)
+[no]Ah I knew you couldn't do it, but that's still impressive #EmoteHappy @Goto(1month)
+@DifferentAnswer yes or no?
+(1week)
+Since you still haven't broken the 1 week limit I'll start easy on you #Grin @SetFlag(png__orgasms_limited)
+I want you to go to my settings
+In the 'Domme' tab in the top right side you'll find the options for your orgasms
+I want you to check the 'limit' box and set 1 orgasm per week
+Then click on the 'locked selected' button and accept the warning message #EmoteHappy
+That will make sure you can only have one orgasm in the next 7 days #Grin @SetFlag(png__orgasms_limited_1week)
+That way you'll be a lot better at controlling yourself in no time! @Goto(end_restrain_instructions)
+(2weeks)
+Being able to break one week without an orgasm is often a very important step in becoming a good slave @SetFlag(png__orgasms_limited)
+I'm very pleased you already showed you can restrain yourself to some extent
+Now it's time to see if you can take the next step
+I want you to go to my settings
+In the 'Domme' tab in the top right side you'll find the options for your orgasms
+I want you to check the 'limit' box and set 1 orgasm per 2 weeks
+Then click on the 'locked selected' button and accept the warning message #EmoteHappy
+That will make sure you can only have one orgasm in the next 14 days #Grin @SetFlag(png__orgasms_limited_2weeks)
+That way you'll be a lot better at controlling yourself in no time! @Goto(end_restrain_instructions)
+(1month)
+Since you showed you had some control this time we will get serious @SetFlag(png__orgasms_limited)
+This one will be a true challenge for you
+But if you can do it I will be very very very pleased with you #Grin
+I want you to go to my settings
+In the 'Domme' tab in the top right side you'll find the options for your orgasms
+I want you to check the 'limit' box and set 1 orgasm per month
+Then click on the 'locked selected' button and accept the warning message #EmoteHappy
+That will make sure you can only have one orgasm in the next month #Grin @SetFlag(png__orgasms_limited_1month)
+That way you'll be a lot better at controlling yourself in no time! @Goto(end_restrain_instructions)
+(long denial)
+Since I know you can restrain yourself so well now @SetFlag(png__orgasms_limited)
+It's a lot more fun to add some randomness in your control
+I want you to go to my settings
+In the 'Domme' tab in the top right side you'll find the options for your orgasms
+I want you to check the 'limit' box and set 1 orgasm per week
+Then click on the 'lock Random' button and accept the warning message #EmoteHappy
+Then you'll see what the program choose for you
+That can be a week or two
+Or that can be 1 year #lol
+Oh I so hope it chose a year!!! #Grin @SetFlag(png__orgasms_limited_random)
+Well anyway your fate is sealed now @Goto(end_restrain_instructions)
+(end_restrain_instructions)
+I'll let you choose the orgasm rate
+If you want to cum early and suffer for the rest of the time set it high
+If you'd rather keep it in reserve set it low #Grin
+How fun it will be to see you teared between wanting an orgasm and knowing your stock is limited #lol
+I'll let you edge to celebrate #Grin @EdgeHold
+@End
+(png_orgasms_limited_refused_redo)
+Alright since you refused to let me decide for how long you have to restrain yourself last time
+I am going to give you another chance #Grin @Goto(ask_redo)
+(png__orgasms_limited)
+@NullResponse @NullResponse @If[#OrgasmLockDate]=['later']Then(unlocked)
+I see you are still under restricted orgasms #EmoteHappy
+I hope it's not too hard on you #Grin
+Oh who am I kidding?
+You <i>know</i> I hope it's excrutiating for you! #lol
+Give me an edge to make it worse @EdgeHold
+And another one #Grin @Edge
+That should help you surpass yourself for me #lol
+Ain't I #Kind to help you like that?
+[yes,kind,sweet]I know, sometimes I think I am spoiling you a bit too much #Grin
+[no,harsh,bad,evil]Oh you don't think I am #Kind... #EmoteSad @Goto(punishment)
+@DifferentAnswer am I yes or no?
+I wonder how many edges would be enough to break you...
+(resume_orgasms_limited)
+10...
+100...
+1000...
+#lol 
+Let's see if I can reach that point #Grin @GotoDommeApathy
+(ApathyLevel5)
+#Edge @EdgeHold
+And another one right away @Edge
+(ApathyLevel4)
+#Edge @EdgeHold
+(ApathyLevel3)
+#Edge @EdgeHold
+Time for a little break @Wait(30)
+(ApathyLevel2)
+#Edge @Edge
+(ApathyLevel1)
+#Edge @EdgeHold
+That should be enough to make you #Ache a lot more than before #lol
+@End
+(unlocked)
+Oh it seems you are done with your last orgasm restriction #Grin
+Did you really do it without cheating?
+[yes]That's very nice #PetName! 
+[no]At least you have the courage to admit it @Goto(cheated_restriction)
+@DifferentAnswer did you respect it or not?
+I'm impressed and very proud of you
+(ask_redo)
+Do you want to redo it for me?
+[yes,I do]
+[no,I don't]Oh you are scared... I see #EmoteSad @SetFlag(png_orgasms_limited_refused_redo) @Goto(punishment_refuse)
+@DifferentAnswer do you or not?
+I'm very very pleased with you today! #EmoteHappy @DeleteFlag(png_orgasms_limited_refused_redo)
+(other_round)
+Let's see... @CheckFlag(png__orgasms_limited_1week,png__orgasms_limited_2weeks,png__orgasms_limited_1month,png__orgasms_limited_random)
+It seems I forgot how long you were restrained last time...
+How long was it : 1 week, 2 weeks, 1 month or random?
+[1 week] Okay @Goto(png__orgasms_limited_1week)
+[2 week] Okay @Goto(png__orgasms_limited_2weeks)
+[1 month] Okay @Goto(png__orgasms_limited_1month)
+[random] Okay @Goto(png__orgasms_limited_random)
+@DifferentAnswer How long was it : 1 week, 2 weeks, 1 month or random?
+(punishment)
+Then I'll be #Mean @CBTCock
+I wonder how many edges would be enough to break you... @Goto(resume_orgasms_limited)
+(cheated_restriction)
+You realize that despite your honesty I still have to punish you for that...
+Let's start by hurting your #Cock a little
+That should teach it to behave @CBTCock
+Now your balls for emptying without my permission @CBTBalls
+Now a few lines @AFKOn @WritingTask(I will not orgasm without #DomHonorific #DomName permission ever again)
+That should make you think a little about what you did! @AFKOff @CheckFlag(png__no_chastity,png__buying_cage,png__has_chastity)
+Do you have a chastity cage?
+[yes]Good @SetFlag(png__has_chastity) @Goto(png__has_chastity)
+[no]
+@DifferentAnswer do you have one yes or no?
+Then you'll need to get one
+(buy_cage)
+It seems you can't control yourself so I guess there is no other way...
+Don't you agree?
+[yes]Then once this session is over I want you to go shop for one online @SetFlag(png__buying_cage) @Goto(png__buying_cage)
+[no]Oh you really don't want to be locked in a cage #lol
+@DifferentAnswer do you agree or not?
+Then you'd better start to behave and restrain yourself!
+(punishment_redo)
+Now since you failed this one we'll have to do another round @CheckFlag(png__orgasms_limited_random)
+How long did you last, in days?
+[1,2,3,4,5,6] Less than 1 week... @Goto(1week)
+[7,8,9,10,11,12,13]Not even 2 weeks... @Goto(2weeks)
+[14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]You couldn't do it for a full month #EmoteSad @Goto(1month)
+@DifferentAnswer I need a number #PetName...
+(png__no_chastity)
+I really think you should buy a #ChastityCage... @Goto(buy_cage)
+(png__buying_cage)
+At least when this #ChastityCage is there it will be easier to control your #Cock #Grin @Goto(punishment_redo)
+(png__has_chastity)
+Since you can't control yourself I'll have to restrain you for real this time!
+Go put your #ChastityCage
+(put_chastity_loop)
+@NullResponse @Wait(30)
+Is it on?
+[yes]Good @ChastityOn
+[no]Hurry up then or I'll make you throw away the key! @Goto(put_chastity_loop)
+@DifferentAnswer Hurry up then or I'll make you throw away the key! @Goto(put_chastity_loop)
+That should teach you a bit to control yourself @Goto(punishment_redo)
+(punishment_refuse)
+But remember that I only make you do all those things for your own good
+And of course for my pleasure... #Grin
+It's a win-win situation
+You get frustrated because it's good for you and I enjoy it a lot #lol
+Now you wouldn't want to deprive me of my pleasure or to make you a better slave, would you?
+[no]Then you need to do another session #EmoteHappy
+[yes]That's not very nice of you #EmoteSad @Goto(punishment)
+@DifferentAnswer do you want to upset me yes or no?
+So will you do another one for me?
+[yes,I will]Ah I knew you would see the truth in my words #EmoteHappy @Goto(other_round)
+[no,I won't]Alright @Goto(punishment)
+@DifferentAnswer do you or not?
+(png__orgasms_limited_1week)
+Since you already completed the one week restriction, it's time to step up #EmoteHappy
+And to give you some motivations I think you earned some tokens #Grin @Add5Tokens
+That will be a big step for you but I'm sure you can make it
+If it gets too hard think about how happy I'll be when you are done #Grin @Goto(2weeks)
+(png__orgasms_limited_2weeks)
+Those two weeks must have seemed very long
+Especially if you got your orgasm early #Grin
+Now it's time to try for the pro league! 
+And to give you some motivation I think you earned some tokens #Grin @Add10Tokens @Goto(1month)
+(png__orgasms_limited_1month)
+Wow only one orgasm in the last month that's very very impressive
+When I think I can barely restrain myself for a few days at most #lol
+But I'm not the one being denied #Grin
+Now how much longer I could make you restrain yourself?
+2 months?
+6 months?
+1 year maybe...
+I think it's better to let fate decide #lol 
+And to give you some motivations I think you earned some tokens #Grin @Add25Tokens @Goto(long denial)
+(png__orgasms_limited_random)
+I wonder how it feels to not know how long and how many orgasms you have #Grin
+I could never withstand that kind of treatment
+I guess that's why <i>I</i> am in control #Grin
+So let's put the decision in the hands of fate once again 
+And to give you some motivation I think you earned some tokens #Grin @Add50Tokens @Goto(long denial)
+(Failed Writing Task)
+Wow you even fail your punishment... @AFKOff
+I am very very angry right now!
+I don't want to see you for 2 days! @CheckFlag(png__temporary_freedom)
+And you better not cum while you are away... @EndTease
+@End
+(png__temporary_freedom)
+Put your cage back on! I can't believe I was nice enough to give you a chance for freedom... @EndTease
+@End
+@Info the dom restrains your orgasms for a given time

@@ -1,0 +1,8 @@
+@Info Expanded version of #Okay, to indicate agreement, usually at the start of a sentence
+@Info OK: "#IAgree! Let's #Play!"
+@Info
+I agree
+#Okay
+#Okay
+sure
+#Yes

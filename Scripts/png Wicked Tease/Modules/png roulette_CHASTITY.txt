@@ -1,0 +1,73 @@
+@NullResponse @StopTaunts @CheckFlag(png__roulette_rules,png__toss_freedom_rules)
+I wonder if you're a gambler... #Grin
+Anf if you are, what could I make you bet for some release... #lol
+I have a game I call the <i>orgasm roulette</i>
+It's a pretty fun game but since you are locked up you cannot play it #Grin
+(roulette_check_play)
+But that doesn't mean we can't gamble for your freedom #Grin
+@NullResponse @NullResponse @If[#OrgasmLockDate]=['later']Then(roulette_ask_play)
+But since your orgasms are already restricted you don't have any gambling chip I'm interrested in #Grin
+So that's just a wasted opportunity for you I guess
+Still making you realize that you could have been free is always fun #lol
+@End
+(png__toss_freedom_rules)
+I wonder if right now you are desperate enough to try to bet your freedom in a 'toss a coin from freedom' game #grin 
+@NullResponse @NullResponse @If[#OrgasmLockDate]=['later']Then(roulette_play)
+But since your orgasms are already restricted you don't have any gambling chip I'm interrested in #Grin
+So that's just a wasted opportunity for you I guess
+Still making you realize that you could have been free is always fun #lol
+@End
+(png__roulette_rules)
+As you know I really like the orgasms roulette
+Since you are locked up we can't play it #EmoteSad @Goto(roulette_check_play)
+(roulette_ask_play)
+Alright let's call this one 'toss a coin for freedom' #Grin 
+It's a lot easier than roulette, you simply have a 50/50 chance to get free
+But if you loose you'll stay locked up and I'll limit your orgasms...
+It means that even if I free you later you will have a limited amount of possible orgasms until the fixed period is over @SetFlag(png__toss_freedom_rules)
+(roulette_play)
+Do you want to play #PetName?
+[yes]Either you like to gamble or you are very very desperate to get out of that #ChastityCage #lol
+[no]Oh it seems I need to make you even more frustrated then #EmoteHappy @Goto(refuse)
+@DifferentAnswer yes or no?
+Either way it's fine with me
+Let's toss... @Wait(20) @Chance50(lost)
+Damn!
+You won #EmoteSad
+Lucky you I guess...
+You can unlock your cage @ChastityOff
+(cage_off_lopp)
+@Wait(30)
+Are you ready to continue?
+[yes]Let's do it then
+[no]I thought you'd be faster than that to get out @Goto(cage_off_lopp)
+@DifferentAnswer Maybe I should just keep you locked in the end... @Goto(cage_off_lopp)
+But I still get to tease you #Grin
+@End
+(refuse)
+I'm sure it will seem a much better idea to you in a few more days of being locked #Grin
+@End
+(lost)
+Congratulation!
+You lost!!! #lol
+Now I'll take your orgasms away even when you are not locked up #Grin 
+I want you to go to my settings
+In the 'Domme' tab in the top right side you'll find the options for your orgasms @GotoDommeApathy
+(ApathyLevel1)
+I want you to check the 'limit' box and set 2 orgasms per week @Goto(locking_done)
+(ApathyLevel2)
+I want you to check the 'limit' box and set 1 orgasm per week @Goto(locking_done)
+(ApathyLevel3)
+I want you to check the 'limit' box and set 1 orgasm per 2 weeks @Goto(locking_done)
+(ApathyLevel4)
+I want you to check the 'limit' box and set 2 orgasm per month @Goto(locking_done)
+(ApathyLevel5)
+I want you to check the 'limit' box and set 1 orgasm per month @Goto(locking_done)
+(locking_done)
+Then click on the 'locked selected' button and accept the warning message #EmoteHappy
+Now that should nicely reduce your chances of cumming
+Not like you had any as long as I keep you locked up #Grin
+Well...
+It seems we are done gambling and now you lost your only betting chip for a while #lol
+@End
+@Info If your orgasms are not limited, the dom will propose to bet them to get free of the cage. you have a 50/50 chance. If you loose she'll restrict your orgasms, the number and duration depends on the apathy level

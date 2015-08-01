@@ -1,0 +1,36 @@
+Stop stroking #PetName, you don't get to cum #GeneralTime @StopStroking
+The funny thing is
+I was actually #Gonna let you
+But you're completely out of orgasms until #OrgasmLimitDate #Grin
+But don't worry #SubName
+Just because that #Cock doesn't get to cum until then
+Doesn't mean you don't get to play with it
+I'll always let you play with it any time you want
+All you have to do is come find me #EmoteHappy @CheckFlag(png__wearing_nippleclamps)
+(resume_clamps_checks)
+@NullResponse @CheckFlag(png__wearing_panties,png__wearing_diapers,png__wearing_abdl_outfit)
+(resume_wearing_checks)
+Until then #PetName
+Take care of yourself and be good #Grin @EndTease
+@End
+(png__wearing_nippleclamps)
+Before leaving you need to take those clamps off!
+#Yes I know it hurts but stop crying or I'll make you put them back #Grin  @Goto(resume_clamps_checks)
+(png__wearing_panties)
+@NullResponse @Chance15(stay_in_panties)
+And don't forget to take your panties off and wash them #PetName! @Goto(resume_wearing_checks)
+(png__wearing_diapers)(png__wearing_abdl_outfit)
+@NullResponse @Chance05(stay_in_diapers)
+You can take all your baby stuff off #PetName
+I hope you didn't mess your diapers #Emote @Goto(resume_wearing_checks)
+(stay_in_diapers)
+Since I had so much fun seeing you in that baby getup
+I think I should keep you there longer
+I want you to stay in it until you wet your diapers *evil*
+So if you have to go I suggest you drink a alot of water to speed things up... #lol @Goto(resume_wearing_checks)
+(stay_in_panties)
+Since I had so much fun teasing you in those panties
+I think you should wear them a while longer
+I want you to keep them until tomorrow morning
+#Yes that means all day at work if you have to and all night while sleeping #Grin
+oh and don't forget to wash them afterward #PetName! #lol @Goto(resume_wearing_checks)

@@ -1,0 +1,31 @@
+#GreetSub @GotoDommeApathy
+(ApathyLevel1)
+I hope you've been enjoying your time locked up for me @Goto(unlock)
+(ApathyLevel2)
+I hope you've been enjoying your time locked up for me @Chance90(unlock)
+@NullResponse @Goto(keep_chastity)
+(ApathyLevel3)
+I hope you've been enjoying your time locked up for me @Chance50(unlock)
+@NullResponse @Goto(keep_chastity)
+(ApathyLevel4)
+I hope you've been enjoying your time locked up for me @Chance25(unlock)
+@NullResponse @Goto(keep_chastity)
+(ApathyLevel5)
+I hope you've been enjoying your time locked up for me @Chance10(unlock)
+@NullResponse @Goto(keep_chastity)
+(keep_chastity)
+Because I'm not <i>quite</i> ready to release you yet
+Not without fucking with you for a little bit first #Grin @StartTaunts
+@End
+(unlock)
+It's about time I let you free again I think! @ChastityOff
+We'll see for how long... #grin
+(cage_off_lopp)
+@Wait(30)
+Are you ready to continue?
+[yes]Let's do it then
+[no]I thought you'd be faster than that to get out @Goto(cage_off_lopp)
+@DifferentAnswer Maybe I should just keep you locked in the end... @Goto(cage_off_lopp)
+And now You can #StartStroking @StartStroking
+@End
+@Info alternate chastity start with a chance of being unlocked based on her level of ampathy

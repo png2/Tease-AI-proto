@@ -1,0 +1,16 @@
+@Info Command verb
+@Info OK: "#Wait, I want to show you something"
+@Info OK: "Just #Wait, you will see"
+@Info
+@Info NOT the noun
+@Info NOT OK: "How is the #Wait?"
+@Info
+wait
+wait
+wait
+wait
+hold it
+hold on
+hold on
+hang on
+@SelfYoung hold up

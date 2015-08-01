@@ -1,0 +1,15 @@
+@Info Verb
+@Info OK: "I #Hate that"
+@Info
+@Info Not a noun
+@Info NOT OK: "Let the #Hate flow through you, my young apprentice"
+@Info
+hate
+hate
+hate
+hate
+hate
+dislike
+dislike
+detest
+despise

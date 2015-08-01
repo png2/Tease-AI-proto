@@ -1,0 +1,47 @@
+Stop stroking #PetName @StopStroking
+It's time we make good use of your <i>huge</i> collection of #Pictures #Grin
+I'll start a slideshow with all your naughty pictures
+And to make it more fun...
+(slideshow_start)
+When you see #png__slideshow_edge_part, #png__slideshow_variations #Grin
+You'll have to be careful with your timing because you are not allowed cum #lol
+@NullResponse @SetVar[png__start_busy_loop]=[#Random(2,10)]
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]*[60]
+@RapidTextOn Let's start @ShowLocalImage @Wait(10)
+(slideshow_loop)
+@NullResponse @If[png__start_busy_loop]<=[0]Then(end_slideshow)
+@NullResponse @ShowLocalImage
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[18]
+@NullResponse @Wait(10) @Chance25(slideshow_loop)
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[10]
+@NullResponse @Wait(10) @Chance75(slideshow_loop)
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[30]
+@NullResponse @Wait(30) @Goto(slideshow_loop)
+(end_slideshow)
+@RapidTextOff You're done @UnlockImages
+Did you miss me?
+[yes]
+[no] Oh really ? Then maybe I shall let you continue for a while @GotoDommeApathy
+@DifferentAnswer Yes or no ?
+That's cute #PetName
+@End
+(ApathyLevel1)
+Let's do another round @Goto(slideshow_start)
+(ApathyLevel2)
+@NullResponse @Chance10(writing_punish)
+Let's do another round @Goto(slideshow_start)
+(ApathyLevel3)
+@NullResponse @Chance30(writing_punish)
+Let's do another round @Goto(slideshow_start)
+(ApathyLevel4)
+@NullResponse @Chance50(writing_punish)
+Let's do another round @Goto(slideshow_start)
+(ApathyLevel5)
+@NullResponse @Chance80(writing_punish)
+Let's do another round @Goto(slideshow_start) 
+(writing_punish)
+Dream on #PetName!
+Instead you'll write some lines #lol @AFKOn @WritingTask(I always miss my #DomHonorific when She is not with me!)
+#Okay enough for now @AFKOff
+@End
+@Info the dom uses your local pictures to make a slideshow and gives you special instructions. The instructions are based on #png__slideshow_edge_part and #png__slideshow_variations in the vocabulary, edit them to make it fit your pictures and kinks

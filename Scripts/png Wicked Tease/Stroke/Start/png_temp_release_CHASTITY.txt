@@ -1,0 +1,31 @@
+#GreetSub
+How are you doing in your little cage?
+[yes,fine,good,great]Oh so that means I can keep you there even longer then #Grin
+[ok,okay,not very good,not so good,not so great,need to stroke]Oh starting to feel the weight of being under my total control #Grin
+[no,badly,bad,terrible,horrible,let me free,free me,need to be free]Oh that's a very good thing #Grin
+@DifferentAnswer are you doing fine or not?
+But today is your lucky day!
+I'll let you free of your #ChastityCage for today's session
+Aren't you lucky? #Grin
+[yes]Of course you are, you are <i>my</i> #PetName afterall #lol
+[no]Ohhh, you don't think you are @Goto(no_freedom)
+@DifferentAnswer are you lucky or not?
+I bet it will feel so good to finally touch your #Cock after being in your #ChastityCage @TempFlag(png__temporary_freedom) @ChastityOff
+(cage_off_lopp)
+@Wait(30)
+Are you ready to continue?
+[yes]Let's do it then
+[no]I thought you'd be faster than that to get out @Goto(cage_off_lopp)
+@DifferentAnswer Maybe I should just keep you locked in the end... @Goto(cage_off_lopp)
+Let's start stroking #PetName @StartStroking
+@End
+(no_freedom)
+Then no freedom for you!
+Instead I'll just make you write lines @AFKOn
+(writing_punishment)
+@NullResponse @WritingTask(I am so lucky to have #DomHonorific #DomName keeping me in chastity)
+Alright time to start teasing you then since you don't think you are a lucky #PetName @AFKOff @StartTaunts
+(Failed Writing Task)
+Wow you can't even do that right...
+Redo it until you get it right! @Goto(writing_punishment)
+@Info The dom frees you from chastity to let you stroke

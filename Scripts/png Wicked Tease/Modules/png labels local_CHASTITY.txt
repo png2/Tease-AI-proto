@@ -1,0 +1,11 @@
+@NullResponse @SetVar[png_pictures_to_tag]=[#Random(50,200)]
+Since you cannot #Stroke let's make you do something usefull for once! #lol
+I want you to to tag @ShowVar[png_pictures_to_tag] pictures from your collection so I can tease you with them! @Goto(wait_for_done)
+(wait_for_done)
+Tell me when you are done...
+[yes, done, finished] Good job #PetName! I'm sure it will be usefull really soon... #Grin
+[no] Then get working #PetName! You wouldn't want to upset me while locked up... #Grin @Goto(wait_for_done)
+@DifferentAnswer Are you done yes or no?
+Where were we? Ah yes...
+@End
+@Info Since you are locked up the dom makes you fill labels on your local pictures

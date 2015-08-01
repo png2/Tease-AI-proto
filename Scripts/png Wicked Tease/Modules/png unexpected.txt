@@ -1,0 +1,151 @@
+@NullResponse @Chance50(skip)
+Ok stop stroking @StopStroking @CheckFlag(png__kneeling) @Goto(skip_kneeling)
+(png__kneeling
+I have a good news for you
+You can stop kneeling! @DeletFlag(png__kneeling)
+But the bad news is...
+(skip_kneeling)
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+(ApathyLevel2)
+I'm really sorry #SubName but something just came up #EmoteSad @Chance33(leave_lvl3)
+I have to leave the computer for a while
+But I know the perfect way to make sure you are not bored @CheckFlag(png__wearing_diaper,png__wearing_abdl_outfit) @Chance50(afk_joi)
+@NullResponse @Goto(afk_porn)
+(ApathyLevel3)
+Damn! Something unexpected came up right now... @CheckFlag(png__wearing_diaper,png__wearing_abdl_outfit) @Chance33(leave_lvl3)
+I have to leave for a while but will be back soon! 
+I kinda feel bad about it @Goto(afk_joi)
+(ApathyLevel4)
+#SubName...
+Something just came up! @Chance25(leave_lvl4-5)
+I'll be back soon
+But as I know it's dangerous to let you idle 
+I'll make sure you are busy while I am away! #Grin @CheckFlag(png__wearing_diaper,png__wearing_abdl_outfit) @Chance50(afk_joi)
+@NullResponse @Chance25(afk_porn)
+@NullResponse @Goto(writing)
+(ApathyLevel5)
+#PetName...
+Something just came up! @Chance33(leave_lvl4-5)
+I'll be back soon
+But as I know it's dangerous to let you idle 
+I'll make sure you are busy while I am away! #Grin @CheckFlag(png__wearing_diaper,png__wearing_abdl_outfit) @Chance25(afk_joi)
+@NullResponse @Chance25(afk_porn)
+@NullResponse @Goto(writing)
+(Never Allows)
+@NullResponse @Goto(no_orgasm)
+(Rarely Allows)
+@NullResponse @Goto(no_orgasm)
+(Sometimes Allows)
+@NullResponse @Chance50(orgasm)
+@NullResponse @Goto(no_orgasm)
+(Often Allows)
+@NullResponse @Chance50(orgasm)
+@NullResponse @Goto(no_orgasm)
+(Always Allows)
+@NullResponse @Goto(orgasm)
+(leave_lvl3)
+Seems I will have to leave very soon #PetName #EmoteSad @FinishTease
+@End
+(leave_lvl4-5)
+And I have to leave in a few minutes
+So give me an edge and we'll see what happens... #EmoteHappy @FinishTease
+@End
+(afk_joi)
+So I'll let you play with yourself while you watch a little video
+But remember...
+NO CUMMIES!!!! #Grin @PlayJOIVideo @AFKOn
+Ok I'm back @AFKOff
+I hope you are not too worked up 
+Because it's time to resume our session #PetName 
+@End
+(afk_porn)
+So I'll let you watch some porn of your choice by yourself!
+Ain't I nice? #Grin
+But remember...
+NO CUMMIES !!!
+I'll be back in around half an hour @AFKOn @Wait(1800)
+Ok I'm back #PetName @AFKOff
+Did you survive without making a mess?
+[yes] Good! 
+[no] That's not acceptable! @Goto(punish)
+@DifferentAnswer Did you refrain to cum, yes or no #PetName?
+Time to resume our session now... #Grin
+@End
+(writing)
+So time to write some lines while you watch this #Picture! #EmoteHappy @ShowLocalImage @AFKOn @chance33(writing_1)
+@NullResponse @chance50(writing_2)
+@NullResponse @WritingTask(I #Love when #DomName #Hurt me)
+@NullResponse @Goto(writing_done)
+(writing_1)
+@NullResponse @WritingTask(My #Cock belongs to #DomName)
+@NullResponse @Goto(writing_done)
+(writing_2)
+@NullResponse @WritingTask(Aching for my #DomHonorific is #Hot)
+@NullResponse @Goto(writing_done)
+(writing_done)
+Looks like you completed your task #PetName @AFKOff
+Good! Now let's resume our session...
+@End
+(Failed Writing Task)
+Wow seems you can't even complete simple tasks when I am not there to supervise you... @AFKOff
+Let's teach this #Cock of yours a lesson @CBTCock
+Now let's resume our session...
+@End
+(skip)
+#Edge @Edge
+#LetTheEdgeFade
+@End
+(punish)
+You need to be punished for that! @CBT
+Now let's go back to where we were...
+What ? You didn't think I would let you off the hook because you came while I was away, did you? #Grin
+[no] Of course not... #EmoteHappy
+[yes] You can be so naive sometimes #lol
+@AcceptAnswer Doesn't matter anyway! #lol
+@End
+(png__wearing_diaper)
+Since you are already in your diapers... @chance75(baby_play) @Goto(corner)
+(png__wearing_abdl_outfit)
+Since you are already in your cute little baby outfit... @chance75(baby_play) @Goto(corner)
+(baby_play)
+It would be fitting to make you play like a little toddler #lol
+Until I am back I want you to get down on your hand and knees
+You can only move by crawling around
+You can only talk as a baby @CheckFlag(png__abdl_baby_bottle) @Goto(skip_baby_bottle)
+(png__abdl_baby_bottle)
+You can only drink from your baby bottle, so fill it up before starting
+(skip_baby_bottle)
+And of course you cannot use the potty #Grin
+If you have to go make good use of your cute little diaper! #Grin
+If you have any baby toy you can play with them
+otherwise you'll have to find anything that would keep a baby busy : a cardboard, pen and paper to draw, etc.
+But nothing grown up
+Except if there is an emergency of course #Emote
+I'll be back in half an hour, bye bye #PetName @Wait(1800)
+Mommy's back!
+Have you been a good little angel while I was gone?
+[yes]Good!
+[no]You are a bad baby! I don't even want to know what happened! @Goto(punish)
+@DifferentAnswer yes or no?
+As a reward give mommy an edge! @Edge
+#LetTheEdgeFade
+@End
+(corner)
+I guess I could treat you like a kid...
+And my favorite punishment for bad kids is to send them wait in a corner! #Grin
+So I guess I'll make you do just that while I'm gone
+And I don't care if you don't think you deserve punishment!
+I am sure you did something bad and never told me about it
+Just like all children do... #Grin
+Don't worry I am not mad at you
+I just like to see you suffer that's all #lol
+Now go stand in your corner for 15 minutes @Wait(900)
+I'm back!
+Did you get bored alone in your little corner?
+[yes]You should have thought about all the things I'm gonna make you do #Emote
+[no]I hope you were thinking about me! #Emote
+@DifferentAnswer Where you bored or not?
+Now let's get back to our session
+@End
+@Info The dom has something unexpected happening and might have to leave for a while (she makes you watch a vide, a JOI video or write some lines while you wait) or definitly (she might let you cum or put you in chastity if you have one)

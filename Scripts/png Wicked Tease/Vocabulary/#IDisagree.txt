@@ -1,0 +1,7 @@
+@Info Expanded way of saying #No, to indicate disagreement with someone
+@Info
+@Info OK: "#IDisagree, #DontStop, you'll be #Okay"
+@Info
+I disagree
+I don't think so
+#No

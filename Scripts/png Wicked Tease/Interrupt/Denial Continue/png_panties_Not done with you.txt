@@ -1,0 +1,34 @@
+Hands off #PetName, I don't want you to cum
+The thing is...
+I don't want to stop making you suffer yet either
+I mean sure, I could tease you about how I just denied you
+Show you sexy pictures like this when I know how bad they'll make you ache @ShowBlogImage
+But I want more
+In fact, I want to just keep on teasing you @CheckFlag(png__panties,png__wearing_panties,png__wearing_nippleclamps)
+(tease)
+So why don't you put your hand back on that #Cock
+And start stroking again #Grin @StartStroking
+@End
+(png__panties)
+Let's spice things a bit though
+I want you to go get your panties and put them on
+(panties_loop)
+@NullResponse @Wait(30)
+Are you wearing them?
+[yes]Alright let's get to the fun part
+[no]Hurry up then @Goto(panties_loop)
+@DifferentAnswer Are they on or not?
+Now start stroking in those panties and suck this pacifier in rythm #lol @StartStroking
+@End
+(png__wearing_panties)
+I had enough fun with my girly #PetName
+You can take those panties off for now
+(undress_loop)
+@NullResponse @Wait(30)
+Are they off?
+[yes]Ok @Goto(tease)
+[no]Hurry up or I'll keep you in them @Goto(undress_loop)
+@DifferentAnswer did you take off your panties yes or no?
+(png__wearing_nippleclamps)
+But before anything you need to take those clamps off!
+#Yes I know it hurts but stop crying or I'll make you put them back #Grin @CheckFlag(png__panties,png__wearing_panties) @Goto(tease)

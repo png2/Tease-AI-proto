@@ -1,0 +1,3 @@
+start chastity @FinishTease @StartTaunts
+@End
+@Info fast start for testing purpose

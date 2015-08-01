@@ -1,0 +1,143 @@
+Stop stoking @StopStroking @CheckFlag(png__no_cumeating,png__cumeating,png__cum_loads_stored,png__not_enough_cum)
+You know I can be kinky sometimes
+Like, I don't know...
+Making you eat your cum... #Grin
+Would you like that?
+[yes]I knew you were just as kinky as me #lol
+[no]Oooh that's too bad I'm sure you would end up liking it #EmoteSad @Goto(png__no_cumeating)
+@DifferentAnswer would you like it or not?
+I'll remember that for later @SetFlag(png__cumeating)
+That could be fun #Grin
+Hmmm
+But why wait later? #lol
+(edge_loops)
+Get to the edge for me @EdgeHold
+That's a start
+Now another one! @EdgeHold
+Are you leaking precum yet?
+[yes]Ohoh we are getting there then #Grin
+[no]Hmmm that means you need more edges! #Grin @Goto(edge_loops)
+@DifferentAnswer Are you leaking or not?
+Edge a last time! @EdgeHold
+Now while it fade, scoop that precum with your index
+Watch it glistening on your finger
+And lick it clean! #Grin
+See it's easy
+@End
+(png__no_cumeating)
+I hope that one day I'll convince you to eat your cum for me #Emote
+I can be very stubborn if it means make you do something you don't like #lol
+Maybe edging a few times will make you ache enough and more obedient #Emote
+Get on the edge @Edge
+And since I am not done making my point...
+Edge again! @Edge
+Yeah successive edges suck I know #lol
+But it's so fun to see you struggle #Grin
+@End
+(png__cumeating)
+I have so much fun making you play with your cum #Grin
+Let's get you worked up a bit @Goto(edge_loops)
+(png__cum_loads_stored)
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @SetVar[png_apathy_level]=[1] @Goto(cum_play)
+(ApathyLevel2)
+@NullResponse @SetVar[png_apathy_level]=[2] @Goto(cum_play)
+(ApathyLevel3)
+@NullResponse @SetVar[png_apathy_level]=[3] @Goto(cum_play)
+(ApathyLevel4)
+@NullResponse @SetVar[png_apathy_level]=[4] @Goto(cum_play)
+(ApathyLevel5)
+@NullResponse @SetVar[png_apathy_level]=[5] @Goto(cum_play)
+(cum_play)
+@NullResponse @If[png__cum_loads_stored]>=[png_apathy_level]Then(enough_cum)
+I wanted to make you play with your cum today but it seems you don't have enough stored #EmoteSad @TempFlag(png__not_enough_cum)
+Well I can still make you lick some precum #Grin @Goto(edge_loops)
+(png__not_enough_cum)
+@NullResponse @Goto(edge_loops)
+(enough_cum)
+I see that you have enough cum stored to have fun together #Emote
+Go get it out of the freezer, a coffee spoon and a bowl of hot water large enough to put you container in it
+Do you have them?
+[yes]Alright, open the container and put it in the water bowl
+@DifferentAnswer What are you waiting for... Do you have them both?
+Make sure no water goes in it
+It should be light enough to float
+That will unfreeze your cum faster
+In the meantime we can continue to have some fun together @BookmarkModule
+@End
+(cum_play_waiting)
+Is your cum unfrozen?
+[yes]Good we can start the <i>real</i> fun! #Grin @Goto(cum_play_start)
+[no]Oh we'll have to keep you busy a bit longer then
+@DifferentAnswer is it or not?
+And I think the best way to do that is by whetting your appetite! #lol
+(cum_play_edge_loops)
+Get to the edge for me @EdgeHold
+That's a start
+Now another one! @EdgeHold
+Are you leaking precum yet?
+[yes]Ohoh we are getting there then #Grin
+[no]Hmmm that means you need more edges! #Grin @Goto(edge_loops)
+@DifferentAnswer Are you leaking or not?
+Edge a last time! @EdgeHold
+Now while it fade, scoop that precum with your index
+Watch it glistening on your finger
+And lick it clean! #Grin
+See it's easy @BookmarkModule
+@End
+@NullResponse @Goto(cum_play_waiting)
+(cum_play_start)
+First let's get you all worked up with an edge @EdgeHold
+Now while it's fading I want you to use one finger and put it in the container
+Get some cum on the tip
+Now get it out
+Look at the cum on it
+Lick your lips
+And smear it on them
+Just like lipgloss! #lol
+@NullResponse @ChangeVar[png__cum_loads_stored]=[png__cum_loads_stored]-[1]
+@NullResponse @If[png__cum_loads_stored]<=[0]Then(cum_play_done)
+Do it again
+All the way down
+But this time...
+You will smear it under your nose #lol
+Now you have the taste on your lips and the smell under your nose #Grin
+@NullResponse @ChangeVar[png__cum_loads_stored]=[png__cum_loads_stored]-[1]
+@NullResponse @If[png__cum_loads_stored]<=[0]Then(cum_play_done)
+Time to get serious
+But first give me an edge! @Edge
+While it fade put your finger down there again and grab a little more cum
+Lick your lips
+Take a deep breath through your nose
+And lick your finger clean! #Grin
+You see it's not that terrible #lol
+@NullResponse @ChangeVar[png__cum_loads_stored]=[png__cum_loads_stored]-[1]
+@NullResponse @If[png__cum_loads_stored]<=[0]Then(cum_play_done)
+Now to see if you have the potential of being a true cum slut for me #Grin
+I want you to grab half of the remaining cum with the spoon
+And watch it while you edge another time for me! @EdgeHold
+Now put the spoon in your mouth and swallow all that cum! #Grin
+That's so #Hot
+I can barely contain myself! #Grin
+But we still have some cum left #Emote
+And my mother always told me we should never waste food!
+Think about all the cum craved slut out there... #lol
+So scoop all the remaining cum in that spoon
+I want you to put it all in your mouth but do not swallow yet!
+Keep it there while you edge for me @Edge
+Now you can swallow!
+Congratulation! You did it!
+You hate it all for me #Grin
+I am so proud of my #PetName
+Too bad we'll have to wait for you stock up to do that again #EmoteSad
+@NullResponse @ChangeVar[png__cum_loads_stored]=[0]
+(cum_play_done)
+So how was it?
+[good,great,amazing,fine,yes]I knew you'd like it, you have so much potential as a cum guzzler #lol
+[horrible,terrible,bad,disgusting,no]Ohh but you still did it for me and that makes me very happy! #Grin
+@DifferentAnswer Did you like it or not?
+Maybe I'll make you cum just to see you eat it next time
+See the good side, at least you would be able to cum #lol
+@End
+@Info If you have enough cum stored in the freezer, the dom makes you play and eat it. Otherwise she tries to make you lick your precum

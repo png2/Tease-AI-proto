@@ -1,0 +1,37 @@
+@Info Gerund verb form of #Hurt
+@Info OK: "I am #Hurting you"
+@Info
+hurting
+hurting
+hurting
+abusing
+abusing
+abusing
+abusing
+tormenting
+tormenting
+tormenting
+tormenting
+torturing
+torturing
+torturing
+torturing
+harming
+punishing
+mistreating
+pummeling
+@Crazy destroying
+@Crazy annihilating
+@Crazy obliterating
+@DommeLevel4 bruising
+@DommeLevel5 bruising
+@DommeLevel5 damaging
+@DommeLevel5 damaging
+@DommeLevel4 injuring
+@DommeLevel5 injuring
+@DommeLevel4 wounding
+@DommeLevel5 wounding
+@DommeLevel4 mauling
+@DommeLevel5 mauling
+@DommeLevel4 maiming
+@DommeLevel5 maiming

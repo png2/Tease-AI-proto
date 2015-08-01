@@ -1,0 +1,3 @@
+#StartStroking @StartStroking
+@End
+@Info fast start for testing purpose

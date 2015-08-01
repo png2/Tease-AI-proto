@@ -1,0 +1,17 @@
+@Info Command verb
+@Info OK: "#Feel the pain"
+@Info
+@Info NOT OK: "Do you #Feel good?"
+@Info NOT OK: "How does that #Feel?"
+@Info
+Feel
+Feel
+Feel
+Feel
+<i>Feel</i>
+Sense
+Sense
+Sense
+Experience
+Enjoy
+Savor

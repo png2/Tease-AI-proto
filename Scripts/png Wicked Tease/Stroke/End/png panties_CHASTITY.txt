@@ -1,0 +1,123 @@
+#TimeToFindIfYouGetToCum
+Now let's see...
+Oh yeah, you're still locked in that cage aren't you? #Lol
+Oh well, I guess there's nothing else I can do
+You just won't be able to cum #GeneralTime
+And I was feeling so generous too #Grin
+Alright I'll give you a chance to at least get out of your cage! @CheckFlag(png__no_panties,png__already_asked_panties_delivered,png__buying_panties,png__panties,png__wearing_panties)
+Oh it seems we never did any panties play until now #PetName
+Well it's time we start to do it then #Grin
+Do you like panties?
+[yes]Of course, all men like panties even #PetName like you #lol
+[no]Oh I thought all men loved them... Maybe you are gay #lol
+@DifferentAnswer Do you like them yes or no?
+But I think you didn't understand my question properly
+I don't really care if you like panties when women like me wear them...
+What interest me is if you like to wear them, silly #PetName #Grin
+So have you ever wore panties?
+[yes]
+[no]Well there is a start to everything I guess #lol @Goto(never_wore)
+@DifferentAnswer Have you or not?
+Ohoh I knew you were a little pervert #lol
+(have_panties_or_not)
+Do you have some right now?
+[yes]A pervert with panties... What an amazing find! I am so glad #Grin @SetFlag(png__panties) @DeleteFlag(png__buying_panties)  @Goto(png__panties)
+[no]It's not a problem, we can correct that very easily #Grin 
+@DifferentAnswer do you or not?
+You just have to go in a shop and buy some
+See it's easy! #Grin
+But don't worry I won't force you to go to a real store, you can order them online
+That's right I want you to buy panties for me #EmoteHappy
+Will you do it?
+[yes]Great! But I think I'll keep you in chastity until they arrive for now #lol @SetFlag(png__buying_panties) @DeleteFlag(png__no_panties)
+[no]Oh really? @Goto(refuse_to_buy)
+@DifferentAnswer will you buy some panties or not?
+Yeah #PetName you should have negociated your freedom before agreeing #Grin
+Not that it would have changed your fate... #lol
+Any way time for you to go order those panties @Goto(end)
+(refuse_to_buy)
+Even if I told you that would give you a chance to get free of this cage?
+[yes]Well it's your choice then, you stay in that cage @SetFlag(png__no_panties) @Goto(end)
+[no]I knew you were much more desperate than you wanted to show #Grin @SetFlag(png__buying_panties) @DeleteFlag(png__no_panties)
+@DifferentAnswer yes or no?
+So now you have to buy some!
+And maybe I'll free you later...
+Well I never said <i>when</i> I would free you if you agreed! #lol
+Don't pout
+We will have a lot of fun with those panties you'll see #Grin
+Any way time for you to go order those panties @Goto(end)
+(never_wore)
+Would you accept to wear some if I asked you to?
+[yes]Amazing @Goto(have_panties_or_not)
+[no]That's not very nice of you #EmoteSad
+@DifferentAnswer yes or no?
+Even if I told you that could get you out of your #ChastityCage?
+[yes]Looks like you are quite stubborn on that subject.... Or maybe just not desperate enough #Grin @SetFlag(png__no_panties)
+[no]I knew I could make you change your mind #Grin @Goto(have_panties_or_not)
+@DifferentAnswer yes or no?
+Anyway you just lost your chance of getting unlocked for today @Goto(end)
+(png__no_panties)
+Since so far you always refused to wear panties for me
+I think it's time to see if your time in cock prison made you change your mind...
+Would you accept to wear panties for me to get a chance to get free right now?
+[yes]I knew that i could convince you with my great arguments #lol @Goto(have_panties_or_not)
+[no]Ohh still not desperate enough...
+@DifferentAnswer yes or no?
+Then I guess that's it for today's chance of getting released
+Better luck next time #Grin @Goto(end)
+(png__already_asked_panties_delivered)
+Oh wait your panties aren't there yet...
+Well there goes your chance to get free then #lol
+i know it's not fair
+But who said I had to be fair with you? #Grin
+Next time you'll go buy them in a store that will be faster #lol @Goto(end)
+(png__buying_panties)
+Oh wait did you get your panties?
+[yes]Great @SetFlag(png__panties) @DeleteFlag(png__buying_panties) @Goto(png__panties)
+[no]Too bad for you...
+@DifferentAnswer did you or not?
+Now you'll just have to wait one more day! @Goto(end)
+(png__panties)
+It's quite easy
+(panties_instructions)
+In order to get free you have to wear your panties for a whole day
+That means putting them after getting up and sleeping with them the next night
+Once you do that, you'll be allowed to take your #ChastityCage off
+That means that you can stay in your cage one more day and be sure to be released
+Or refuse and try your luck again tomorrow #Grin
+So do you want to wear your panties for a full day?
+[yes]Ohoh, good choice #PetName #EmoteHappy
+[no]Well that means we'll see each other again tomorrow then #EmoteHappy @Goto(end)
+@DifferentAnswer yes or no?
+Remember you have to keep your cage on until you wore you panties for a full day and a full night!
+And that also means that we can't play together until you performed that task
+One day without me will probably remember you how much you need me anyway #lol
+Now I'll trust you to keep your word since I can't be there to watch over you all the time #EmoteSad @ChastityOff
+But remember you promised to do it for me so no backing off now! @Goto(end)
+(png__wearing_panties)
+Well since you are already wearing your panties you'll have to start by washing them
+Unless you already have several pairs #EmoteHappy @Goto(panties_instructions)
+(end)
+@NullResponse @CheckFlag(png__wearing_nippleclamps)
+(end_clamps_checked)
+@NullResponse @CheckFlag(png__wearing_diapers,png__wearing_abdl_outfit)
+(resume_wearing_checks)
+#Bye @EndTease
+@End
+(png__wearing_nippleclamps)
+Oh I almost forgot about those nipple clamps
+They must hurt like hell #Grin
+You know it will hurt even more when you take them off...
+Maybe I should be #Kind and make you keep them on instead #lol
+Alright Take them off now #Emote
+Massage your #Tits a bit to make them feel better @Goto(end_clamps_checked)
+(png__wearing_diapers)(png__wearing_abdl_outfit)
+@NullResponse @Chance05(stay_in_diapers)
+You can take all your baby stuff off #PetName
+I hope you didn't dirty your diaper #Emote @Goto(resume_wearing_checks)
+(stay_in_diapers)
+Since I had so much fun seeing you in that baby getup
+I think I should keep you in it longer
+I want you to stay in it until you wet your diaper *evil*
+So, if you have to go, I suggest you drink a a lot of water to speed things up... #lol @Goto(resume_wearing_checks)
+@Info Depending of your panties status the dom will try make wear them for a whole day or buy some to get out of chastity

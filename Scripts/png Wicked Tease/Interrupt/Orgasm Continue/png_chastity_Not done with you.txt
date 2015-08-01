@@ -1,0 +1,52 @@
+#CumForMe
+[came, finished, did] Good #Grin
+[thank, gracias, merci, grateful, good, amazing, incredible] You're welcome #PetName #Grin
+@AcceptAnswer Hehe just calm down now
+I hope you enjoyed that orgasm
+I'm sure it feels good to finally be free of some of that cum
+But the thing is...
+I don't want that #Cock to feel good, I want it to ache #Grin
+So now I have to make sure that good feeling is as fleeting as possible
+By teasing you all over again @CheckFlag(png__facial)
+(resume)
+@NullResponse @CheckFlag(png__has_chastity,png__wearing_nippleclamps)
+(tease)
+It might be a little sore at first
+But I'm pretty sure I can put the life back in that #Cock #EmoteHappy
+Start stroking @StartStroking
+@End
+(png__has_chastity)
+@NullResponse @SetVar[png_continue_chastity_days]=[#DomLevel]
+@NullResponse @ChangeVar[png_continue_chastity_days]=[png_continue_chastity_days]*[2]
+But I'm ready to make you an offer... @CheckFlag(png__wearing_nippleclamps)
+(resume_offer)
+I'll let you go if you put your #ChastityCage on for @ShowVar[png_continue_chastity_days] days #lol
+Imagining you locked in that #ChastityCage is probably the only thing more fun that teasing and hurting you #Grin
+So what do you choose : chastity or teasing?
+[chastity,cage,lock]Alright it's <i>my</i> #Cock but your choice! #Grin @Goto(chastity)
+[teasing,tease,stroke]Alright it's <i>my</i> #Cock but your choice! #Grin @Goto(tease)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose] You'd choose whichever one pleases me the most? @Goto(Pleases Me)
+@DifferentAnswer chastity or teasing?
+(Pleases Me)
+Well since it's up to me #Grin 
+Maybe I will lock you up... #EmoteHappy @Chance25(chastity)
+No, nothing give me more pleasure than the thought of your #Cock
+Aching in your grasp as I make you suffer for me @Goto(tease)
+(chastity)
+Go put you cage on!
+(put_cage_loop)
+@NullResponse @Wait(30)
+Is it on?
+[yes]
+[no]Hurry up then! @Goto(put_cage_loop)
+@DifferentAnswer is it or not? @Goto(put_cage_loop)
+Good! @ChastityOn
+Well you chose your fate! See ya in @ShowVar[png_continue_chastity_days] days then #lol
+@EndTease
+@End
+(png__wearing_nippleclamps)
+Before anything you need to take those clamps off!
+#Yes I know it hurts but stop crying or I'll make you put them back #Grin @Goto(resume_offer)
+(png__facial)
+And knowing that your face is covered in cum will I do is going to add so much more to <i>my</i> fun
+So no cleaning until we are done #PetName #Grin @Goto(resume)

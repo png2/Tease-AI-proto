@@ -1,0 +1,39 @@
+@NullResponse @CheckFlag(png__kneeling)
+You know what I find #Hot?
+Seeing you kneeling for me! #Grin
+So get on your knees and start stroking @TempFlag(png__kneeling) @StartStroking
+@End
+(png__kneeling)
+Are you still kneeling for me #PetName?
+[yes]Good! @Goto(kneeling)
+[no]I don't remember telling you to get up... @Goto(punishment)
+@DifferentAnswer are you kneeling yes or no?
+(kneeling)
+I like it when you are an obedient #PetName
+Now should I let you get up or not? I wonder... @Chance33(get_up)
+#No you are too cute on your knees #Grin
+I'd rather have you stay there #lol
+Start stroking again @StartStroking
+@End
+(punishment)
+I'll have to punish you!
+But first get back on your knees #Now!
+Then let's start by teaching this #Cock what happens when you disobey... @CBTCock
+Now those #Balls @CBTBalls
+And you better stay on your knees until I say otherwise! 
+You can start #Stroking #PetName @StartStroking
+@End
+(get_up)
+Alright, I'll let you get back on your chair for now @DeleteFlag(png__kneeling)
+But I might change my mind so keep this pillow close by #Grin @Chance33(get_up_temporary)
+And you can start stroking again @StartStroking
+@End
+(get_up_temporary)
+And you can start stroking again @StartStroking @BookmarkLink
+@End
+I think you were a lot cuter when you were kneeling for me... #Grin
+So I changed my mind and I want you back on your knees! #lol @TempFlag(png__kneeling)
+Yes I can be feeble and I know you like me that way #Emote
+And since I am nice you can stroke again @StartStroking
+@End
+@Info Either makes you kneel if you are not, let you sit down again or keep you kneeling

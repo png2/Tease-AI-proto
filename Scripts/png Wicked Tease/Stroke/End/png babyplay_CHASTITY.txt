@@ -1,0 +1,119 @@
+#TimeToFindIfYouGetToCum
+Now let's see...
+Oh yeah, you're still locked in that cage aren't you? #Lol
+Oh well, I guess there's nothing else I can do
+You just won't be able to cum #GeneralTime
+And I was feeling so generous too #Grin
+Alright I'll give you a chance to at least get out of your cage! @CheckFlag(png__no_abdl,png__buying_abdl,png__buying_abdl_outfit,png__abdl,png__abdl_outfit)
+Oh it seems we never did any baby play until now #PetName
+Well it's time we start to do it then #Grin
+You know I always dreamed of having my own grown up baby...
+So since you are all locked up and quite desperate to get out we might find a solution that pleases us both #lol
+Have you ever tried some adult baby or abdl play before?
+[yes]
+[no]Well there is a start to everything I guess #lol @Goto(never_wore)
+@DifferentAnswer Have you or not?
+Ohoh I knew you were a little pervert #lol
+(have_diapers_or_not)
+Do you have some diapers and a pacifier right now?
+[yes]A pervert with diapers ready... What an amazing find! I am so glad #Grin @SetFlag(png__abdl) @DeleteFlag(png__buying_abdl)  @Goto(png__abdl)
+[no]It's not a problem, we can correct that very easily #Grin 
+@DifferentAnswer do you or not?
+You just have to go in a shop and buy some
+See it's easy! #Grin
+But don't worry I won't force you to go to a real store, you can order them online
+That's right I want you to buy diapers and a pacifier for me #EmoteHappy
+You should also buy a baby bottle while you are at it
+Will you do it?
+[yes]Great! But I think I'll keep you in chastity until they arrive for now #lol @SetFlag(png__buying_abdl) @DeleteFlag(png__no_abdl)
+[no]Oh really? @Goto(refuse_to_buy)
+@DifferentAnswer will you buy some diapers or not?
+Yeah #PetName you should have negociated your freedom before agreeing #Grin
+Not that it would have changed your fate... #lol
+Any way time for you to go order those diapers and a cute pacifier @Goto(end)
+(refuse_to_buy)
+Even if I told you that would give you a chance to get free of this cage?
+[yes]Well it's your choice then, you stay in that cage @SetFlag(png__no_abdl) @Goto(end)
+[no]I knew you were much more desperate than you wanted to show #Grin @SetFlag(png__buying_abdl) @DeleteFlag(png__no_abdl)
+@DifferentAnswer yes or no?
+So now you have to buy some!
+And maybe I'll free you later...
+Well I never said <i>when</i> I would free you if you agreed! #lol
+Don't pout
+We will have a lot of fun with those diapers you'll see #Grin
+Any way time for you to go order those diapers and a pacifier @Goto(end)
+(never_wore)
+Would you accept to wear some if I asked you to?
+[yes]Amazing @Goto(have_diapers_or_not)
+[no]That's not very nice of you #EmoteSad
+@DifferentAnswer yes or no?
+Even if I told you that could get you out of your #ChastityCage?
+[yes]Looks like you are quite stubborn on that subject.... Or maybe just not desperate enough #Grin @SetFlag(png__no_abdl)
+[no]I knew I could make you change your mind #Grin @Goto(have_diapers_or_not)
+@DifferentAnswer yes or no?
+Anyway you just lost your chance of getting unlocked for today @Goto(end)
+(png__no_abdl)
+Since so far you always refused to wear diapers for me
+I think it's time to see if your time in cock prison made you change your mind...
+Would you accept to wear diapers for me to get a chance to get free right now?
+[yes]I knew that i could convince you with my great arguments #lol @Goto(have_diapers_or_not)
+[no]Ohh still not desperate enough...
+@DifferentAnswer yes or no?
+Then I guess that's it for today's chance of getting released
+Better luck next time #Grin @Goto(end)
+(png__buying_abdl)
+Oh wait did you get your diapers?
+[yes]Great @SetFlag(png__abdl) @DeleteFlag(png__buying_abdl) @Goto(png__abdl)
+[no]Too bad for you...
+@DifferentAnswer did you or not?
+Now you'll just have to wait one more day! @Goto(end)
+(png__abdl_outfit)
+It's quite easy
+(abdl_instructions)
+In order to get free you have to wear your full baby outfit and diapers until you pee in them @GotoDommeApathy
+(png__abdl)
+It's quite easy
+(abdl_instructions)
+In order to get free you have to wear your diapers until you pee in them @GotoDommeApathy
+(ApathyLevel1)(ApathyLevel2)
+Since I'm nice I'll even allow you to go stand in your shower or bathtub when you wet them @Goto(resume_diapers)
+(ApathyLevel3)
+Don't worry about the mess you might make, you can stand in the bathroom or anywhere that has tiles floor
+But You cannot wet them while standing in the shower or bathtub! #Grin
+It would be too easy otherwise lol @Goto(resume_diapers)
+(ApathyLevel4)
+And when you feel the urge to pee overtaking you I want you to go lie down in your bed
+#Yes I'm gonna make you wet your bed
+But don't worry the diaper should hold almost everything #lol @Goto(resume_diapers)
+(ApathyLevel5)
+And when you feel the urge to pee overtaking you I want you to go lie down in your bed
+#Yes I'm gonna make you wet your bed
+But don't worry the diaper should hold almost everything #lol 
+And the worst is still to come
+I want you to stay in this diaper for 1 hour after you messed it! #Grin @Goto(resume_diapers)
+(resume_diapers)
+So do you want to mess your diapers?
+[yes]Ohoh, good choice #PetName #EmoteHappy
+[no]Well that means I haven't made desperate enough, I'll have to work even harder on that #Grin @Goto(end)
+@DifferentAnswer yes or no?
+Remember you have to keep your cage on until you wet your diapers!
+And that also means that we can't play together until you performed that task
+Now I'll trust you to keep your word since I can't be there to watch over you all the time #EmoteSad @ChastityOff
+But remember you promised to do it for me so no backing off now! @Goto(end)
+(end)
+@NullResponse @CheckFlag(png__wearing_nippleclamps)
+(end_clamps_checked)
+@NullResponse @CheckFlag(png__wearing_panties)
+(resume_wearing_checks)
+Cya
+@End
+(png__wearing_nippleclamps)
+Oh I almost forgot about those nipple clamps
+They must hurt like hell #Grin
+You know it will hurt even more when you take them off...
+Maybe I should be #Kind and make you keep them on instead #lol
+Alright Take them off now #Emote
+Massage your #Tits a bit to make them feel better @Goto(end_clamps_checked)
+(png__wearing_panties)
+And don't forget to take your panties off and wash them #PetName! @Goto(resume_wearing_checks)
+@Info Depending of your diapers status the dom will try wet them or buy some to get out of chastity

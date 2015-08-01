@@ -1,0 +1,20 @@
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @Goto(stop kneeling)
+(ApathyLevel2)
+@NullResponse @Chance10(keep kneeling)
+@NullResponse @Goto(stop kneeling)
+(ApathyLevel3)
+@NullResponse @Chance30(keep kneeling)
+@NullResponse @Goto(stop kneeling)
+(ApathyLevel4)
+@NullResponse @Chance70(keep kneeling)
+@NullResponse @Goto(stop kneeling)
+(ApathyLevel5)
+@NullResponse @Goto(keep kneeling)
+(stop kneeling)
+Alright you can get back on your chair @DeleteFlag(png__kneeling)
+@End
+(keep kneeling)
+Nope, you'll keep kneeling for me for a little more #Emote
+@End

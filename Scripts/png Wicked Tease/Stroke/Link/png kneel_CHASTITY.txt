@@ -1,0 +1,46 @@
+@NullResponse @CheckFlag(png__kneeling)
+You know what I find #Hot?
+Seeing you kneeling for me! #Grin
+So get on your knees before I start teasing you again @TempFlag(png__kneeling) @StartTaunts
+@End
+(png__kneeling)
+Are you still kneeling for me #PetName?
+[yes]Good! @Goto(kneeling)
+[no]I don't remember telling you to get up... @Goto(punishment)
+@DifferentAnswer are you kneeling yes or no?
+(kneeling)
+I like it when you are an obedient #PetName
+Now should I let you get up or not? I wonder... @Chance33(get_up)
+#No you are too cute on your knees #Grin
+I'd rather have you stay there #lol
+Let's start the teasing again @StartTaunts
+@End
+(punishment)
+I'll have to punish you!
+Let's you wee how nasty I could be if I wanted to...
+Go get a handfull of rice grains, small rocks, frozen peas of whatever you find similar to that...
+Let me now when you have them
+@AcceptAnswer
+Good I want you to put them on the floor
+And kneel on them for the next 5 minutes!
+Make sure they are under your knees
+See you in 5 #PetName #lol @Wait(300)
+I hope you learnt your lesson...
+Next time I might make you kneel on them until the end of our session #Grin
+And now you better stay on your knees until I say otherwise! 
+Already let's tease this caged cock a little more @StartTaunts
+@End
+(get_up)
+Alright, I'll let you get back on your chair for now @DeleteFlag(png__kneeling)
+But I might change my mind so keep this pillow close by #Grin @Chance33(get_up_temporary)
+And let's tease this caged cock a little more @StartTaunts
+@End
+(get_up_temporary)
+And let's tease this caged cock a little more @StartTaunts @BookmarkLink
+@End
+I think you were a lot cuter when you were kneeling for me... #Grin
+So I changed my mind and I want you back on your knees! #lol @TempFlag(png__kneeling)
+Yes I can be feeble and I know you like me that way #Emote
+And since I am nice I guess I'll just tease more while I'm at it #lol @StartTaunts
+@End
+@Info Either makes you kneel if you are not, let you sit down again or keep you kneeling

@@ -1,0 +1,113 @@
+#SubName... @CheckFlag(png__marked_cock,png__marked_chest,png__marked_head)
+I love the control I have over you
+Over your mind...
+Over your body...
+Over your cock! #Grin
+I have always heard that you can control a boy with his cock
+But I never knew it was <i>that</i> efficient
+And so much fun! #lol
+I want you to realize that your #Cock isn't yours any more
+It's mine now! #Grin
+The fact that it's attached to your body is just a technical detail
+I can do whatever I want to it! #lol
+To make this clear I want you to grab a sharpie, permanent marker or, if you don't have any, a very thick pen
+And I want you to write <i>MY</i> name on <i>MY</i> cock! #Grin @TempFlag(png__marked_cock) @Wait(30)
+Let it dry a bit
+Contemplate what you just did
+Admit that I own your #Cock
+And that by owning it, I own you! #Grin
+Say it out loud : "#DomHonorific #DomName owns my #Cock "
+Now : "By owning my #Cock she owns me!"
+Good #PetName
+I'm sure you will soon realize how true it is
+If you haven't yet... #lol
+Now you can start stroking it again @StartStroking
+@End
+(png__marked_cock)
+I hope that marking on your cock is holding up! #Grin
+If not redo it
+You'll realize that being my property can be a great thing
+I'll make you experience things you never dreamed of
+Make you do things you didn't even dare fantasize about
+All while keeping you horny all the time
+Sometimes it will be hard for you
+But remember that I do it for your own good
+The fact that it's so fun for me is just a bonus #Grin @GotoDommeApathy
+(ApathyLevel1)
+You can start #Stroking <i>my></i> #Cock while all this sinks into your head @StartStroking
+@End
+(ApathyLevel2)
+@NullResponse @Chance10(mark_chest)
+You can start #Stroking <i>my></i> #Cock while all this sinks into your head @StartStroking
+@End
+(ApathyLevel3)
+@NullResponse @Chance05(mark_head)
+@NullResponse @Chance25(mark_chest)
+You can start #Stroking <i>my></i> #Cock while all this sinks into your head @StartStroking
+@End
+(ApathyLevel4)
+@NullResponse @Chance10(mark_head)
+@NullResponse @Chance50(mark_chest)
+You can start #Stroking <i>my></i> #Cock while all this sinks into your head @StartStroking
+@End
+(ApathyLevel5)
+@NullResponse @Chance25(mark_head)
+@NullResponse @Chance75(mark_chest)
+You can start #Stroking <i>my></i> #Cock while all this sinks into your head @StartStroking
+@End
+(mark_chest)
+I don't think marking your #Cock is enough...
+So take out that marker again
+And this time write "Property of #DomHonorific #DomName" on your chest! #Grin @TempFlag(png__marked_chest)
+Don't worry your clothes will cover it
+Well I hope you don't have to change at work or plan on going to the gym... #lol
+You can start stroking while it dries @StartStroking
+@End
+(mark_head)
+I don't think marking your #Cock is enough...
+So take out that marker again
+The world should know what you are
+and you should be proud of it! #Grin
+So I want you to write "#PetName" on your forehead
+Do it!
+I already own your #Cock
+So let me own you totally
+The rest of the world doesn't matter
+Only <i>I</i> matter! #Grin
+Did you do it?
+[yes] Good #PetName! I am so happy #EmoteHappy
+[no] Oh is that too extreme for you? @Goto(mark_head_punishment)
+@DifferentAnswer Did you or not?
+I hope this permanent marker is not false advertising #lol @TempFlag(png__marked_head)
+But don't worry it'll wear off
+Well eventually
+Maybe after a lot of scrubbing #lol
+I want you to go look at yourself in a mirror for a few minutes when I tell you to
+Realizing what you did for me
+Realizing that I own you completely now! #Grin
+And since you have been so obedient I'll let you edge once while you do it
+But you better not cum! #Grin
+Now go and let me know when you are back!
+@AcceptAnswer Welcome back #PetName
+Did you enjoy it? Did it make you feel completely owned by me?
+[yes]Great! That's where I want your mind to be! #Grin
+[no]Don't worry, you'll be begging me to mark all over your body soon! #lol
+@DifferentAnswer Did it or not?
+Now you can start #Stroking <i>my</i> #Cock again @StartStroking
+@End
+(mark_head_punishment)
+It's ok I won't force you
+I'm sure one day you'll do it without even hesitating one second #Grin
+But I can't let you off the hook after you refused me
+That wouldn't be fair! #lol @CBT
+Start stroking to see if it makes the pain subside faster #lol @StartStroking
+@End
+(png__marked_chest)(png__marked_head)
+Are all those markings on your body still there?
+[yes]Good! I like to know that my words are still all over you! #Grin
+[no]Then redo them! Maybe I'll make you tatoo them to be sure they stay next time #lol
+@DifferentAnswer Are they or not?
+Don't worry I won't add more for now
+I just wanted to make sure you remember who owns you #Grin
+Now start stroking again @StartStroking
+@End

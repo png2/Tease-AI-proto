@@ -1,0 +1,79 @@
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+Alright take it off #PetName, you suffered enough for now @ChastityOff @TempFlag(png__chastityoff_tmp)
+@NullResponse @CheckStrokingState
+(ApathyLevel2)
+I wonder if you have been good enough to be free...
+Do you thing you did?
+[yes] Ok, then let's free you for now #PetName #EmoteHappy @ChastityOff @TempFlag(png__chastityoff_tmp)
+[no] Hmmm and you want me to free you? I need to think about it @Wait(20) 
+@DifferentAnswer Yes or No?
+@NullResponse @Goto(stay_in_chastity_lvl2)
+(ApathyLevel3)
+I wonder if you have been good enough to be free...
+Do you thing you did?
+[yes] @NullResponse
+@AcceptAnswer Hmmm and you want me to free you? I need to think about it @Wait(20) 
+@NullResponse @Goto(stay_in_chastity_lvl3)
+(ApathyLevel4)
+But I don't think you deserve to be free... 
+In fact I don't really care about what you think... 
+I'm the only one who decide of your fate! #Grin @Chance25(punishment) @Goto(stay_in_chastity_lvl4)
+(ApathyLevel5)
+No way I'll let you free!
+I am the one who decide your fate
+(punishment)
+In fact you deserve punishment for asking such a silly thing! @AFKOn @WritingTask(I should be grateful to be in chastity for #DomName)
+Still want to get out #PetName? #lol @AFKOff 
+[yes]Oh I guess you didn't learn that lesson then @Goto(punishment2)
+[no]Good
+@DifferentAnswer Do you or not?
+I knew you could learn when you put your mind to it! #Grin
+@NullResponse @CheckStrokingState
+(stay_in_chastity_lvl2)
+@NullResponse @Chance20(stay_in_chastity)
+Alright, I'll be #Kind for this time and let you out! @ChastityOff @TempFlag(png__chastityoff_tmp)
+@NullResponse @CheckStrokingState
+(stay_in_chastity_lvl3)
+@NullResponse @Chance60(stay_in_chastity)
+Alright, I'll be #Kind for this time and let you out! @ChastityOff @TempFlag(png__chastityoff_tmp)
+@NullResponse @CheckStrokingState
+(stay_in_chastity_lvl4)
+@NullResponse @Chance75(stay_in_chastity)
+Alright, I'll be #Kind for this time and let you out! @ChastityOff @TempFlag(png__chastityoff_tmp)
+But don't assume I'll always be that #Kind because I won't!
+@NullResponse @CheckStrokingState
+(stay_in_chastity)
+No way I'll let you free! You don't deserve it...
+@NullResponse @CheckStrokingState
+(Failed Writing Task)
+Wow not only you ask to get out but you fail the punishment... @AFKOff 
+Get out of my sight for today, I don't want to see you again for a while!
+@EndTease
+@End
+(punishment2)
+Go get a wooden spoon, a hairbrush, a spatula or something like that...
+And hit your balls #Random(5,10) times with it! Make each one count!
+(loop_punishment)
+@NullResponse @Wait(60)
+Done?
+[yes]Good, I hope you are crying right now...
+[no]You are too slow! That means 5 more slaps @Goto(loop_punishment)
+@DifferentAnswer Can't you answer by yes or no? That means 5 more slaps to teach you @Goto(loop_punishment)
+@NullResponse @CheckStrokingState
+(Sub Stroking)
+@NullResponse @CheckFlag(png__chastityoff_tmp)
+@NullResponse @StartTaunts
+@End
+(Sub Not Stroking)
+@NullResponse @DeleteFlag(png__chastityoff_tmp)
+@End
+(png__chastityoff_tmp)
+(cage_off_lopp)
+@Wait(30)
+Are you ready to continue?
+[yes]Let's do it then
+[no]I thought you'd be faster than that to get out @Goto(cage_off_lopp)
+@DifferentAnswer Maybe I should just keep you locked in the end... @Goto(cage_off_lopp)
+Since you are free I guess you can start stroking for now @DeleteFlag(png__chastityoff_tmp) @StartStroking
+@End

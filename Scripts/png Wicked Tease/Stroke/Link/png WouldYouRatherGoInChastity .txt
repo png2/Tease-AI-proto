@@ -1,0 +1,92 @@
+@NullResponse @CheckFlag(png__no_chastity,png__buying_cage,png__has_chastity) 
+Seeing you #Hurt yourself like that gives me so many ideas... #Grin
+Like...
+Do you happen to have a chastity cage #PetName?
+[yes] #Yay that will be fun then @SetFlag(png__has_chastity) @Goto(png__has_chastity)
+[no] Damn so many wasted fun potential :(
+@DifferentAnswer Yes or no?
+You should really get one so I can have even more fun with you and this #Cock! #lol
+Would you consider do that for me?
+[yes] That's so great! I can't wait for you to have one!!! #Grin @SetFlag(png__buying_cage) @Goto(Start Stroking for real)
+[no] That's ok we can have fun some other way #Emote @SetFlag(png__no_chastity) @Goto(Start Stroking for real)
+@DifferentAnswer Yes or no?
+(png__no_chastity)
+Since you will not let me lock this #Cock away
+I'm #Gonna make it suffer instead *evil* @CBTCock
+Did that make you change your mind ? #Grin
+[yes] That's so great! I can't wait for you to have one!!! #Grin @DeleteFlag(png__no_chastity) @SetFlag(png__buying_cage) @Goto(Start Stroking for real)
+[no] Damn maybe I should be even harsher with you next time in that case #lol @Goto(Start Stroking for real)
+@DifferentAnswer Yes or no?
+(png__buying_cage)
+Did this #ChastityCage arrive yet?
+[yes] #Yay @DeleteFlag(png__buying_cage) @SetFlag(png__has_chastity) @Goto(png__has_chastity)
+[no] Damn, I'm so impatient to start teasing you with it... #Grin
+@DifferentAnswer Yes or no?
+I guess I'll just make you edge while waiting @Edge
+#LetTheEdgeFade
+@RapidTextOn And now has it arrived??? #lol
+I know, I know...
+Alright give me another edge then @RapidTextOff @Edge
+Don't worry you will not have to do that anymore once the #ChastityCage is there... #lol
+#LetTheEdgeFade @Goto(Start Stroking for real)
+(png__has_chastity)
+@RapidTextOnIf you had the choice right now
+Would you rather lock yourself up in your #ChastityCage
+Or start #Stroking that #Cock again? @RapidTextOff
+[first, chastity, cage] You'd really rather get locked up than have to touch yourself one more time?
+[second, stroke, stroking, jerk, masturbate, last] That works for me #Grin @Goto(Start Stroking)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose] You'd choose whichever one pleases me the most? @Goto(Pleases Me)
+@DifferentAnswer Chastity or stroking #PetName?
+Wow @Chance50(chastity)
+Knowing that is going to turn me on so much more now #Grin @Chance10(chastity_after_chastity_choice_and_let_stroke)
+@NullResponse @Goto(Start Stroking for real)
+(Pleases Me)
+Well since it's up to me #Grin 
+Maybe I will lock you up... #EmoteHappy @Chance25(chastity)
+No, nothing give me more pleasure than the thought of your #Cock
+Aching in your grasp as I make you suffer for me
+I guess what I'm saying is @Chance20(hurt2)
+(Start Stroking)
+@NullResponse @Chance10(chastity_after_stroke)
+(Start Stroking for real)
+Start #Stroking #PetName @StartStroking
+@End
+(chastity)
+#EmoteMoan the thought of your #Cock in that #ChastityCage is so tempting right now!!! @Chance25(hurt)
+@NullResponse @Chance10(change_her_mind)
+#Yes Let's do that! Put on your #ChastityCage for me!!! #Lol
+Let me know when it's on... #Grin 
+[yes,done,put,on]Good #PetName! But the fun for me is not over yet #EmoteHappy @ChastityOn @StartTaunts
+[no]Then put it on #now! @LoopAnswer
+@DifferentAnswer Is it on or not?
+@End
+(hurt)
+No, on second thought let's #Hurt this #Cock instead! @Goto(do_hurt)
+(hurt2)
+It's time to #Hurt your cock! #lol @Goto(do_hurt)
+(do_hurt)
+@NullResponse @CBTCock
+I can be such a #Mean #DomHonorific sometimes...
+But that's why you #Love me, don't you? #Grin
+[yes,of course,love you]Of course you #Love me! #Emote
+@DifferentAnswer Well it doesn't matter what you think, as long as I have fun #Hurting you! #Lol
+Start stroking #PetName @StartStroking
+@End
+(change_her_mind)
+But I think it's still more fun to make you #Stroke #PetName @Goto(Start Stroking for real)
+(chastity_after_stroke)
+Start #Stroking #PetName @StartStroking @BookmarkLink
+@End
+So you would choose #Stroking over chastity
+And you believed that I would let you choose your fate like that? #Grin
+Since I indulged your selfishness earlier it's time to pay the price #PetName @Chance25(hurt2)
+So grab that #ChastityCage... #Grin @Goto(chastity)
+(chastity_after_chastity_choice_and_let_stroke)
+But I think it's still more fun to make you #Stroke #PetName 
+Start #Stroking #PetName @StartStroking @BookmarkLink
+@End
+Hmmm you know what?
+Earlier you choose chastity and I ended up letting you #Stroke...
+But I am starting to think I shouldn't have been so #Kind to you
+So grab that #ChastityCage... #Grin @Goto(chastity)
+@Info Based on the same link written by 1885. But add more impredictability whatever your answer you might end up stroking, in chastity or hurting your cock. The odds change depending on your response and the Dom might change her mind at any moment. If you don't have a cage, the dom will try to convince one to buy one and check if it's arrived if you accept to buy it

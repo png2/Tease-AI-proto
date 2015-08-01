@@ -1,0 +1,15 @@
+@Info Indicating that something is okay
+@Info Note that this is subtlely different from agreeing with someone
+@Info
+@Info OK: "I feel #Okay"
+@Info
+@Info If you wish to indicate casual agreement, use #IAgree instead
+@Info #IAgree includes #Okay among its choices
+@Info
+@Info OK: "#Okay, let's do that instead"
+@Info BETTER: "#IAgree, let's do that instead"
+@Info
+okay
+@SelfYoung ok
+fine
+alright

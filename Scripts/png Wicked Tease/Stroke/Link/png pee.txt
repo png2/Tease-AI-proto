@@ -1,0 +1,201 @@
+You know how much control I have over you @TempFlag(png__pee_holding)
+You know that I love that control
+And I know that <i>you</i> love it too
+Telling you what to do
+What not to do
+Like a little child #Grin @CheckFlag(png__abdl,png__wearing_diapers,png__wearing_abdl_outfit)
+Remember when you were a little child?
+(first_round)
+Before you were potty trained...
+Well I love testing my control over you
+And one fun way to do it is to see if I can overrule your potty training #Grin
+It's a lot harder than you may think
+Even for an amazing #DomHonorific like me #EmoteSad
+Afterall you've been trained to hold it for nearly #SubAge years now...
+But I can always try since it's so fun to make you squirm in front of me #lol
+Alright I want you to fetch a mesuring glass, a bottle, or anything that allow you to know how much liquid there is in it...
+If it can mesure up to 0.5 liter it's even better
+That's 17 onces if you are american #EmoteHappy
+(fetch_loop_1)
+@NullResponse @Wait(30)
+Do you have it?
+[yes]Good
+[no] Then what are you still doing there? @Goto(fetch_loop_1)
+@DifferentAnswer Then what are you still doing there? @Goto(fetch_loop_1)
+Now I want you yo drink 0.5 liter of water before we continue
+I'll show you some pictures in the mean time
+Maybe if I make you drool you'll get more thirsty #lol @ShowLocalImage
+Or maybe I should make you do some exercices to make you sweat @ShowLocalImage
+Anyway drinking water is good for the health @ShowLocalImage
+It is recommanded to drink at least 2 liters per day! @ShowLocalImage
+I wonder how that tease turned into a health advertisment... #lol @UnlockImages
+Oh right, you were drinking water!
+(drink_loop_1)
+Are you done?
+[yes,I'm done]Okay
+[no,not yet,almost,not done]Take your time it's not good to drink too fast @Goto(drink_more_1)
+@DifferentAnswer Did you drink it all yes or no?
+Now I want you to drink another half liter of water while I continue teasing you
+And from now on and until the end of the tease you are forbidden to use the toilets
+I hope you went there before we started #lol
+Now go get some more water
+(fetch_loop_2)
+@NullResponse @Wait(30)
+Do you have it?
+[yes]Good
+[no] Then what are you still doing there? @Goto(fetch_loop_2)
+@DifferentAnswer Then what are you still doing there? @Goto(fetch_loop_2)
+Let's get back to stroking and don't forget to drink it all along the way... @StartStroking @BookmarkLink
+@End
+So did you finish all your water?
+[yes]Good
+[no]Then I want you to drink all that is left in one go!
+@DifferentAnswer Did you drink it all yes or no?
+Now hopefuly you should be starting to feel a tingle in your bladder #Grin
+If not that should start soon enough
+I want you to close your eyes and think about a beautiful and soothing waterfall for one minute #Grin @ShowImage[png/waterfalls/waterfall1.jpg] @Wait(60)
+Relaxing isn't it? And I bet it made you very conscious of your filling bladder #lol @UnlockImages
+Time to refill that water
+I want you to go get half a liter again
+(fetch_loop_3)
+@NullResponse @Wait(30)
+Do you have it?
+[yes]Good
+[no] Then what are you still doing there? @Goto(fetch_loop_3)
+@DifferentAnswer Then what are you still doing there? @Goto(fetch_loop_3)
+Now drink it for me
+You know drinking water can be quite dangerous
+I heard someone died of it for a radio contest
+But don't worry you're not there yet #Grin
+(drink_loop_2)
+@Wait(30)
+Is all the water gone?
+[yes]It's time to continue then
+[no]Hurry up, I know you are not thristy but I don't care #Grin @Goto(drink_loop_2)
+@DifferentAnswer Did you drink it all or not?
+I want you to refill that half liter before we continue
+I think you are starting to see the pattern there #lol
+(fetch_loop_4)
+@NullResponse @Wait(30)
+Do you have it?
+[yes]Good
+[no] Then what are you still doing there? @Goto(fetch_loop_4)
+@DifferentAnswer Then what are you still doing there? @Goto(fetch_loop_4)
+Like last time you'll drink it while I continue to tease you #Emote
+Start stroking @StartStroking @BookmarkLink
+@End
+Now you should definitly be full
+You drank 2 liters after all
+That's a lot of water!
+Do you feel the need to pee?
+[yes]Then you shouldn't fight nature, let it flow #Grin
+[no]I'm sure I can help with that #Grin
+@DifferentAnswer yes or no?
+I know it's not easy
+But it's not about difficulty
+Nor about how disgusting it is
+Or even having to clean that mess later
+#No It's about testing my control
+See if you will #Surrender all your body to me or not
+And I'll give you the choice right now
+Will you #Surrender to me and pee right were you are?
+[yes,surrender,submit,resign,yield,defer,concede]Good #PetName @Goto(pee_training)
+[no]It's ok, I respect your limits
+@DifferentAnswer will you do it or not?
+But that doesn't mean I won't try to make you wet yourself #lol @TempFlag(png__pee_refuse)
+It would be even more fun to do it against your will
+You can resist all you want but you still have to follow my instructions #Grin
+(pee_training)
+Now how can I help you release your bladder and break all that conditionning
+First I want you to massage your lower abdomen
+It's the zone between your belly button and your #Cock
+Massage it deep, that's where your bladder is
+Do it slowly with a circular, downward motion
+Keep rubbing @ShowImage[png/waterfalls/waterfall1.jpg] @Wait(20)
+Feel the urge to pee @ShowImage[png/waterfalls/waterfall2.jpg] @Wait(20)
+Associate it witht he need to please me @ShowImage[png/waterfalls/waterfall3.jpg] @Wait(20)
+The need to obey me @ShowImage[png/waterfalls/waterfall4.jpg] @Wait(20)
+And just relax and let it flow! @ShowImage[png/waterfalls/waterfall5.jpg] @Wait(30)
+Did you wet yourself? #lol @UnlockImages
+[yes]Wow! Amazing! I can't believe I did it.. #EmoteHappy @Goto(pee_end)
+[no]Damn
+@DifferentAnswer did you or not?
+It's really hard to make someone aroused pee...
+Maybe I should make you take a break #Grin
+But no that wouldn't be as fun as making you do it despite your arousal #lol
+And I still have some weapons to help you do it
+I want you to go fetch a hot water bottle or anything that can contain hot water and will be able to transmit its warmth to you
+And fill it with hot water of course, it needs to be very hot but be careful to not burn yourself
+(fetch_loop_5)
+@NullResponse @Wait(30)
+Do you have it?
+[yes]Good
+[no] Then what are you still doing there? @Goto(fetch_loop_5)
+@DifferentAnswer Then what are you still doing there? @Goto(fetch_loop_5)
+Now put it on your lower abdomen and let it there while we resume our session
+The heat should help relax your bladder muscles
+Now you can start #Stroking again @StartStroking @BookmarkLink
+@End
+Alright last try before I give up #Emote
+If you are not desperate to pee by now I suspect that you cheated
+Or that you have one incredible bladder #Grin
+Let's go back to that massaging on your lower abdomen
+It should be nice and warm after that hot water bottle
+Do it slowly with a circular, downward motion
+Focus on your bladder @ShowImage[png/waterfalls/waterfall1.jpg] @Wait(20)
+Do not resist @ShowImage[png/waterfalls/waterfall2.jpg] @Wait(20)
+Imagine how good it would feel to let it flow @ShowImage[png/waterfalls/waterfall3.jpg] @Wait(20)
+And imagine my hudge smile as you do it @ShowImage[png/waterfalls/waterfall4.jpg] @Wait(20)
+All that #Pleasure that you would feel transfering to me @ShowImage[png/waterfalls/waterfall5.jpg] @Wait(30)
+Let go #PetName @UnlockImages
+@RapidTextOn Relax your bladder and push softly
+Feel the need to obey me
+The need to be controled by me and letting go
+Forget everything
+All your worries
+All the world around you
+All your fears
+Push softly and relax
+Pee for me! @Wait(30)
+Did you wet yourself? #lol @RapidTextOff
+[yes]Wow! Amazing! I can't believe I did it.. #EmoteHappy @Goto(pee_end)
+[no]Damn
+@DifferentAnswer did you or not?
+@NullResponse @CheckFlag(png__pee_refuse)
+Too bad you weren't able to do it
+But don't be sad, I know how hard it is
+And I'm sure with more training you'll be able to do it anytime I want #Grin
+Anyway I give up for now @Goto(no_pee_end)
+(png__pee_refuse)
+Ok you win I give up for now #EmoteSad
+(no_pee_end)
+But that doesn't mean you can run to the bathroom #lol
+You still have to wait until I'm done with you
+Maybe I'll make a come back victory #Grin
+In the mean time start #Stroking @StartStroking
+@End
+(pee_end)
+I knew you wouldn't be able to resist the urge to obey me! #Grin @TempFlag(png__peed) @DeleteFlag(png__pee_holding)
+Now you know with absolute certainty that I own you completly
+I'm even stronger than #SubAge years of training #lol
+Time to continue that teasing session
+Start #Stroking #PetName, yeah soaking in your pee #Grin @StartStroking
+@End
+(drink_more_1)
+Even if you are not thirsty force yourself @ShowLocalImage @Wait(20)
+Remember that you are doing it for me @ShowLocalImage @Wait(20)
+And we barely started #Emote @ShowLocalImage @UnlockImages @Goto(drink_loop_1)
+(png__abdl)
+And I don't <i>only</i> say that because I love to play with you as my little baby #lol @Goto(prelude_abdl)
+(png__wearing_diapers)
+And I don't <i>only</i> say that because I made you wear diapers today #lol @Goto(prelude_abdl)
+(png__wearing_abdl_outfit)
+@NullResponse @CheckFlag(png__abdl_baby_girl,png__abdl_baby_boy)
+(png__abdl_baby_girl)
+And I don't <i>only</i> say that because I put you in your little girl baby outfit today #lol @Goto(prelude_abdl)
+(png__abdl_baby_boy)
+And I don't <i>only</i> say that because I put you in your little boy baby outfit today #lol @Goto(prelude_abdl)
+(prelude_abdl)
+Well you'll wish I put you in diapers when you hear what I have in mind for you #Grin 
+Remember when you were a real little child? @Goto(first_round)
+@Info the dom tries to make you pee yourself over several rounds

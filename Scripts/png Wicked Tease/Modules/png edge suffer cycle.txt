@@ -1,0 +1,63 @@
+Stop stroking @StopStroking @RapidTextOn
+@NullResponse @SetVar[rounds]=[#DomLevel]
+@NullResponse @SetVar[max_rounds]=[rounds] @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @ChangeVar[max_rounds]=[rounds]*[1]
+@NullResponse @Chance50(inc_rounds)
+@NullResponse @Goto(start_suffer)
+(ApathyLevel2)
+@NullResponse @ChangeVar[max_rounds]=[rounds]*[2]
+@NullResponse @Chance50(inc_rounds)
+@NullResponse @Goto(start_suffer)
+(ApathyLevel3)
+@NullResponse @ChangeVar[max_rounds]=[rounds]*[3]
+@NullResponse @Chance50(inc_rounds)
+@NullResponse @Goto(start_suffer)
+(ApathyLevel4)
+@NullResponse @ChangeVar[max_rounds]=[rounds]*[4]
+@NullResponse @Chance50(inc_rounds)
+@NullResponse @Goto(start_suffer)
+(ApathyLevel5)
+@NullResponse @ChangeVar[max_rounds]=[rounds]*[5]
+@NullResponse @Chance66(inc_rounds)
+@NullResponse @Goto(start_suffer)
+(inc_rounds)
+@NullResponse @If[rounds]=[max_rounds]Then(start_suffer)
+@NullResponse @ChangeVar[rounds]=[rounds]+[1]
+@NullResponse @Chance33(inc_rounds)
+@NullResponse @Goto(start_suffer)
+(start_suffer)
+I think you are enjoying yourself a bit too much right now... @RapidTextOff
+Let's #Play together instead #Grin
+Well it will be fun for me at least... #lol
+Don't be #Nervous. You know I only give you what you want... #EmoteHappy
+Let's start with an edge @Edge
+#LetTheEdgeFade
+Now let's see you suffer a bit for me @CBT
+#EmoteMoan it feels so right when you #Hurt yourself for me like that! #Emote
+Such a good #PetName
+To reward you let's... @Chance50(cbt_again)
+do another edge! #Grin @Edge
+#LetTheEdgeFade
+I am such a #Kind #DomHonorific @Goto(before_loop)
+(cbt_again)
+make you please me by #Hurting yourself a bit more #lol @CBT
+I am such a #Mean #DomHonorific #Grin @Goto(before_loop)
+(before_loop)
+Time to #RelaxAndBreathe for a while and check a few of your lewd #Pictures #PetName
+You can #Stroke slowly if you want to @ShowLocalImage @Wait(20) 
+Interesting what you can find on a pervert's computer... @ShowLocalImage @Wait(20)
+I #Love looking around like that #lol @ShowLocalImage @Wait(20)
+Ok enough rest! @Goto(edge_cbt_loop)
+(edge_cbt_loop)
+@NullResponse @ChangeVar[rounds]=[rounds]-[1]
+@NullResponse @If[rounds]<[0]Then(stop_loop)
+@NullResponse @Chance25(edge_cbt_loop_cbt)
+#ReachTheEdge @Edge
+#LetTheEdgeFade @Goto(edge_cbt_loop)
+(edge_cbt_loop_cbt)
+@NullResponse @CBT @Goto(edge_cbt_loop)
+(stop_loop)
+#ThatsEnough for now let's get back to where we were... #Grin
+@End
+@Info The loop of suffering. the dom will make you edge then CBT then start a loop with a random chance of either edge or CBT. the length of the loop is random between the level of the dom and level od the dom / ampathy. Meaning for a level 3 dom with 4 empathy between 3 and 12 rounds.

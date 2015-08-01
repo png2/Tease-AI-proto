@@ -1,0 +1,457 @@
+Ok stop stroking @StopStroking
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @SetVar[png_apathy_lvl]=[1] @Goto(resume_1)
+(ApathyLevel2)
+@NullResponse @SetVar[png_apathy_lvl]=[2] @Goto(resume_1)
+(ApathyLevel3)
+@NullResponse @SetVar[png_apathy_lvl]=[3] @Goto(resume_1)
+(ApathyLevel4)
+@NullResponse @SetVar[png_apathy_lvl]=[4] @Goto(resume_1)
+(ApathyLevel5)
+@NullResponse @SetVar[png_apathy_lvl]=[5] @Goto(resume_1)
+(resume_1)
+@NullResponse @CheckFlag(png__roulette_rules)
+I wonder if you're a gambler... #Grin
+And if you are, what could I make you bet for some release... #lol
+I have a game I call the <i>orgasm roulette</i> #Emote
+It's pretty easy
+I'll tell you the odds you have to cum
+The lower the chance, the easier the losing tasks will be
+And of course the higher the chance, the harder they'll be #Grin
+But to be more fun, you won't know what the losing wager is #lol
+For example, I could give you a 10% chance to cum but if you lose I'll make you edge 2 times or maybe hit your cock a few times
+Quite easy
+But if I offer you a 50% chance to orgasm, the losing end could be no touching for 3 days
+Each time I offer you odds, you can refuse it and I'll raise it
+But I'll never lower it #lol
+And of course if you reach the highest odds, you can't refuse any more #Grin
+So choose wisely... @SetFlag(png__roulette_rules)
+@NullResponse @If[#OrgasmLockDate]=['later']Then(roulette_ask_play)
+(cannot_play_limited)
+But that's too bad since your orgasms are already restricted. you cannot play now! #Grin
+So instead I'll just increase your frustration by making you edge @Edge
+I wonder if you'd wager a lot for me to reduce the restriction on your orgasms
+But I don't want to so we'll never know #lol
+@End
+(roulette_ask_play)
+Do you want to play?
+[yes]Oh we have a gambler... I hope you don't go bankrupt too fast #lol @Goto(roulette_play)
+[no]I see... Too afraid to gamble #Emote @Goto(roulette_convince)
+(roulette_play)
+@NullResponse @Chance10(roulette_50)
+@NullResponse @Chance20(roulette_33)
+@NullResponse @Chance30(roulette_25)
+@NullResponse @Chance40(roulette_20)
+@NullResponse @Goto(roulette_10)
+(roulette_10)
+Ok I offer you 1 chance out of 10 to cum...
+Do you take it? #Grin
+[yes]A low risk bet, you are cautious today #lol
+[no]Oh you want me to raise the odds... @Chance20(roulette_33) @Goto(roulette_20)
+@DifferentAnswer take it, yes or no?
+@NullResponse @SetVar[png_roulette_odd]=[10]
+Alright let's play then... @Chance10(roulette_cum)
+@NullResponse @Chance11(roulette_cbt)
+@NullResponse @Chance13(roulette_clamps)
+@NullResponse @Chance14(roulette_marker)
+@NullResponse @Chance16(roulette_panties)
+@NullResponse @Chance20(roulette_out)
+@NullResponse @Chance25(roulette_writting)
+@NullResponse @Goto(roulette_edge)
+(roulette_20)
+This time I offer you a 20% chance of release #Grin
+Ready to risk it?
+[yes]Not very risky but still a good chance #Grin
+[no]Oh going for a high wager I think #lol @Chance50(roulette_33) @Goto(roulette_25)
+@DifferentAnswer take it, yes or no?
+@NullResponse @SetVar[png_roulette_odd]=[20]
+Alright let's play then... @Chance20(roulette_cum)
+@NullResponse @Chance25(roulette_cbt)
+@NullResponse @Chance33(roulette_clamps)
+@NullResponse @Chance50(roulette_out)
+@NullResponse @Goto(roulette_edge)
+(roulette_25)
+I wonder if 1 chance out of 4 would be enough to tempt you #Grin
+Is it?
+[yes]Not very risky but still a good chance #Grin
+[no]Now that's a true gambler! #lol @Chance50(roulette_50) @Goto(roulette_33)
+@DifferentAnswer take it, yes or no?
+@NullResponse @SetVar[png_roulette_odd]=[25]
+Alright let's play then... @Chance25(roulette_cum)
+@NullResponse @Chance33(roulette_cbt)
+@NullResponse @Chance50(roulette_out)
+@NullResponse @Goto(roulette_edge)
+(roulette_33)
+Time to get serious with 1 chance out of 3! #Grin
+Will you take it or go for an "all in" gamble? #lol
+[yes]I think you got scared and rightly so #Grin
+[no]Alright all or nothing then! #Grin @Goto(roulette_50)
+@DifferentAnswer take it, yes or no?
+@NullResponse @SetVar[png_roulette_odd]=[33]
+Alright let's play then... @Chance33(roulette_cum)
+@NullResponse @Chance50(roulette_out)
+@NullResponse @Chance50(roulette_cbt)
+@NullResponse @Goto(roulette_edge)
+(roulette_50)
+Now it's the real deal.. 
+heads or tails..
+1 chance out of 2...
+You can't back off!
+@NullResponse @SetVar[png_roulette_odd]=[50]
+Getting cold sweat? #lol @Chance50(roulette_cum) 
+@NullResponse @Chance50(roulette_edge) @Goto(roulette_out)
+(roulette_cum)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+@NullResponse @GotoDommeOrgasm
+(Never Allows)
+You didn't think I would allow you to cum did you?
+Even though you won... #lol
+Yes I can be cruel sometimes but that's what you like and deserve!
+@End
+(Rarely Allows)(Sometimes Allows)(Often Allows)(Always Allows)
+@RapidTextOn Got you! #lol 
+Cum for me #PetName!!! #EmoteHappy @RapidTextOff
+[came, finished, did, done] Good #Grin
+[thank, gracias, merci, grateful, good, amazing, incredible] You're welcome #PetName #Grin
+@AcceptAnswer Hehe just calm down now @UpdateOrgasm
+You won this time! Aren't you a lucky #PetName?
+Well we aren't done yet... #lol
+I don't care if you already came!
+I haven't had my share of fun yet! #Grin
+@End
+(roulette_cbt)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+Oops you lost! #lol
+Time to pay the price
+A very painful price #Grin
+@NullResponse @SetVar[png_rounds]=[png_apathy_lvl]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]*[png_roulette_odd]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]/[20]
+(roulette_cbt_loop)
+@NullResponse @If[png_rounds]<=[0]Then(roulette_cbt_loop_done)
+@NullResponse @CBT
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @Goto(roulette_cbt_loop)
+(roulette_cbt_loop_done)
+Alright, your debt is paid! #lol
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(roulette_clamps)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+oops you lost! #lol
+Time to pay the price
+A very painful price #Grin
+@NullResponse @SetVar[png_rounds]=[png_apathy_lvl]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]*[png_roulette_odd]
+I want you to fetch some nipple clamps or clothespins and put them on @Wait(30)
+They'll have to stay there for the next @ShowVar[png_rounds] minutes!
+Even if that session ends before!
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(roulette_marker)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+oops you lost! #lol
+Time to pay the price @CheckFlag(png__marked_cock,png__marked_chest,png__marked_head)
+(png__marked_cock)(png__marked_chest)
+I want you to write "Loser" on your forehead! #Grin @TempFlag(png__marked_head)
+@NullResponse @If[png_apathy_lvl]>=[4]Then(roulette_marker_day)
+And I want you to keep it for @ShowVar[png_apathy_lvl] hours after we are done @Goto(roulette_marker_resume)
+(roulette_marker_day)
+And you will have to keep it for the whole day!
+You can remove it when you wake up tomorrow morning #Emote
+(roulette_marker_resume)
+I hope You didn't plan to get out #lol
+Well if you did the world will know you lost a bet
+Maybe They'll ask what it was... #Grin
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(png__marked_head)
+Since you have already written something on your forehead it will make this one easy..
+@NullResponse @If[png_apathy_lvl]>=[4]Then(roulette_marker_day)
+I simply want you to keep it for @ShowVar[png_apathy_lvl] hours after we are done @Goto(roulette_marker_resume)
+(roulette_marker_day)
+You will have to keep it for the whole day!
+You can remove it when you wake up tomorrow morning #Emote @Goto(roulette_marker_resume)
+(roulette_panties)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+oops you lost! #lol
+Time to pay the price
+Or to be more exact to wear it! #Grin @CheckFlag(png__no_panties,png__buying_panties,png__panties,png__wearing_panties)
+Since I don't know if you have any panties, I'll let you choose
+Either wear panties or go commando without underwear!
+Which will it be #PetName?
+[panties]Ohoh I'll remember that choice for later too that gives me some ideas @SetFlag(png__panties) @Goto(roulette_panties_resume)
+[commando]I knew you'd chicken out... #EmoteSad @Goto(roulette_commando_resume)
+@DifferentAnswer Panties or commando?
+(png__no_panties)
+Well the penalty should have been to wear panties
+But since you refused, You will have to go without underwear! #Grin @Goto(roulette_commando_resume)
+(png__buying_panties)
+Once your panties arrive I want you to wear them! #Grin @Goto(roulette_panties_resume)
+(png__panties)
+The penalty will be to wear panties... @Goto(roulette_panties_resume)
+(png__wearing_panties)
+Since you are already wearing panties this one should be an easy one for you
+You continue to wear them @Goto(roulette_panties_resume)
+(roulette_panties_resume)
+@NullResponse @If[png_apathy_lvl]=[1]Then(roulette_panties_1day)
+I want you to do it for @ShowVar[png_apathy_lvl] days! #lol
+I hope you have several pairs ready
+Otherwise it might be a good idea to go shopping while you are punished
+Or just wash them every night
+I wouldn't want you to get caught in dirty underwear #Grin
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(roulette_panties_1day)
+And I want you to do it for a whole day! #lol
+You will put them on first thing in the morning and will not take them off until you go to sleep
+Hmmm...
+Forget that!
+You will wear them to sleep too! #Grin
+And don't forget to wash them afterwards
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(roulette_commando_resume)
+@NullResponse @SetVar[png_commando_delay]=[png_apathy_lvl]
+@NullResponse @ChangeVar[png_commando_delay]=[png_commando_delay]*[2]
+I want you to do it for @ShowVar[png_commando_delay] days! #lol
+I hope your pants burn your crotch! #Grin
+Otherwise it wouldn't really be a penalty game I guess
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(roulette_writting)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+oops you lost! #lol
+Time to pay the price
+Or more precisely to write it... #Grin @RapidTextOn @AFKOn
+(roulette_writing_start)
+@NullResponse @SetVar[png_rounds]=[png_apathy_lvl]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]*[png_roulette_odd]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]/[20]
+@NullResponse @WritingTask(I shouldn't wager my orgasms so lightly)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(I am a stupid #PetName)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(I am a loser!)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(I don't deserve to win any game against #DomHonorific #DomName)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(#DomHonorific #DomName should deny my orgasms forever)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(Losing games against #DomHonorific #DomName is only logical since I am a loser)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(I give total control of my #Cock to #DomHonorific #DomName for my own good)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @If[png_rounds]<=[0]Then(roulette_writing_done)
+@NullResponse @WritingTask(Taking shortcuts is always a bad idea, all I need to do is give #DomHonorific #DomName pleasure)
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+(roulette_writing_done)
+@RapidTextOff Alright, your debt is paid! #lol @AFKOff
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(Failed Writing Task)
+Wow you failed a writing task...
+And you had @ShowVar[png_rounds] left...
+Doesn't matter I'll make you start from the beginning!
+And I'll make you redo it until you do it right @Goto(roulette_writing_start)
+(roulette_edge)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+oops you lost! #lol
+Well only one lousy edge is not enough to make you pay the price of defeat...
+@NullResponse @SetVar[png_rounds]=[png_apathy_lvl]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]*[png_roulette_odd]
+@NullResponse @SetVar[png_roulette_score]=[png_rounds]
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]/[20]
+(roulette_edge_loop)
+@NullResponse @If[png_rounds]<=[0]Then(roulette_edge_loop_done)
+#Edge @ShowVar[png_rounds] @Edge
+#LetTheEdgeFade
+@NullResponse @ChangeVar[png_rounds]=[png_rounds]-[1]
+@NullResponse @Goto(roulette_edge_loop)
+(roulette_edge_loop_done)
+@NullResponse @If[png_roulette_score]==[250]Then(roulette_edge_very_very_long)
+@NullResponse @If[png_roulette_score]>=[125]Then(roulette_edge_very_long)
+@NullResponse @If[png_roulette_score]>=[99]Then(roulette_edge_long)
+(roulette_edge_done)
+Alright, your debt is paid! #lol
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(roulette_edge_long)
+I'll show you what a true edge is
+And what chaining them means! #lol
+Go on, edge for me @EdgeHold 
+Another one right away @EdgeNoHold 
+And another one! #Grin @EdgeHold 
+Take a deep breath #Grin @Goto(roulette_edge_done)
+(roulette_edge_very_long)
+I'll show you what a true edge is
+And what chaining them means! #lol 
+Go on, edge for me @EdgeHold 
+Another one right away @EdgeHold 
+And another one! #Grin @EdgeHold 
+Just to make sure let's do a fourth... @EdgeHold
+Take a deep breath #Grin @Goto(roulette_edge_done)
+(roulette_edge_very_very_long)
+I'll show you what a true edge is
+And what chaining them means! #lol
+Go on, edge for me @EdgeHold 
+Another one right away @EdgeHold 
+And another one! #Grin @EdgeHold 
+Just to make sure let's do a fourth... @EdgeHold
+Did you think I would stop there? Get to the edge again #PetName! @EdgeHold
+Starting to learn to control that cock?
+To make sure give me another edge! @EdgeHold
+Take a deep breath #Grin @Goto(roulette_edge_done)
+(roulette_out)
+Alright before giving you the result, let's build you up a bit... #Grin
+Start stroking slowly
+Keep going
+Feel the pressure building in your cock
+And in your brain #lol
+Speed up a bit
+Did you win or not?
+Who knows?
+Oh wait, <i>I</i> Know! #lol
+Get faster!
+And now time to reach the edge and finally learn your fate... @EdgeHold
+oops you lost! #lol
+Time to pay the price @CheckFlag(png__has_chastity)
+Do you have a chastity cage #PetName?
+[yes] Great that will be fun even for later @SetFlag(png__have_chastity) @Goto(png__has_chastity)
+[no] Then you will have to control yourself without any help... #Grin @Goto(roulette_out_resume)
+@DifferentAnswer Do you have one or not?
+(roulette_out_resume)
+I want you to go to my settings
+In the 'Domme' tab in the top right side you'll find the options for your orgasms
+@NullResponse @SetVar[png_roulette_score]=[png_apathy_lvl]
+@NullResponse @ChangeVar[png_roulette_score]=[png_roulette_score]*[png_roulette_odd]
+@NullResponse @If[png_roulette_score]<=[20]Then(roulette_out_3per_week)
+@NullResponse @If[png_roulette_score]<=[30]Then(roulette_out_2per_week)
+@NullResponse @If[png_roulette_score]<=[60]Then(roulette_out_1per_week)
+@NullResponse @If[png_roulette_score]<=[100]Then(roulette_out_1per_2weeks)
+@NullResponse @If[png_roulette_score]<=[150]Then(roulette_out_2per_month)
+@NullResponse @If[png_roulette_score]<=[200]Then(roulette_out_1per_month)
+@NullResponse @Goto(roulette_out_1per_2months)
+(roulette_out_3per_week)
+I want you to check the 'limit' box and set 3 orgasms per week @Goto(locking_done)
+(roulette_out_2per_week)
+I want you to check the 'limit' box and set 2 orgasms per week @Goto(locking_done)
+(roulette_out_1per_week)
+I want you to check the 'limit' box and set 1 orgasm per week @Goto(locking_done)
+(roulette_out_1per_2weeks)
+I want you to check the 'limit' box and set 1 orgasm per 2 weeks @Goto(locking_done)
+(roulette_out_2per_month)
+I want you to check the 'limit' box and set 2 orgasm per month @Goto(locking_done)
+(roulette_out_1per_month)
+I want you to check the 'limit' box and set 1 orgasm per month @Goto(locking_done)
+(roulette_out_1per_2months)
+I want you to check the 'limit' box and set 1 orgasm per 2 months @Goto(locking_done)
+(locking_done)
+Then click on the 'locked selected' button and accept the warning message #EmoteHappy
+Now that should nicely reduce your chances of cumming
+And I hope for you that you won't get too lucky early in the period #Grin
+Well... @Goto(roulette_out_done)
+(png__has_chastity)
+Since you have a #ChastityCage it will probably make this one easier to control #Grin
+I want you to lock yourself!
+Let me know when you are in your cage 
+@AcceptAnswer Good! @ChastityOn @Goto(roulette_out_resume)
+(roulette_out_done)
+You knew you had a harsh price to pay
+So it's too late to cry now #EmoteHappy
+That will probably make you think twice next time you wager to get an early release #Grin
+@End
+(png__roulette_rules)
+@NullResponse @NullResponse @If[#OrgasmLockDate]=['later']Then(roulette_play_2)
+I was feeling like playing orgasm roulette with you @Goto(cannot_play_limited)
+(roulette_play_2)
+I feel like placing your fate in dice right now...
+Well in the orgasm roulette to be exact @Goto(roulette_ask_play)
+(roulette_convince)
+I was just looking forward to giving you a fair chance at orgasm for once
+But it's ok
+Just edge for me instead @EdgeHold
+Did getting so close make you change your mind? #lol
+[yes]I knew I had the <i> right arguments</i> #Grin @Goto(roulette_play)
+[no]Well at least I tried #Emote 
+@DifferentAnswer Do you want to play or not?
+Maybe next time you'll be horny enough to try your luck
+@End
+@Info The dom asks you to play the orgasm roulette. She gives you a chance to cum. If you play she rolls the roulette and determines your fate. If you refuse the odds she will make them higher. The higher the odd the worse the punishment if you lose. What are you willing to risk to get an early release? This script ignores all your orgasm/ruining settings except if you are never allowed to orgasm. The goal is to give you a potentially very costly exit door if you get ready to bet on your release :)

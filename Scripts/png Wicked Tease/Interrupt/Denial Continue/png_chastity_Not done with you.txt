@@ -1,0 +1,42 @@
+Hands off #PetName, I don't want you to cum
+The thing is...
+I don't want to stop making you suffer yet either
+I mean sure, I could tease you about how I just denied you
+Show you sexy pictures like this when I know how bad they'll make you #Ache @ShowBlogImage
+But I want more
+In fact, I want to just keep on teasing you @CheckFlag(png__has_chastity)
+(tease)
+So why don't you put your hand back on that #Cock
+And start stroking again #Grin @StartStroking
+@End
+(png__has_chastity)
+@NullResponse @SetVar[png_continue_chastity_days]=[#DomLevel]
+But I'm ready to make you an offer... @CheckFlag(png__wearing_nippleclamps)
+(resume_offer)
+I'll let you go if you put your #ChastityCage on for @ShowVar[png_continue_chastity_days] days #lol
+Imagining you locked in that #ChastityCage is probably the only thing more fun that teasing and hurting you #Grin
+So what do you choose : chastity or teasing?
+[chastity,cage,lock]Alright it's <i>my</i> #Cock but your choice! #Grin @Goto(chastity)
+[teasing,tease,stroke]Alright it's <i>my</i> #Cock but your choice! #Grin @Goto(tease)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose] You'd choose whichever one pleases me the most? @Goto(Pleases Me)
+@DifferentAnswer chastity or teasing?
+(Pleases Me)
+Well since it's up to me #Grin 
+Maybe I will lock you up... #EmoteHappy @Chance25(chastity)
+No, nothing give me more pleasure than the thought of your #Cock
+Aching in your grasp as I make you suffer for me @Goto(tease)
+(chastity)
+Go put you cage on!
+(put_cage_loop)
+@NullResponse @Wait(30)
+Is it on?
+[yes]
+[no]Hurry up then! @Goto(put_cage_loop)
+@DifferentAnswer is it or not? @Goto(put_cage_loop)
+Good! @ChastityOn
+Well you chose your fate! See ya in @ShowVar[png_continue_chastity_days] days then #lol
+@EndTease
+@End
+(png__wearing_nippleclamps)
+Before anything you need to take those clamps off!
+#Yes I know it hurts but stop crying or I'll make you put them back #Grin @Goto(resume_offer)

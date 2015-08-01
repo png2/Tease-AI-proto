@@ -1,0 +1,163 @@
+This must be so hard on you
+Locked up in that tight little #ChastityCage
+Seeing sexy little #Pictures like this @ShowLocalImage
+Or this @ShowLocalImage
+Never knowing what I'm #Gonna find next...
+To torment your #Cock with #Grin @ShowLocalImage
+I suppose I could let you out for a little bit
+Give you a chance for a little relief
+Grab your keys
+Feel them in your hand
+So close yet so far way from freedom
+Only one word away
+<i>MY</i> word #Grin
+Put those keys in front of you
+I want you to see them while I tease you
+So that you can remember that I own your #Cock
+That I own your freedom to #Stroke #lol @BookmarkModule
+@End
+Take the keys in your hand again
+Put them in the padlock
+But do not unlock it yet! #Grin
+Let the urge to get free from that #ChastityCage grows in you
+Feel it devouring you #Grin @BookmarkModule
+@End
+I hope the padlock is still in place... #grin
+Caress your #ChastityCage
+Feel your #Cock inside it
+Dying to get out #lol
+Unlock the padlock
+But keep it in place
+You are not free yet #Grin
+Soooo close to freedom
+So close to #Pleasure
+But still not there #Grin @BookmarkModule
+@End
+Look at that opened padlock still holding you captive
+And realize how strong <i>my</i> power holds you
+Much stronger than any padlock! #Grin
+I wonder how desperate you are...
+What would you do to get free?
+[anything, everything,all]Hmmm maybe you are ready... @Goto(keys_everything)
+@AcceptAnswer I'm not sure you are completly ready yet... @Goto(keys_not_ready)
+(keys_not_ready)
+I want you to be at a stade where you would litterally do anything to get free!
+Would you do anything I ask to have a chance to stroke?
+[yes]Hmmm maybe you are ready... @Goto(keys_everything)
+[no]I see, that's ok I will just have to keep you locked up a while longer then #Emote
+@DifferentAnswer Yes or no #PetName?
+I am sure you will be ready soon enought #Grin
+@End
+(keys_everything)
+Would you really do anything I ask? Are you sure?
+[yes]#EmoteMoan I love it when you get so desperate #PetName #lol @Goto(keys_challenge)
+[no]I see, that's ok I will just have to keep you locked up a while longer then #Emote
+@DifferentAnswer Yes or no #PetName?
+I am sure you will be ready soon enought #Grin
+@End
+(keys_challenge)
+I might take you to your word you know #Emote @Chance01(keys_freedom)
+@NullResponse @Chance50(skip_marker) @CheckFlag(png__marked_head) @Goto(keys_mark_head)
+(png__marked_head)(skip_marker)
+@NullResponse @CheckFlag(png__no_panties,png__buying_panties,png__panties)
+Let's see how far you'll really go
+I'll free you if you buy a pair of panties! #Grin
+Since I'm #Kind, I won't force you to go buy it in a store
+You can order it online if you prefer 
+Once you have them I want you to wear them for a full day!
+That means putting them when you get out of the shower on the morning
+And even keeping them to sleep that night
+A full 24h in panties
+I hope it's a work day
+Or even better a gym day #lol
+Will you do it?
+[yes]Oh, I guess you will really do anything @SetFlag(png__buying_panties) @TempFlag(png__already_asked_panties_delivered) @Goto(keys_chastity_off)
+[no]So that means you lied... @Goto(keys_punishment)
+@DifferentAnswer Will you do it or not?
+(keys_freedom)
+But today I'm feeling generous and will trust your word
+(keys_chastity_off)
+Take the padlock and the #ChastityCage off #Grin @ChastityOff
+(cage_off_lopp)
+@Wait(30)
+Are you ready to continue?
+[yes]Let's do it then
+[no]I thought you'd be faster than that to get out @Goto(cage_off_lopp)
+@DifferentAnswer Maybe I should just keep you locked in the end... @Goto(cage_off_lopp)
+Now the real fun can begins!
+@End
+(keys_mark_head)
+Let's see how far you'll really go
+I'll let you free if...
+You write "#PetName" on your forehead with a permanent marker and keep it until you go to sleep
+Will you do it?
+[yes]Oh, I guess you will really do anything @TempFlag(png__marked_head) @Goto(keys_chastity_off)
+[no]So that means you lied... @Goto(keys_punishment)
+@DifferentAnswer Will you do it or not?
+(png__no_panties)
+Let's see how far you'll really go
+I know you refused to wear panties for me once
+But right now you said you'd do anything for me...
+I guess you see where I am going with that... #lol
+I'll free you if you buy a pair of panties! #Grin
+Since I'm #Kind, I won't force you to go buy it in a store
+You can order it online if you prefer
+Will you do it?
+[yes]Oh, I guess you will really do anything... Now you are my pantyboy! Willingly or not #lol @SetFlag(png__buying_panties) @TempFlag(png__already_asked_panties_delivered) @Goto(keys_chastity_off)
+[no]So that means you lied... @Goto(keys_punishment)
+@DifferentAnswer Will you do it or not?
+(png__buying_panties)
+Let's see how far you'll really go
+Since your panties should be there soon...
+I know how excited you will be when they arrived
+So I want you to wear them for a full day once they do!
+That means putting them when you get out of the shower on the morning
+And even keeping them to sleep that night
+A full 24h in panties
+I hope it's a work day
+Or even better a gym day #lol
+Will you do it?
+[yes]Oh, I guess you will really do anything @Goto(keys_chastity_off)
+[no]So that means you lied... @Goto(keys_punishment)
+@DifferentAnswer Will you do it or not?
+(png__panties)
+Let's see how far you'll really go
+Since you love panties so much
+I know how excited you are when I ask you to wear them
+So I want you to wear them for a full day!
+That means putting them when you get out of the shower on the morning
+And even keeping them to sleep that night
+A full 24h in panties
+I hope it's a work day
+Or even better a gym day #lol
+Will you do it?
+[yes]Oh, I guess you will really do anything @Goto(keys_chastity_off)
+[no]So that means you lied... @Goto(keys_punishment)
+@DifferentAnswer Will you do it or not?
+(keys_punishment)
+And you know that I don't like liars... #EmoteSad
+So first thing first, lock the padlock and take off the keys!
+For now I'll make you write lines while I think of a suitable punishment! @AFKOn @WritingTask(I shouldn't lie to #DomHonorific #DomName or she will punish me harshly)
+Now go grad a spatula, a wooden spoon or a hairbrush @AFKOff
+And hit your balls #Random(5,10) times with it! Make each one count!
+(loop_punishment)
+@NullResponse @Wait(60)
+Done?
+[yes]Good, I hope you are crying right now...
+[no]You are too slow! That means 5 more slaps @Goto(loop_punishment)
+@DifferentAnswer Can't you answer by yes or no? That means 5 more slaps to teach you @Goto(loop_punishment)
+Now I want you to go stand in a corner for 10 minutes
+That will let you think about what you did!
+You could have answered truthfully and I would have just kept you in your cage
+But you tried to be smart and now you pay the price! #EmoteSad
+Now go to your corner! See you in 10 minutes @AFKOn  @Wait(600)
+Ok I'm done punishing you for now @AFKOff
+But I'm not done with you #Emote
+@End
+(Failed Writing Task)
+Wow you even fail your punishment after all that... @AFKOff
+I am very angry right now!
+You will stay locked for the next 48 hours
+And I don't want to see your face until then! @EndTease
+@End
+@Info Module where the dom makes you play with the key and ends up asking you if you'd do anything to get free. If you do she might let you off or take you to your word and ask for a task before freeing you. The script builds you up over multiple taunts session. And be careful if you lied to her :)

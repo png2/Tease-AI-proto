@@ -1,0 +1,123 @@
+Stop stroking @StopStroking
+@NullResponse @CheckFlag(png__no_cumeating,png__cumeating,png__wearing_diapers) 
+#SubName...
+I was wondering...
+Have you ever eaten your <i>own</i> cum? #Grin
+[yes] #EmoteMoan I'm excited just imagining you doing it @Goto(do_it_again)
+[no] ooooh @Goto(would_you_do_it)
+@DifferentAnswer Did you or not?
+(png__no_cumeating)
+I know you didn't want to lick your precum for me before
+But the thought still linger in my head... #Grin
+And since you refused me it makes me want to do it even more #lol @Goto(convince)
+(png__cumeating) 
+You know I find it so sexy when I get a man to eat his cum for me
+My #Pussy gets so #Horny!!! @Grin
+#Edge @EdgeHold
+Scoop the leaking precum with your finger
+And lick it up for me
+#EmoteMoan
+#HolyShit I almost came right now... #lol
+Let's do it again!
+#Edge @EdgeHold
+Lick it up #PetName!!!
+I'll have to stop before I get addicted! #lol
+Or maybe you are going to get addicted to the taste before that #PetName
+How did it taste?
+[bad,not so good,terrible,foul,gross,horrible,disgusting]I guess it's an acquired taste, we will have to do it more often then #lol
+[ok,good,great,excellent,yummy]Oh did I found a little cumslut in the making ? Could be fun #lol
+[salty]That means you need to eat more fruits! #lol
+[sweet]I think someone is eating too much candies... #lol
+@AcceptAnswer I heard it gets better each time #lol
+I just can't resist...
+Do it one more time for me... #Grin
+I know you can do it #Emote @Goto(ruin_to_eat)
+(do_it_again)
+I find it so #Hot!
+Would you do it again for me?
+[yes] #HolyShit that's so #Hot @DeleteFlag(png__no_cumeating) @SetFlag(png__cumeating) @Goto(png__cumeating)
+[no] Bleh, you're no fun! :( @Goto(convince)
+@DifferentAnswer Would you or not?
+(would_you_do_it)
+You know there is a first time for everything #Grin
+And it makes me so #Horny to think about it... @Goto(convince)
+(convince)
+Imagine how good I'll feel if you do it for me #Grin
+#Edge @EdgeHold
+Look at all this precum glistening
+Only waiting for you to scoop it with your finger...
+And lick it for me #Grin
+Would you do it for me #PetName?
+[yes]#ThankYou I love it so much when you try you hardest to please me #Grin @Goto(accept)
+[no]#EmoteSad It's ok we all have our limits @SetFlag(png__no_cumeating) @Goto(do_ruin_done)
+(accept)
+See it wasn't that terrible #Emote @DeleteFlag(png__no_cumeating) @SetFlag(png__cumeating)
+Maybe I'll ask you do it again later #lol
+@End
+(ruin_to_eat)
+@NullResponse @GotoDommeOrgasm
+(Never Allows)
+@NullResponse @Goto(last scooping)
+(Rarely Allows)
+@NullResponse @Chance90(last scooping)
+@NullResponse @GotoDommeRuin
+(Sometimes Allows)
+@NullResponse @Chance75(last scooping)
+@NullResponse @GotoDommeRuin
+(Often Allows)
+@NullResponse @Chance50(last scooping)
+@NullResponse @GotoDommeRuin
+(Never Ruins)
+@NullResponse @Goto(last scooping)
+(Rarely Ruins)
+@NullResponse @Chance90(last scooping)
+@NullResponse @Goto(do_ruin)
+(Sometimes Ruins)
+@NullResponse @Chance75(last scooping)
+@NullResponse @Goto(do_ruin)
+(Often Ruins)
+@NullResponse @Chance50(last scooping)
+@NullResponse @Goto(do_ruin)
+(last scooping)
+#Edge @EdgeHold
+Scooooop and liiiiiick #Grin
+That was fun
+@End
+(do_ruin)
+#Edge @EdgeToRuinHold
+Now you have to lick all your mess for me! #lol
+Did you eat it all ?
+[yes]Good #PetName! I am so proud of you! #Grin @Goto(do_ruin_done)
+[no]You chicken! #lol @Goto(do_ruin_punishment)
+(do_ruin_punishment)
+@NullResponse @GotoDomApathy
+(ApathyLevel1)(ApathyLevel2)
+I'll let you off the hook this time
+But I hope that one day you'll really do it for me @Goto(do_ruin_done)
+(ApathyLevel3)
+I am disapointed in you
+But I know how hard it is for you
+So I won't punish you this time @Goto(do_ruin_done)
+(ApathyLevel4)(ApathyLevel5)
+Are you kidding me?
+I won't let that slip easily #PetName! @CBTCock
+Punishing your #Cock is not enough! @CBTBalls
+And you are lucky I am not there in person! @CheckFlag(png__has_chastity) @Goto(do_ruin_done)
+(png__has_chastity)
+@NullResponse @Chance10(do_ruin_punishment_chastity) @Goto(do_ruin_done)
+(do_ruin_punishment_chastity)
+I know how to make you reflect about being desobedient #PetName...
+Get that cage and put it on!
+Let me know when it's on...
+[yes,done,put,on]Good #PetName! But the fun for me is not over yet #EmoteHappy @ChastityOn @Goto(do_ruin_done)
+[no]Then put it on #now! @LoopAnswer
+@DifferentAnswer Is it on or not?
+(do_ruin_done)
+I know you are still horny so let's continue! #Emote
+@End
+(png__wearing_diapers)
+Too bad those diapers are absording all the precum you are leaking...
+I wonder if I should make you lick it next time #lol
+Well we'll see about that #Grin
+@End
+@Info a script to ease you into eating your cum. The dom ask you if you've done it and depending of the answers will try to make you lick your precum. If you do it she'll know you are a cum eater and might ask you do it later or might ruin you to see you lick it :)

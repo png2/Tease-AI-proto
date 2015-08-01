@@ -1,0 +1,108 @@
+@NullResponse @CheckFlag(png__worship,png__pleasure) 
+Instead of being so #Kind to you I should make you do something more interresting for me
+Like licking my #Pussy
+Or worshiping my feet... #Grin
+That would be so much better than having you lamenting over that locked #Cock
+Which one would you prefer? #lol
+[first,pussy,pleasure]That's tempting #lol @Goto(pleasure)
+[second,feet,worship]I always knew you were a pervert @SetFlag(png__feet) @Goto(worship)
+[you rather, youd rather, youd prefer, you prefer, please, pleases, your choice, you choose]Oh, you'd let me choose ? @Goto(choice)
+@DifferentAnswer pleasure or worship #PetName? Choose!
+(choice)
+You don't know what you are getting yourself into... #lol
+Maybe I'll make you do both! #Grin @Chance50(choice_worship)
+But for now I'd rather have you pleasure me! #Emote @Goto(pleasure)
+(choice_worship)
+But I guess nothing beats having my personal worshiper waiting at my feet... @Goto(worship)
+(pleasure)
+#EmoteMoan @SetFlag(png__pleasure)
+I can already picture it
+Using your face as a chair...
+Having you under my desk...
+Under the table...
+Ready to pleasure me whenever I want...
+Making you lick me until your tongue gets sore...
+Then forbidding you to stop as I ride orgasm after orgasm
+Knowing all too well that <i>YOU</i> can't get any #Pleasure without my permission #lol
+Does that thought makes you even harder than usual?
+Oh wait...
+You can't get hard in that cage #lol
+@End
+(worship)
+#EmoteMoan @SetFlag(png__worship)
+Having you worship my feet all the time would be quite nice
+Kissing them...
+Rubbing them...
+Licking them...
+Sucking my toes...
+All while I deny you any #Pleasure! #lol
+Not that you would need any other #Pleasure than my perfect feet #Emote
+I would work extra hard at the gym knowing I have my #PetName waiting for me at home
+Your tongue out and ready for my feet the second I open the door! #Grin
+I bet that makes you super horny!!! #lol
+Keep thinking about it and let's see if I can make you even more obedient
+@End
+(png__worship)
+You know I am glad you realized that you should worship me like I deserve
+Because I <i>do</i> deserve it! #Grin
+Especially since I am so #Kind to you and let you #Ache for me #lol
+Maybe I should start my own cult...
+Well maybe later
+After all for now I only have one true believer
+You believe I am a Goddess that should be worshiped, right #PetName?
+[yes]Good! I was sure you'd be faithful to me #Grin @Goto(praying)
+[no]Oh, an heretic... It's ok I can be a merciful Goddess @Goto(punish_worship)
+@DifferentAnswer Do you believe it, yes or no?
+(png__pleasure)
+Damn i really wish your tongue was busy licking me right now...
+But just in case you have the honor to pleasure me one day, maybe I should train you a little...
+Stick your tongue out for me
+I want you to flick it in the air as if you were licking me #Grin
+Go slowly, I am not in a hurry #lol
+Keep going until I tell you to stop @Wait(#Random(30,120))
+You look ridiculous #lol
+Yet so #Sexy... #Grin
+Ok rest a bit
+Stick your tongue out again
+This time I want you to trace cricles with it
+Imagine you are circling around my clit
+Slow and steady
+#EmoteMoan
+Now flick your tongue rapidly
+up and down
+right and left
+Just like you would do if you wanted to make me cum! #Grin
+Not bad #PetName
+but you still need training so maybe I'll make you do more later
+@End
+(praying)
+I want you to bow in front of me 5 times and say "#DomHonorific #DomName is my only Goddess" each time you are down @Wait(60)
+#EmoteMoan I can feel your faith going straight to my #Pussy #lol
+Do it again! @Wait(60)
+Now get in a kneeling position
+Join your hand in a praying posture
+and repeat after me
+"Oh Great #DomName"
+"My #Cock belongs to you"
+"Please make it #Ache for you"
+"Please make <i>me</i> suffer for you"
+"I long to serve you forever"
+"#DomHonorific #DomName is my only Goddess"
+"And I love her"
+"Praised be #DomHonorific #DomName"
+Wow!
+You know what? I think I just had a small orgasm right now... #lol
+We will definitly have to do it again soon #Grin
+@End
+(punish_worship)
+But a true Goddess should also be revengeful sometimes
+Otherwise her flock will go astray... #Grin
+So I guess It's time to punish you for your own good!
+Since you are locked up I'll have you do penitence another way
+Just like in the old time with some self-flagellation #lol
+Grab a belt and take off your top, shirt ot whatever you are wearing if you are not naked
+Now I want you to hit your back over your shoulder like repenting monks used to do!
+Do it another #Random(2,5) times!
+I hope you learnt your lesson
+But I suspect you to enjoy those punishements a little too much sometimes #Emote
+@End

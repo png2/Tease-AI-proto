@@ -1,0 +1,166 @@
+@NullResponse @CheckFlag(png__temporary_freedom)
+#TimeToFindIfYouGetToCum @GotoDommeOrgasm
+(Never Allows)
+@NullResponse @DecideOrgasm
+(Rarely Allows)
+@NullResponse @Chance75(Orgasm Deny)
+@NullResponse @GotoDommeRuin
+(Sometimes Allows)
+@NullResponse @Chance50(Orgasm Deny)
+@NullResponse @GotoDommeRuin
+(Often Allows) 
+@NullResponse @Chance25(Orgasm Deny)
+@NullResponse @GotoDommeRuin
+(Always Allows) 
+@NullResponse @GotoDommeRuin
+(Never Ruins)
+@NullResponse @DecideOrgasm
+(Rarely Ruins)(Sometimes Ruins)(Often Ruins)(Always Ruins)
+@NullResponse @Goto(Orgasm Ruin)
+(Orgasm Allow)
+Bring yourself to the edge one more time @Edge
+[came, finished, did] Good #Grin
+[thank, gracias, merci, grateful, good, amazing, incredible] You're welcome #PetName #Grin
+@AcceptAnswer Hehe just calm down now
+I hope you enjoyed that orgasm #SubName
+Who knows how many you're actually going to get? @Goto(EndScript)
+(Orgasm Deny)
+Bring yourself to the edge one more time @Edge
+Put it back in your pants, you don't get to cum #GeneralTime
+Too bad
+Better luck next time #Grin @Goto(EndScript)
+(Orgasm Ruin)
+Bring yourself to the edge one more time @EdgeToRuin
+[ruined, did] Good #Grin
+[fuck] #Grin
+@AcceptAnswer hehe just calm down now
+I love building up all that pleasure just to snatch it away from you
+In fact I love it so much that I'll make you ruin another one for me! #lol
+Get to the edge... @EdgeToRuin
+Wow that was great! #Grin
+I wonder how many I can make you ruin like that #lol @GotoDommeLevel
+(DommeLevel5)
+Edge for me @EdgeToRuinHold
+Wow this one must have really hurt #lol
+But it's way to early to stop!
+(DommeLevel4)
+Give me another edge @EdgeToRuinHold
+This is so fun
+(DommeLevel3)
+Are you dry yet? #lol
+Let's make sure!
+Edge one more time @EdgeToRuin
+I wonder if you can take more than that...
+Let's try and see #Grin
+(DommeLevel2)
+Edge for me #PetName @EdgeToRuin
+(DommeLevel1)
+I'm so mean ruining all your orgasms like that
+I'm sorry! #Grin
+Well not really... #lol
+But this time I'll let you come, I swear! @Chance20(Orgasm Allow)
+Bring yourself to the edge one more time @EdgeToRuin
+Well you came... #lol
+I know i can be so #Mean to you sometimes @Chance01(EndScript)
+Do you think you can take one more for me?
+[yes]ohh I love it when you destroy yourself so willingly #lol
+[no]Good that means you're past your limit! Let's see how far past it I can make you go #lol
+@DifferentAnswer It might be the frustration but you don't make sense... Can you take one more yes or no?
+So let's end that session in a bang!
+Or a splurt in this case #lol
+Gather all your remaining forces and edge a last time @EdgeToRuinHold
+Alright you can rest
+For now... #Grin @Goto(EndScript)
+(EndScript)
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @Chance10(chastity)
+@NullResponse @Chance10(tasks)
+@NullResponse @Goto(free)
+(ApathyLevel2)
+@NullResponse @Chance25(chastity)
+@NullResponse @Chance33(tasks)
+@NullResponse @Goto(free)
+(ApathyLevel3)
+@NullResponse @Chance33(chastity)
+@NullResponse @Chance50(tasks)
+@NullResponse @Goto(free)
+(ApathyLevel4)
+@NullResponse @Chance50(chastity)
+@NullResponse @Chance80(tasks)
+@NullResponse @Goto(free)
+(ApathyLevel5)
+@NullResponse @Chance50(chastity)
+@NullResponse @Goto(tasks)
+(tasks)
+I know I teased you pretty good #GeneralTime
+But I'm not <i>quite</i> done yet #Grin
+I'm sending you some instructions I'd like you to do for me today
+I think you're #Gonna find them pretty intense #Grin @SendDailyTasks
+Thanks for giving me such a good time #GeneralTime #PetName
+I can't wait to see you again #EmoteHappy @Goto(end)
+(chastity)
+@NullResponse @CheckFlag(png__has_chastity) @Goto(tasks)
+(png__has_chastity)
+I know I teased you pretty good #GeneralTime
+But I'm not <i>quite</i> done yet #Grin
+Let's put that #ChastityCage back on for now! @ChastityOn
+That way I am sure you won't do anything nasty while I am away
+Ain't I #Kind to think of your well being like that? #lol @Goto(end)
+(free)
+I know I teased you pretty good #GeneralTime
+And I had a lot of fun so I will let you off the hook this time #EmoteHappy @Goto(end)
+(end)
+@NullResponse @CheckFlag(png__wearing_nippleclamps)
+(end_clamps_checked)
+@NullResponse @CheckFlag(png__wearing_panties,png__wearing_diapers,png__wearing_abdl_outfit)
+(resume_wearing_checks)
+Cya
+@End
+(png__wearing_nippleclamps)
+Oh I almost forgot about those nipple clamps
+They must hurt like hell #Grin
+You know it will hurt even more when you take them off...
+Maybe I should be #Kind and make you keep them on instead #lol
+Alright Take them off now #Emote
+Massage your #Tits a bit to make them feel better @Goto(end_clamps_checked)
+(png__wearing_panties)
+@NullResponse @Chance15(stay_in_panties)
+And don't forget to take your panties off and wash them #PetName! @Goto(resume_wearing_checks)
+(png__wearing_diapers)(png__wearing_abdl_outfit)
+@NullResponse @Chance05(stay_in_diapers)
+You can take all your baby stuff off #PetName
+I hope you didn't dirty your diaper #Emote @Goto(resume_wearing_checks)
+(stay_in_diapers)
+Since I had so much fun seeing you in that baby getup
+I think I should keep you in it longer
+I want you to stay in it until you wet your diaper *evil*
+So, if you have to go, I suggest you drink a a lot of water to speed things up... #lol @Goto(resume_wearing_checks)
+(stay_in_panties)
+Since I had so much fun teasing you in those panties
+I think you should wear them a while longer
+I want you to keep them on until tomorrow morning
+#Yes that means all day at work if you have to and all night while sleeping #Grin
+oh and don't forget to wash them afterwards #PetName! #lol @Goto(resume_wearing_checks)
+(png__temporary_freedom)
+Time to find out if you get to cum #PetName
+Wait let me rephrase that...
+Time to put back on your #ChastityCage #PetName #lol
+Did you really think I would give you a chance to cum?
+I was already nice enough to let you touch your #Cock #GeneralTime
+In fact you should thank me for that!
+I want you to say it : "Thank you #DomHonorific #DomName for letting me touch my #Cock!"
+[for letting me touch my]
+@DifferentAnswer Say it right!
+You are welcome #PetName it was my pleasure #Grin
+Now, no more trying to escape your fate... put your #ChastityCage on
+(cage_on_loop)
+@NullResponse @Wait(30)
+Is it on?
+[yes]Time for you to resume your day
+[no]Then hurry up or I'll make you throw away the key! @Goto(cage_on_loop)
+@DifferentAnswer is it or not?
+I don't even have to give you tasks or warn you to not touch yourself thanks to your #ChastityCage #lol
+#Bye @EndTease
+@End
+@Info If you are allowed to cum and have a chance to ruin it, the dom will make you ruin your orgasms one after another (number based on her level). After being done : task, chastity (if you have one), cleaning your mess (if you already did it at least once) or nothing special to do. The odds are based on the level of ampathy

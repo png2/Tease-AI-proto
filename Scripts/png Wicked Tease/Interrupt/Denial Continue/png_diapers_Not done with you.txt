@@ -1,0 +1,72 @@
+Hands off #PetName, I don't want you to cum
+The thing is...
+I don't want to stop making you suffer yet either
+I mean sure, I could tease you about how I just denied you
+Show you sexy pictures like this when I know how bad they'll make you ache @ShowBlogImage
+But I want more
+In fact, I want to just keep on teasing you @CheckFlag(png__abdl,png__wearing_diapers,png__wearing_abdl_outfit,png__wearing_nippleclamps)
+(tease)
+So why don't you put your hand back on that #Cock
+And start stroking again #Grin @StartStroking
+@End
+(png__abdl)
+But this time let's change things a bit...
+I miss my little baby so much that I want to play with you @CheckFlag(png__abdl_outfit) @Goto(abdl_start)
+(png__abdl_outfit)
+I guess a good baby always starts by wearing diapers
+Don't worry I'll not ask you to mess them
+Well not yet #Emote
+So put them on! Oh and grab that pacifier while you're at it... #Grin @TempFlag(png__wearing_diapers)
+Are you all snug and diapered?
+[yes] Start sucking on that pacifier then #Grin
+@DifferentAnswer Then hurry up #PetName
+You are soooo cute!! #EmoteMoan
+Now I want you to put your outfit on! #Grin
+Let me know when you are fully clothed...
+[done] Good little baby! 
+@AcceptAnswer Good little baby!
+@NullResponse @TempFlag(png__wearing_abdl_outfit) @CheckFlag(png__abdl_baby_boy,png__abdl_baby_girl)
+(abdl_start)
+I guess a good baby always starts by wearing diapers
+Don't worry I'll not ask you to mess them
+Well not yet #Emote
+So put them on! Oh and grab that pacifier while you're at it... #Grin @TempFlag(png__wearing_diapers)
+Are you all snug and diapered?
+[yes] Start sucking on that pacifier then #Grin
+@DifferentAnswer Then hurry up #PetName
+You are soooo cute!! #EmoteMoan
+(resume_after_outfit)
+@NullResponse @CheckFlag(png__abdl_baby_bottle)
+Do you have a baby bottle?
+[yes]Great! @SetFlag(png__abdl_baby_bottle) @Goto(png__abdl_baby_bottle)
+[no]Too bad that could have been fun! You should buy one someday #Emote @Goto(skip_baby_bottle)
+(png__abdl_baby_bottle)
+Fill your baby bottle with water or milk if you have some
+Let me know when you are done
+[done] Good
+@AcceptAnswer Good
+Each time I'll let you edge
+You will feed on that bottle while you let the edge fade
+After all I don't want my little baby to get dehydrated #Grin
+(skip_baby_bottle)
+Now I can't resist the urge...
+@RapidTextOn While you still suck this pacifier I want you to say "I love you mummy" in a childish voice #Grin @Wait(30)
+Oooh I love you too honey #Grin @RapidTextOff
+Remember you have to keep your diapers until I let you out #Emote
+And if you have to pee, well they are there for a reason aren't they? #lol
+The only exception is if I tell you to hurt your #Balls or #Cock
+But you have to put them back afterward!
+Now start stroking in those diapers and suck this pacifier in rythm #lol @StartStroking
+@End
+(png__wearing_diapers)(png__wearing_abdl_outfit)
+I had enough fun with my little baby for now
+You can take out your outfit for now
+(undress_loop)
+@NullResponse @Wait(30)
+Is it off?
+[yes]Ok @Goto(tease)
+[no]Hurry up you are a grown up now @Goto(undress_loop)
+@DifferentAnswer did you take off your baby stuff yes or no?
+(png__wearing_nippleclamps)
+But before anything you need to take those clamps off!
+#Yes I know it hurts but stop crying or I'll make you put them back #Grin @CheckFlag(png__abdl,png__wearing_diapers,png__wearing_abdl_outfit) @Goto(tease)

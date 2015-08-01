@@ -1,0 +1,186 @@
+#GreetSub
+Before we start I want to know if you are already naked or still wearing your clothes?
+[yes,naked,bare]Good @Goto(naked)
+[no,wearing,clothes]How dare you present yourself before me still wearing clothes #PetName? @Goto(strip)
+@DifferentAnswer are you naked yes or no?
+(naked)
+I want you completely naked #GeneralTime! #Grin
+Today you're gonna work on some slave positions
+That way if one day you come to serve me for real you'll already be trained
+Let's see... @CheckFlag(png__position_stand,png__position_kneel,png__position_beg,png__position_worship,png__position_nadu)
+Since you don't know any position we will start with an easy one #Grin
+I call this one 'stand' @SetFlag(png__position_stand)
+(learn_stand)
+When I tell you 'stand #PetName' I want you to stand up, your back straight
+Your feet slightly apart
+Your hands crossed being your back palms outward
+Your head bowed down
+It's almost like an 'at ease' position in the military
+You need to be able to keep this one for a while since it will be your default position
+From now on it's also your position if I tell you to stand in a corner
+So when I give you the order I want you to stand in front of the screen until I tell you to sit back down
+@RapidTextOn Let's try
+Stand #PetName @Wait(60)
+Keep your back straight @Wait(60)
+Remember to look down @Wait(60)
+Keep it a bit longer @Wait(60)
+Imagine staying hours like this for me #Grin @Wait(30)
+Waiting for my orders @Wait(30)
+Alright you can sit down @RapidTextOff @Goto(position_done)
+(png__position_stand)
+Do you remember the 'Stand' position #PetName?
+[yes,I do]Good
+[no,I don't]Oh, we'll need to retrain you then! @Goto(forgot_stand)
+@DifferentAnswer Do you or not?
+Stand #PetName @Wait(60)
+You can sit down again
+Now time for a new one! #Grin
+(learn_kneel)
+This one is called 'kneel' @SetFlag(png__position_kneel)
+So when I tell you 'Kneel #PetName' I want you on your knees
+Your knees and ankles touching each other
+Your back straight
+Your hands crossed being your back, palms outward
+Your head bowed down
+If I want you to keep this one for a long time I'll tell you to get a pillow for under your knees
+And if you get punished the pillow can be replaced by rice or frozen peas
+Trust me after a few minutes kneeling on rice you'll be a lot more obedient #lol
+Let's try it
+Don't worry, the classical one, not in punishment mode #Grin
+@RapidTextOn Kneel #PetName @Wait(60)
+With some training you'll be able to hold it a lot longer without any pillow @Wait(30)
+Alright you can sit down @RapidTextOff @Goto(position_done)
+(png__position_kneel)
+You are supposed to know two positions by now @Chance50(beg_try_kneel)
+Stand #PetName @Wait(60) @Chance25(beg_try_kneel) @Goto(beg_skip_kneel)
+(beg_try_kneel)
+Kneel #PetName @Wait(60)
+(beg_skip_kneel)
+Sit down again
+Time to learn a third one
+(learn_beg)
+This one is the 'beg' position @SetFlag(png__position_beg)
+It's also a kneeling position
+But this time Your knees are slightly apart around 10 inches/25 centimeters
+Sitting on your heels, back straight
+Hands on your lap, palms up
+And head up, eyes looking down
+Each time you have something to ask me, or if I tell you to beg me, I want you in this position! #Grin @ShowImage[png/beg.jpg] @UnlockImages
+Let's try it
+@RapidTextOn Beg me orally to let you free of your #ChastityCage #PetName @Wait(30)
+Not convincing enough, beg harder @Wait(30)
+Alright, good enough. You can sit down @RapidTextOff @Goto(position_done)
+(png__position_beg)
+Your training is coming along nicely #PetName
+I hope you remember all the positions you learned so far...
+Do you remember all three?
+[yes]Good @Chance33(worship_try_kneel)
+[no]I wonder what I'll do with you... @Goto(forgot_position)
+@DifferentAnswer yes or no?
+@NullResponse @Chance50(worship_try_beg)
+Stand #PetName @Wait(60) @Chance25(worship_try_kneel) 
+@NullResponse @Chance25(worship_try_beg) @Goto(worship_skip)
+(worship_try_kneel)
+Kneel #PetName @Wait(60) @Chance25(worship_try_beg) @Goto(worship_skip)
+(worship_try_beg)
+Beg me orally to teach you a new position #PetName @Wait(60)
+(worship_skip)
+Sit down again
+Now we are getting to a more advanced position
+(learn_worship)
+The next one is the 'worship' position @SetFlag(png__position_worship)
+You'll do this one each time I tell you to worship me or to pray to me
+It's basically the praying position of the Muslims
+Kneeling, knees together
+Head down, your forehead touching ground
+Your arms stretched in front of you reaching far
+Your hands together palm down touching the floor @ShowImage[png/worship.jpg] @UnlockImages
+Let's try it
+Worship me by saying out loud "I will always obey, love and worship #DomHonorific #DomName " 20 times @Wait(90)
+I know you will #PetName #Grin
+And in exchange I promise that I will always make you ache for me! #lol @Goto(position_done)
+(png__position_worship)
+It's time for my favorite position!
+But before that...
+Do you remember all four positions you learned?
+[yes]Good @Chance25(nadu_try_kneel)
+[no]I wonder what I'll do with you... @Goto(forgot_position)
+@DifferentAnswer yes or no?
+@NullResponse @Chance25(nadu_try_beg)
+@NullResponse @Chance25(nadu_try_worship)
+Stand #PetName @Wait(60) @Chance25(nadu_try_kneel) 
+@NullResponse @Chance25(nadu_try_beg)
+@NullResponse @Chance25(nadu_try_worship) @Goto(nadu_skip)
+(nadu_try_kneel)
+Kneel #PetName @Wait(60) @Chance25(nadu_try_beg)
+@NullResponse @Chance25(nadu_try_worship) @Goto(nadu_skip)
+(nadu_try_beg)
+Beg me orally to teach you a new position #PetName @Wait(60) @Chance25(nadu_try_worship) @Goto(nadu_skip)
+(nadu_try_worship)
+Worship me by saying out loud 'Thank you #DomHonorific #DomName for teaching me new positions' 10 times @Wait(45) @Goto(nadu_skip)
+(nadu_skip)
+Sit down #PetName
+Now back to your new position
+(learn_nadu)
+I call this one 'Nadu' since it's inspired by the Gorrean slave position @SetFlag(png__position_nadu)
+And if you don't know about Gor and the gorrean slaves you should look it up on internet later #Grin
+So for this one, you will be kneeling
+Knees as far apart as you can and feet together
+Sitting on your heels
+Your back arched and your head straight
+Hands behind your head with your fingers locked @ShowImage[png/nadu.jpg] @UnlockImages
+I love this one because it leaves you completely exposed
+Totally vulnerable and submissive to me #Grin
+Let's see how you do
+Nadu #PetName @Wait(30)
+Keep your back arched and your knees spread! @Wait(30)
+Alright sit down @Goto(position_done)
+(png__position_nadu)
+I don't have any more positions for you for now
+But that doesn't mean we can skimp on your training
+Practice makes perfect after all, well perfect practice that is.
+And I'm sure you want to be a perfect #PetName for me #Grin
+@NullResponse @SetVar[png_position_training_loop]=[0]
+(training_loop)
+@NullResponse @If[png_position_training_loop]>[#DomLevel]Then(position_done)
+@NullResponse @ChangeVar[png_position_training_loop]=[png_position_training_loop]+[1]
+@NullResponse @Chance50(training_loop_kneel)
+Stand #PetName @Wait(60) @Goto(training_loop_advanced)
+(training_loop_kneel)
+Kneel #PetName @Wait(60)
+(training_loop_advanced)
+@NullResponse @Chance33(training_loop_beg)
+@NullResponse @Chance50(training_loop_worship)
+Nadu #PetName @Wait(60) @Goto(training_loop)
+(training_loop_beg)
+Beg #PetName @Wait(60) @Goto(training_loop)
+(training_loop_worship)
+Worship me by saying out loud 'Thank you #DomHonorific #DomName for training me' 10 times @Wait(45) @Goto(training_loop)
+(position_done)
+Now that you trained so much I bet you can't wait to be teased #Grin @StartTaunts
+@End
+(forgot_stand)
+But before that... 
+Go grab a wooden spoon and hit your balls 10 times
+@Goto(learn_stand)
+(forgot_position)
+For started I'll punish you!
+Go grab a wooden spoon and hit your balls 10 times
+Now which one did you forget slave?
+[stand]Alright, let's restart from there then @Goto(learn_stand)
+[kneel]Alright, let's restart from there then @Goto(learn_kneel)
+[beg]Alright, let's restart from there then @Goto(learn_beg)
+[worship]Alright, let's restart from there then @Goto(learn_worship)
+[nadu]Alright, let's restart from there then @Goto(learn_nadu)
+@AcceptAnswer It seems you can't even say which one so it's best we start again from the beginning @Goto(learn_stand)
+(strip)
+You're off to a bad start, but we can still fix that
+Go grab a wooden spoon and hit your balls 10 times
+Ok now your mistake has been forgiven #Grin
+You can go take off your clothes so we can start for real #lol
+(puting_cloth_loop)
+Are you ready?
+[yes]Alright @Goto(naked)
+[no]Then why are you talking to me? @Goto(puting_cloth_loop)
+@DifferentAnswer I don't want you to talk I want you to take your clothes off! @Goto(puting_cloth_loop)
+@Info The dom makes you learn slave positions for her. 5 positions to learn, 1 learned each time you get the script

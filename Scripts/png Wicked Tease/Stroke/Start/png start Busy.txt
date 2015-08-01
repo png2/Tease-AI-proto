@@ -1,0 +1,85 @@
+#GreetSub @GotoDommeApathy
+(ApathyLevel1)
+(ApathyLevel2)
+I'm sorry #PetName I'm a little busy right now...
+But since you are already there let's #Play while you wait for me ! #EmoteHappy @Chance50(slideshow)
+You can #Stroke while watching this video but remember no cumming !!! #Emote @PlayJOIVideo @AFKOn
+#Okay I'm back, I hope you enjoyed that because it's time to begin #PetName @AFKOff
+#StartStroking @StartStroking
+@End
+(ApathyLevel3)
+I'm sorry #PetName I'm a little busy right now...
+But since you are already there let's #Play while you wait for me ! #EmoteHappy @Chance50(slideshow)
+I'll let you watch this video but you don't have the right to #Stroke until I'm back !!! #Emote @PlayJOIVideo @AFKOn
+#Okay I'm back, I hope you enjoyed that because it's time to begin #PetName @AFKOff
+#StartStroking @StartStroking
+@End
+(ApathyLevel4)
+(ApathyLevel5)
+I don't have time for you right now #PetName... @Chance33(writing)
+@NullResponse @Chance33(slideshow)
+But since you are already there let's make you #Writhe while you wait for me ! #EmoteHappy
+I'll let you watch this video but you don't have the right to #Stroke until I'm back !!! #Emote @PlayJOIVideo @AFKOn
+I hope she teased you as much as I would because it's time to begin the real fun #PetName @AFKOff
+#StartStroking @StartStroking
+@End
+(writing)
+But since you are already there let's keep you busy with some line writing while you watch this #Picture ! #EmoteHappy @ShowLocalImage @AFKOn @chance33(writing_1)
+@NullResponse @chance50(writing_2)
+@NullResponse @WritingTask(I #Love when #DomName #Hurt me)
+@NullResponse @Goto(writing_done)
+(writing_1)
+@NullResponse @WritingTask(My #Cock belongs to #DomName)
+@NullResponse @Goto(writing_done)
+(writing_2)
+@NullResponse @WritingTask(Aching for my #DomHonorific is #Hot)
+@NullResponse @Goto(writing_done)
+(writing_done)
+Looks like you completed your task #PetName @AFKOff
+I'm ready, let's begin!
+#StartStroking @StartStroking
+@End
+(Failed Writing Task)
+Wow it seems you can't even complete simple tasks when I am not there to supervise you... @AFKOff
+Let's teach this #Cock of yours a lesson @CBTCock
+Now that we are both ready let's begin!
+#StartStroking @StartStroking
+@End
+(slideshow)
+But I have an idea!
+It's time you make some good use of your <i>huge</i> collection of #Pictures #Grin
+I'll start a slideshow while I am gone
+And to make it more fun...
+(slideshow_start)
+When you see #png__slideshow_edge_part, #png__slideshow_variations #Grin
+You'll have to be careful on your timing #lol
+@NullResponse @SetVar[png__start_busy_loop]=[#Random(2,10)]
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]*[60]
+@RapidTextOn Let's start @ShowLocalImage @Wait(10)
+(slideshow_loop)
+@NullResponse @If[png__start_busy_loop]<=[0]Then(end_slideshow)
+@NullResponse @ShowLocalImage
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[18]
+@NullResponse @Wait(10) @Chance25(slideshow_loop)
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[10]
+@NullResponse @Wait(10) @Chance75(slideshow_loop)
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[30]
+@NullResponse @Wait(30) @Goto(slideshow_loop)
+(end_slideshow)
+@RapidTextOff You're done @UnlockImages @AFKOff
+Did you miss me?
+[yes] That's cute #PetName, let's start right way then #Grin
+[no] Oh really ? Then maybe I shall let you continue for a while @Goto(punish)
+@DifferentAnswer Yes or no ?
+#StartStroking @StartStroking
+@End
+(punish)
+@NullResponse @Chance80(writing_punish)
+@NullResponse @Goto(slideshow_start)
+(writing_punish)
+Dream on #PetName!
+Instead you'll write some lines #lol @WritingTask(I always miss my #DomHonorific when She is not with me!)
+#Okay enough for now
+#StartStroking @StartStroking
+@End
+@Info Did you think the Dom was at your disposal? Sometimes she is busy when you contact her but since she is nice she'll either make you write lines or make you watch a JOI video to keep you busy while she is AFK

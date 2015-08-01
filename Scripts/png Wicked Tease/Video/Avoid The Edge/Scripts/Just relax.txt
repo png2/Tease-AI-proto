@@ -1,0 +1,6 @@
+@NullResponse @ChangeVar[png__avoid_edge_counter]=[png__avoid_edge_counter]+[1]
+Stop stroking #PetName @StopStroking
+Just relax from that edge until I make you start stroking again
+Like...
+Right now #Grin @ResumeAvoidTheEdge
+@End

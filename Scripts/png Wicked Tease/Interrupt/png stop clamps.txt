@@ -1,0 +1,20 @@
+@NullResponse @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @Goto(stop clamps)
+(ApathyLevel2)
+@NullResponse @Chance10(keep clamps)
+@NullResponse @Goto(stop clamps)
+(ApathyLevel3)
+@NullResponse @Chance30(keep clamps)
+@NullResponse @Goto(stop clamps)
+(ApathyLevel4)
+@NullResponse @Chance70(keep clamps)
+@NullResponse @Goto(stop clamps)
+(ApathyLevel5)
+@NullResponse @Goto(keep clamps)
+(stop clamps)
+Alright you can take the nipple clamps off @DeleteFlag(png__wearing_clamps)
+@End
+(keep clamps)
+Nope, you'll keep the clamps for me for a little longer #Emote
+@End

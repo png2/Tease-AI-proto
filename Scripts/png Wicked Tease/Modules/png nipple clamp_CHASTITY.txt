@@ -1,0 +1,69 @@
+Seeing you caged like that makes me want to see you suffer even more for me...
+Let the need to be free grow while you watch this picture @ShowLocalImage
+@RapidTextOn While you let it fade, I want you to fetch some nipple clamps or clothpines @CheckFlag(png__kneeling) @Chance25(png__kneeling) @Goto(skip_kneeling)
+(png__kneeling)
+And to make it even more fun I want you to go there while crawling on your knees! #lol @Wait(60)
+(skip_kneeling)
+@RapidTextOff Are you ready to start?
+[yes] Alright #Grin
+[no] Well you should be if you are back on your computer... Slap your cock 5 times and then hurry up @Goto(skip_kneeling)
+@DifferentAnswer I don't care about your vague answers! Slap your cock 2 times!
+Now I want to play with your #Tits a bit while looking at those #Sexy #Boobs @ShowBoobsImage @Wait(30)
+So #Sexy @ShowBoobsImage @Wait(30)
+#EmoteMoan keep rubbing them... @ShowBoobsImage @Wait(30)
+Pinch them lightly... @ShowBoobsImage @Wait(30)
+Imagine you are playing with <i>her</i> #Tits #Emote @ShowBoobsImage @Wait(30)
+Or hers @ShowBoobsImage @Wait(30)
+@RapidTextOn Now that they are hard and ready...
+Put the clamps on them #PetName ! #Grin @TempFlag(png__wearing_nippleclamps)
+I hope they don't hurt that much...
+Oh who am I kidding...
+I hope they hurt like HELL!!! #lol
+@RapidTextOff Keep them on until I tell you to get them off #PetName @BookmarkModule
+@End
+Must hurt to get teased with those clamps on your nipples #lol @GotoDommeApathy
+(ApathyLevel1)
+(ApathyLevel2)
+@Goto(take_them_off)
+(ApathyLevel3)
+Look at that picture while you keep suffering for me @ShowLocalImage
+@RapidTextOn Ok, take them off #now!
+#EmoteMoan this mix of #Pleasure and pain can be addictive
+For me at least, not sure you'll like it that much #lol
+@RapidTextOff I'll let you look at another picture while the pain subside in them #EmoteHappy @ShowLocalImage
+@End
+(ApathyLevel4)
+(ApathyLevel5)
+Look at that picture while you keep suffering for me @ShowLocalImage
+Twist the clamps
+Dive deeper in the #Pleasure and the pain <i>I</i> make you feel! #Grin
+Again twist them in the other way ! @Chance01(take_them_off)
+It excites me so much!! #lol @BookmarkModule
+@End
+Is the pain on your #Tits unbearable yet? #lol 
+[yes] Good I like to see you suffering just to please me! #Grin
+[no] Ooh a tough one, well I'll just have to keep going then! #Grin
+@AcceptAnswer It doesn't matter as long as It gives me #Pleasure #Grin
+Now what should I do with you ? @Chance25(take_them_off)
+Since you are so eager to please me, I'll let you watch some pictures for me #Grin @ShowLocalImage
+While the memory of that fades away I want you to twist the clamps as far as you can!
+#EmoteMoan Keep twisting!!
+Okay #ThatsEnough! #Grin
+God it feels so good! 
+I almost came from seing you in such pain #lol @Chance75(take_them_off)
+I think I am becoming a true sadist #Grin @Chance90(take_them_off)
+Ready for a third round?
+@AcceptAnswer Ready or not here it comes #lol @BookmarkModule
+@End
+Now you must be in pain #lol
+And that makes me sooooo #Horny!!! #EmoteHappy @Chance10(final_no_edge)
+Ok, let's the pain and desire burn inside you while you watch her #Boobs @ShowBoobsImage @Wait(30) @Goto(take_them_off)
+(final_no_edge)
+#EmoteMoan It's soooo fun #lol 
+I'm sure deep inside you, you #Love me so much for doing this to you
+Think about it for a while watching those #Boobs @ShowBoobsImage @Wait(30)
+(take_them_off)
+Ok you can take them off now #PetName @DeleteFlag(png__wearing_nippleclamps)
+Are you #Boobs as big and pretty as hers now? #lol @ShowBoobsImage
+@End
+@Info The dom make you use nipple clamps/clothpins to torture you 

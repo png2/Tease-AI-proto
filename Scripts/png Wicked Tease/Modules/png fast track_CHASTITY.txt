@@ -1,0 +1,3 @@
+End module
+@End
+@Info fast module for testing purpose

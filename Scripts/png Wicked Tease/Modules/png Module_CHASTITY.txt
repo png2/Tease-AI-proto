@@ -1,0 +1,39 @@
+This must be so hard on you
+Locked up in that tight little #ChastityCage
+Seeing sexy little #Pictures like this @ShowLocalImage
+Or this @ShowLocalImage
+Never knowing what I'm #Gonna find next...
+To torment your #Cock with #Grin @ShowLocalImage
+I suppose I could let you out for a little bit
+Give you a chance for a little relief
+But I won't
+Or maybe I will? @GotoDommeApathy
+(ApathyLevel1)
+@NullResponse @Goto(unlock)
+(ApathyLevel2)
+@NullResponse @Chance90(unlock)
+@NullResponse @Goto(keep_chastity)
+(ApathyLevel3)
+@NullResponse @Chance50(unlock)
+@NullResponse @Goto(keep_chastity)
+(ApathyLevel4)
+@NullResponse @Chance25(unlock)
+@NullResponse @Goto(keep_chastity)
+(ApathyLevel5)
+@NullResponse @Chance10(unlock)
+@NullResponse @Goto(keep_chastity)
+(keep_chastity)
+But not just yet anyway #Lol
+@End
+(unlock)
+#Imagine all the things you could do if I let you out #Grin
+So don't ever say I'm not a #Kind #DomHonorific...
+And take it off! @ChastityOff
+(cage_off_lopp)
+@Wait(30)
+Are you ready to continue?
+[yes]Let's do it then
+[no]I thought you'd be faster than that to get out @Goto(cage_off_lopp)
+@DifferentAnswer Maybe I should just keep you locked in the end... @Goto(cage_off_lopp)
+@End
+@Info alternate chastity module that let you a slight chance of getting released

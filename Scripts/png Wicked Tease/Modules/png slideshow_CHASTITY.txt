@@ -1,0 +1,24 @@
+It's time we make good use of your <i>huge</i> collection of #Pictures #Grin
+I'll start a slideshow with all your naughty pictures
+And to make it more fun...
+(slideshow_start)
+For each one I want you to write why you like it so much
+That will keep your hands busy since you can't stroke #lol
+@NullResponse @SetVar[png__start_busy_loop]=[#Random(2,10)]
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]*[60]
+@RapidTextOn Let's start @ShowLocalImage @Wait(10)
+(slideshow_loop)
+@NullResponse @If[png__start_busy_loop]<=[0]Then(end_slideshow)
+@NullResponse @ShowLocalImage
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[18]
+@NullResponse @Wait(10) @Chance25(slideshow_loop)
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[10]
+@NullResponse @Wait(10) @Chance75(slideshow_loop)
+@NullResponse @ChangeVar[png__start_busy_loop]=[png__start_busy_loop]-[30]
+@NullResponse @Wait(30) @Goto(slideshow_loop)
+(end_slideshow)
+@RapidTextOff We're done @UnlockImages
+That was very interesting... #Grin
+@End
+
+@Info the dom uses your local pictures to make a slideshow and give you special instructions. The instructions are based on #png__slideshow_edge_part and #png__slideshow_variations in the vocabulary, edit them to make it fit your pictures and kinks

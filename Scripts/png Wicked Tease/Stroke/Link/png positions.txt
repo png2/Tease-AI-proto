@@ -1,0 +1,51 @@
+I know you want to stroke
+I know you can't help it
+Afterall I'm doing all I can to make you #Ache
+But remember...
+This is not about your pleasure
+It's about <i>mine</i>! #Grin
+But there is a way we can make it about you and still gives me pleasure 
+And it's by training you to make a better #PetName for me #EmoteHappy @CheckFlag(png__position_stand,png__position_kneel,png__position_beg,png__position_worship,png__position_nadu)
+One day I'll make your learn slave positions for me
+So that you know how to behave in my presence
+But for now just #Stroke your #Cock for me @StartStroking
+@End
+(png__position_stand)
+So... 
+(stand)
+Stand #PetName! @Wait(60) @Goto(position_done)
+(png__position_kneel)
+So... @Chance50(stand)
+(kneel)
+Kneel #PetName! @Wait(60) @Goto(position_done)
+(png__position_beg)
+So... @Chance33(stand)
+@NullResponse @Chance50(kneel)
+(beg)
+Beg me out loud to let you stroke @Wait(60) @Goto(position_done)
+(png__position_worship)
+So... @Chance25(stand)
+@NullResponse @Chance33(kneel)
+@NullResponse @Chance50(beg)
+Worship me by saying out loud 'Thank you #DomHonorific #DomName for training me' 10 times @Wait(45) @Goto(position_done)
+(png__position_nadu)
+@NullResponse @SetVar[png_position_training_loop]=[0]
+(training_loop)
+@NullResponse @If[png_position_training_loop]>[#DomLevel]Then(position_done)
+@NullResponse @ChangeVar[png_position_training_loop]=[png_position_training_loop]+[1]
+@NullResponse @Chance50(training_loop_kneel)
+Stand #PetName @Wait(60) @Goto(training_loop_advanced)
+(training_loop_kneel)
+Kneel #PetName @Wait(60)
+(training_loop_advanced)
+@NullResponse @Chance33(training_loop_beg)
+@NullResponse @Chance50(training_loop_worship)
+Nadu #PetName @Wait(60) @Goto(training_loop)
+(training_loop_beg)
+Beg #PetName @Wait(60) @Goto(training_loop)
+(training_loop_worship)
+Worship me by saying out loud 'Thank you #DomHonorific #DomName for training me' 10 times @Wait(45) @Goto(training_loop)
+(position_done)
+Now that we are done training, you can #Stroke for me @StartStroking
+@End
+@Info the dom train you on your position if you already had the position start, otherwise she teases you about it

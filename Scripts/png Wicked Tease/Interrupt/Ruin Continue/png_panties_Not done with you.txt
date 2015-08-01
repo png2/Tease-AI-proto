@@ -1,0 +1,43 @@
+#RuinYourOrgasm
+[ruined, did] Good #Grin
+[fuck] #Grin
+@AcceptAnswer hehe just calm down now
+Hardly seems fair, really
+I spend all this time building you up
+Letting you get so close you can actually feel the cum rushing through your #Cock
+Only to snatch it all away from you at the last second
+I almost feel kinda bad about it #Grin
+In fact, I think I'm going to give you another chance
+Of course, I'll have to build you up and tease you all over again @CheckFlag(png__facial)
+(resume)
+But who knows...
+Maybe this time it will all be worth it #Grin @CheckFlag(png__panties,png__wearing_panties,png__wearing_nippleclamps)
+(tease)
+Now you can start stroking again @StartStroking
+@End
+(png__panties)
+Let's spice things a bit though
+I want you to go get your panties and put them on
+(panties_loop)
+@NullResponse @Wait(30)
+Are you wearing them?
+[yes]Alright let's get to the fun part
+[no]Hurry up then @Goto(panties_loop)
+@DifferentAnswer Are they on or not?
+Now start stroking in those panties and suck this pacifier in rythm #lol @StartStroking
+@End
+(png__wearing_panties)
+I had enough fun with my girly #PetName
+You can take those panties off for now
+(undress_loop)
+@NullResponse @Wait(30)
+Are they off?
+[yes]Ok @Goto(tease)
+[no]Hurry up or I'll keep you in them @Goto(undress_loop)
+@DifferentAnswer did you take off your panties yes or no?
+(png__wearing_nippleclamps)
+But before anything you need to take those clamps off!
+#Yes I know it hurts but stop crying or I'll make you put them back #Grin @CheckFlag(png__panties,png__wearing_panties) @Goto(tease)
+(png__facial)
+And knowing that your face is covered in cum will I do is going to add so much more to <i>my</i> fun
+So no cleaning until we are done #PetName #Grin @Goto(resume)

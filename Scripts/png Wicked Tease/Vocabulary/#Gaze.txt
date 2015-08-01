@@ -1,0 +1,10 @@
+@Info Verb
+@Info OK: "#Gaze at my #RNDSexyBodyPart"
+@Info
+@Info Not a noun
+@Info NOT OK: "Lock your #Gaze on my #RNDSexyBodyPart"
+@Info
+look
+look
+stare
+gaze

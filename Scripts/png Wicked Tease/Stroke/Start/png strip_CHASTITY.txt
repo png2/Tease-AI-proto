@@ -1,0 +1,39 @@
+#GreetSub
+Before we start I want to know if you are already naked or still wearing your clothes?
+[yes,naked,bare]Who told you to get naked #PetName? @Goto(naked)
+[no,wearing,clothes]Good @Goto(strip)
+@DifferentAnswer are you naked yes or no?
+(naked)
+I don't think I did...
+You're off a bad start but we can still fix that @CBTCock
+Ok now your mistake has been forgiven #Grin
+You can go put your clothes on so we can start for real #lol
+(puting_cloth_loop)
+Are you ready?
+[yes]Alright @Goto(strip)
+[no]Then why are you talking to me? @Goto(puting_cloth_loop)
+@DifferentAnswer I don't want you to talk. I want you to put clothes on! @Goto(puting_cloth_loop)
+(strip)
+Today I want to start in a special way
+I want you to take your clothes off while doing a strip tease for me #Grin
+Go on youtube or whichever site you want and find "I Want Your Sex" by George Michael
+Make some room around you
+I'll give you 5 minutes to prepare 
+And of course at the end I want you completly naked! @Grin
+Well except your cage obviously #lol
+Alright go prepare what you need and don't waste time @Wait(240)
+(ready_loop)
+@NullResponse @Wait(60)
+Ready?
+[yes]Then let me get comfortable too #EmoteHappy
+[no]I told you you had 5 minutes... Hurry up
+@DifferentAnswer ready or not?
+Ok I'm ready #Grin
+Start! @Wait(300)
+Wow, I know you want it #PetName #lol
+That was fun and that definitely made me #Horny
+Now I can't tell if it was you or just the fact that I made you do it #Grin
+And since now you are naked
+I guess it's time for you to get a reward and I start teasing you @StartTaunts
+@End
+@Info The dom make you strip. if you are naked she'll punish you and make you put your clothes back on

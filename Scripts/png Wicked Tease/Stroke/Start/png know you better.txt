@@ -1,0 +1,182 @@
+#GreetSub
+@NullResponse @SetVar[png_know_you_better_questions_count]=[0]
+Before we start today I'd like to ask you a few things
+That way I can know you better
+And the better I know you the more I can use all that knowledge to tease you #Grin
+And we both know how much you like it when I tease you #lol
+Do you want to talk a little before we start?
+[yes]I knew you'd be eager to give me more ammunition #Grin
+[no]Oooh don't be shy! I promise I won't blackmail you... I'll just transform you into the perfect slave #Grin @Goto(skip)
+@DifferentAnswer Do you want to answer my questions or not?
+Let's start then @CheckFlag(png__no_chastity,png__buying_cage,png__has_chastity)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+I have been wondering for a while if you have ever tried chastity...
+I know you like tease and denial of course
+But do you have a chastity cage?
+[yes]Ooooh I'll make sure to use it one day then #lol @SetFlag(png__has_chastity) @Goto(png__has_chastity)
+[no]That's too bad
+@DifferentAnswer yes or no?
+We could have so much fun if you had one
+You really should buy a #ChastityCage #Emote
+Would you buy one for me to have fun?
+[yes]Great! I can't wait for you to get it then @SetFlag(png__buying_cage) @Goto(png__buying_cage)
+[no]It's alright, I won't force you #EmoteSad 
+@DifferentAnswer yes or no?
+But that could have been so fun
+Me locking you in that #ChastityCage and controlling you like a puppet #Grin
+You suffering in it and hoping I let you take it off #lol @SetFlag(png__no_chastity) @Goto(png__no_chastity)
+(png__no_chastity)(png__buying_cage)(png__has_chastity)
+@NullResponse @CheckFlag(png__no_panties,png__panties,png__buying_panties)
+@NullResponse @If[png_know_you_better_questions_count]>=[#DomLevel]Then(stop_questions)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+I heard some men like to wear women's clothes
+I wonder if that's one of your fantasies #Grin
+Is it?
+[yes]Oooh @Goto(ask_panties)
+[no]Really? And yet I'm sure you would be really cute in panties and a bra #EmoteSad @Goto(convince_panties)
+@DifferentAnswer yes or no?
+(ask_panties)
+That's so kinky #lol
+Have you ever worn panties then?
+[yes]Wow, that makes me so #Horny just thinking about you wearing some #Grin @Goto(have_panties)
+[no]So it's still a fantasy... that means more to explore later then #Grin @Goto(have_panties)
+@DifferentAnswer yes or no?
+(convince_panties)
+Even if you never thought about it, it still makes me very #Horny to think about you in panties #Grin
+Would you wear some if I asked you?
+[yes]Ooh that's really nice! I'm very pleased about that #Emote @Goto(have_panties)
+[no]Well at least I tried #lol @SetFlag(png__no_panties) @Goto(png__no_panties)
+@DifferentAnswer yes or no?
+(have_panties)
+And since I already pried so much about that, let's cut the chase...
+Do you have access to a pair of panties? Either one you bought or your wife's?
+[yes]That's good to know #Emote @SetFlag(png__panties) @Goto(png__panties)
+[no]Too bad that could have been fun #Emote
+@DifferentAnswer yes or no?
+You really should buy some, either online or in a shop #Grin
+Would you do that for me?
+[yes]Amazing! You'll have to keep that promise!! I'll check on you later #Grin @SetFlag(png__buying_panties) @Goto(png__buying_panties)
+[no]You are no fun! #EmoteSad @SetFlag(png__no_panties) @Goto(png__no_panties)
+@DifferentAnswer yes or no?
+(png__no_panties)(png__panties)(png__buying_panties)
+@NullResponse @CheckFlag(png__no_abdl,png__buying_abdl,png__abdl)
+@NullResponse @If[png_know_you_better_questions_count]>=[#DomLevel]Then(stop_questions)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+Since I ask about you, I should tell you a bit about myself too #Emote
+You know one day I'd really like to have a baby of my own...
+But not for now! #Grin
+Well not the kind of baby that cries at night anyway #lol
+What would be great is a grown up baby...
+I heard some people really like that kind of thing
+And I always wanted to try to have my own adult baby
+What do you think about that? Would you like to be my little baby? #Grin
+[yes]That's so cute!
+[no]You're no fun #EmoteSad @SetFlag(png__no_abdl) @Goto(png__no_abdl)
+@DifferentAnswer yes or no?
+You know being a baby requires a lot of things
+At least diapers and a pacifier
+You'll need to buy all that as soon as possible so I can play with you #Grin
+Unless you already have those kind of things at home #Emote
+Do you?
+[yes]It seems I've discovered a lot of interesting things about you today #lol @SetFlag(png__abdl) @Goto(png__abdl)
+[no]It's ok, you'll just have to buy some next time you go to the supermarket #Emote @SetFlag(png__buying_abdl) @Goto(png__buying_abdl)
+@DifferentAnswer yes or no?
+(png__abdl)(png__buying_abdl)
+@NullResponse @CheckFlag(png__abdl_baby_girl,png__abdl_baby_boy)
+@NullResponse @If[png_know_you_better_questions_count]>=[#DomLevel]Then(stop_questions)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+Since we already talked about baby play I'm wondering...
+If you could choose...
+Would you be a little baby boy or a little baby girl? #Grin
+[boy]Not a very adventurous baby it seems, but safe is also nice! #Emote @SetFlag(png__abdl_baby_boy) @Goto(png__abdl_baby_boy)
+[girl]Oooh I'd make that choice too! Baby girls are so cute in their pink clothes #Emote @SetFlag(png__abdl_baby_girl) @Goto(png__abdl_baby_girl)
+@DifferentAnswer Boy or girl?
+(png__abdl_baby_girl)
+@NullResponse @CheckFlag(png__buying_abdl_outfit,png__abdl_outfit)
+@NullResponse @If[png_know_you_better_questions_count]>=[#DomLevel]Then(stop_questions)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+I can't stop thinking about all that baby stuff #Grin
+It's not my fault if it makes me so #Horny to have my own grown up baby girl all to myself! #lol
+But it wouldn't be as much fun if you only wear a diaper and a pacifier
+You need a complete outfit!
+Cute dresses with pink ruffles and little bows
+Oversized panties with little hearts to cover your diaper
+Shiny maryjane shoes and ruffled ankle socks
+I can already see you in them #EmoteMoan
+That would be so incredibly cute #Grin
+Just in case...
+You don't happen to have that kind of outfit? #lol
+[yes,I do,I have]Oh my God! I can't believe it... That's great news! @SetFlag(png__abdl_outfit) @Goto(png__abdl_outfit)
+[non,I don't,Ihaven't]Of course not #EmoteSad I guess that means you'll have to buy it for me then! #lol 
+@Different yes or no?
+And don't think I'll forget! #Grin @SetFlag(png__buying_abdl_outfit) @Goto(png__buying_abdl_outfit)
+(png__abdl_baby_boy)
+@NullResponse @CheckFlag(png__buying_abdl_outfit,png__abdl_outfit)
+@NullResponse @If[png_know_you_better_questions_count]>=[#DomLevel]Then(stop_questions)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+I can't stop thinking about all that baby stuff #Grin
+It's not my fault if it makes me so #Horny to have my own grown up baby boy all to myself! #lol
+But it wouldn't be as much fun if you only wear a diaper and a pacifier
+You need a complete outfit!
+Cute onesies with bears, cars or cowboys on it
+And of course cute little slippers
+Or a footed pajama with buzzlightyear or winnie the poo on it
+I can already see you in them #EmoteMoan
+That would be so incredibly cute #Grin
+Just in case...
+You don't happen to have that kind of outfit? #lol
+[no,I don't,I haven't]Of course not #EmoteSad I guess that means you'll have to buy it for me then! #lol 
+[yes,I do,I have]Oh my God! I can't believe it... That's great news! @SetFlag(png__abdl_outfit) @Goto(png__abdl_outfit)
+@DifferentAnswer yes or no?
+And don't think I'll forget! #Grin @SetFlag(png__buying_abdl_outfit) @Goto(png__buying_abdl_outfit)
+(png__no_abdl)(png__buying_abdl_outfit)(png__abdl_outfit)
+@NullResponse @CheckFlag(png__no_cumeating,png__cumeating)
+@NullResponse @If[png_know_you_better_questions_count]>=[#DomLevel]Then(stop_questions)
+@NullResponse @ChangeVar[png_know_you_better_questions_count]=[png_know_you_better_questions_count]+[1]
+Let's get a bit more intimate in the questions... #Grin
+I don't really like the taste of cum
+But when I see others licking it, it makes me so #Horny
+And when they swallow I'm literally #Leaking in my panties #lol
+But that all seems tame compared to what I feel when I can make a guy do it just for me! #Grin
+Most of the time I just come right there as I see him doing it
+Now that I confided one of my kinks, it's your turn!
+Have you ever tasted your own cum? #Grin
+[yes]Damn you! Now my panties are dripping wet... #lol @SetFlag(png__cumeating) @Goto(png__cumeating)
+[no]It's ok there is a first time for everybody #Emote
+@DifferentAnswer yes or no?
+And knowing how much pleasure it gives me...
+Would you consider doing it for me if I asked you later?
+[yes]That's really sweet of you! And that makes me really really happy #EmoteHappy @SetFlag(png__cumeating) @Goto(png__cumeating)
+[no]I'm sure I'll end up convincing you one day #lol @SetFlag(png__no_cumeating) @Goto(png__no_cumeating)
+@DifferentAnswer yes or no?
+(png__no_cumeating)(png__cumeating)
+It seems I'm out of questions for now
+But maybe I'll have more later
+Since the more I know about you the better I can tease you and make you #Ache for me #Grin
+For now let's start our session
+Grab your #Cock and start #Stroking @StartStroking
+@End
+(skip)
+Alright no questions for now
+But I hope you'll change your mind
+We could have so much fun if you did #Grin
+And in order to make sure you think about that
+I want you to write it for me!  @AFKOn
+(redo_writing)
+@NullResponse @WritingTask(I will tell all my secrets to #DomHonorific #DomName so she can tease me relentlessly)
+Maybe after a few hundreds of those you'll tell me all I want to know #Grin @AFKOff
+But for now start #Stroking @StartStroking
+@End
+(stop_questions)
+Enough questions for today
+I know you can't wait to stroke for me #Emote
+So let's start, stroke your #Cock @StartStroking
+@End
+(Failed Writing Task)
+I'm not very pleased with that performance #PetName
+I'll make you redo it until you get it right!
+If you need motivation remember that the more time you pass writing lines...
+The less time I have to tease you!
+So get to work @Goto(redo_writing)
+@End
+@Info The dom wants to know more about you and ask you some questions about a lot of different things
