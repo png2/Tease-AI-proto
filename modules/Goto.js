@@ -3,7 +3,7 @@ import {RandomUtil} from '../utils/RandomUtil';
 /**
  * All the commands to go to another part of the file
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor}) {
     commandsProcessor.registerCommand('Goto', goToTarget);
 
     // Create all the @ChanceXX

@@ -3,7 +3,7 @@ import {RandomUtil} from '../utils/RandomUtil';
 /**
  * All the misc commands and filters, mostly system stuff like @End, @Wait, etc.
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
     commandsProcessor.registerCommand('NullResponse', ignoreLine);
 
     commandsProcessor.registerCommand('Info', ignoreLine);

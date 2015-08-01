@@ -8,8 +8,10 @@ var lineReader = require('line-reader');
  *
  */
 export class ListParser {
-    constructor(uiDispatcher) {
+    constructor(commandFiltersProcessor, uiDispatcher) {
+        this.commandFiltersProcessor = commandFiltersProcessor;
         this.uiDispatcher = uiDispatcher;
+        this.ignoredLine = false;
     }
 
     /**
@@ -28,7 +30,12 @@ export class ListParser {
         });
     }
 
+    ignoreLine() {
+        this.ignoredLine = true;
+    }
+
     _next() {
+        this.ignoredLine = false;
         this._readRandomLineGroup();
     }
 
@@ -42,7 +49,14 @@ export class ListParser {
     }
 
     _parseLineGroup(lines) {
-        this.displayLines([...lines]);
+        var processedLines = [];
+        lines.forEach((line) => {
+            processedLines.push(this.commandFiltersProcessor.processCommands(line));
+        });
+
+        if(!this.ignoredLine ) {
+            this.displayLines([...processedLines]);
+        }
     }
 
     displayLines(lines) {

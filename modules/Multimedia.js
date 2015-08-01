@@ -5,7 +5,7 @@ var fs = require('fs');
 /**
  * All the things managing the images, videos or audio
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, uiDispatcher}) {
 
     uiDispatcher.on("displayImage", storeLastDisplayedImage);
 

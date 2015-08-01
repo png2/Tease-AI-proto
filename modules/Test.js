@@ -2,11 +2,12 @@
  * A simple sample to see how to implement a module
  * @param commandsProcessor Allow you to register and process commands. See <code>core/processors/CommandsProcessor</code>
  * @param vocabularyProcessor Allow you to register and process vocabulary filters. See <code>core/processors/VocabularyProcessor</code>
+ * @param commandFiltersProcessor Allow you to register and process command filters. See <code>core/processors/CommandFiltersProcessor</code>
  * @param uiDispatcher Allow you to communicate with the UI. See <code>core/UIDispatcher</code>
  * @param settings Contains all the app settings. See <code>core/Settings</code>
  * @param state Contains the state of the current session. See <code>core/State</code>
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state}) {
     /* Here you can set up things like setting default values of variables or states */
 
     /**

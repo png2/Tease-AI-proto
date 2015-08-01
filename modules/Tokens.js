@@ -1,7 +1,7 @@
 /**
  * Manage the tokens system
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, state}) {
     if(!state.persistent.tokens) {
         state.persistent.tokens = 0;
     }

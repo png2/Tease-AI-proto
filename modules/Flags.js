@@ -1,7 +1,7 @@
 /**
  * The flag system management
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, state}) {
     state.persistent.flags = new Set();
     state.temp.flags = new Set();
 

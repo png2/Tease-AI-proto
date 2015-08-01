@@ -1,7 +1,7 @@
 /**
  * All the things directly related to the Domme
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
 
     commandsProcessor.registerCommand('DommeLevelUp', levelUp);
 

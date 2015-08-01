@@ -6,6 +6,7 @@ import {CommandsProcessor} from './processors/CommandsProcessor';
 import {VariablesProcessor} from './processors/VariablesProcessor';
 import {VocabularyProcessor} from './processors/VocabularyProcessor';
 import {AnswerProcessor} from './processors/AnswerProcessor';
+import {CommandFiltersProcessor} from './processors/CommandFiltersProcessor';
 import {FileUtil} from '../utils/FileUtil';
 
 /**
@@ -25,6 +26,7 @@ export class Session {
         var cycler = new Cycler();
 
         var commandsProcessor = new CommandsProcessor(uiDispatcher,settings,state);
+        var commandFiltersProcessor = new CommandFiltersProcessor(uiDispatcher,settings,state);
         var vocabularyProcessor = new VocabularyProcessor(uiDispatcher,settings,state);
         var variablesProcessor = new VariablesProcessor();
         var answerProcessor = new AnswerProcessor(uiDispatcher, settings);
@@ -38,9 +40,9 @@ export class Session {
                                 uiDispatcher,
                                 state);
 
-        var listParser = new ListParser(uiDispatcher);
+        var listParser = new ListParser(commandFiltersProcessor, uiDispatcher);
 
-        Session._loadModules(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state);
+        Session._loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state);
 
         //scriptParser.parseFile(file);
         listParser.parseFiles([
@@ -56,11 +58,18 @@ export class Session {
      * Dynamically load all the modules in the ../modules directory
      * @private
      */
-    static _loadModules(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+    static _loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state) {
         FileUtil.walk('./modules',filePath => {
             var module = require(filePath);
             if(module && module.register) {
-                module.register(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state)
+                module.register({
+                    commandsProcessor:commandsProcessor,
+                    vocabularyProcessor:vocabularyProcessor,
+                    commandFiltersProcessor:commandFiltersProcessor,
+                    uiDispatcher:uiDispatcher,
+                    settings:settings,
+                    state:state
+                });
             } else {
                 console.log(`the module ${filePath} is not valid or do not have a 'register' export`)
             }

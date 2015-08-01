@@ -28,7 +28,7 @@ export class CommandsProcessor {
             this.uiDispatcher.debug(`Applying commmand '${commandName}' with params : ${params.length==0?'no params':params.join(",")}`);
             this.commands.get(commandName)(this.scriptParser, this.uiDispatcher, this.settings, this.state, params);
         } else {
-            throw `Unknown command : ${commandName}`;
+            console.log(`Unknown command : ${commandName}`);
         }
     }
 

@@ -3,7 +3,7 @@ import {RandomUtil} from '../utils/RandomUtil';
 /**
  * Manage the Writing task system
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
 
     /**
      * Register the main @WritingTask(line) command

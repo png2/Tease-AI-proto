@@ -1,7 +1,7 @@
 /**
  * All Chastity related things
  */
-module.exports.register = function(commandsProcessor, vocabularyProcessor, uiDispatcher, settings, state) {
+module.exports.register = function({commandsProcessor}) {
     commandsProcessor.registerCommand('ChastityOn', chastityOn);
 
     commandsProcessor.registerCommand('ChastityOff', chastityOff);
