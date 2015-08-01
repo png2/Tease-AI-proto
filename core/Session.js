@@ -40,7 +40,10 @@ export class Session {
                                 uiDispatcher,
                                 state);
 
-        var listParser = new ListParser(commandFiltersProcessor, uiDispatcher);
+        var listParser = new ListParser(
+            commandFiltersProcessor,
+            vocabularyProcessor,
+            uiDispatcher);
 
         Session._loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state);
 
@@ -49,7 +52,13 @@ export class Session {
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
-        ]);*/
+        ]);
+
+        setTimeout(()=>{
+            listParser.stop(() => {
+                console.log('waiting for more');
+            });
+        },30000); */
 
         return state;
     }
