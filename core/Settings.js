@@ -11,7 +11,8 @@ export class Settings {
             level:1,
             apathy:1,
             orgasmChance:'Never',
-            ruinChance:'Never'
+            ruinChance:'Never',
+            crazy: false
         };
         // Sub informations
         this.sub = {
@@ -27,6 +28,7 @@ export class Settings {
             hasChastity: false,
             hasChastityPA: false,
             hasChastitySpikes: false,
+            holdingEdgeMax: 0,
             birthday:{
                 day:1,
                 month:1,

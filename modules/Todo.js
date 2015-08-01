@@ -13,9 +13,6 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'StartTaunts',
         'StopStroking',
         'StopTaunts',
-        'Edge',
-        'EdgeHold',
-        'EdgeNoHold',
         'EdgeToRuin',
         'EdgeToRuinHold',
         'EdgeToRuinNoHold',
@@ -49,8 +46,8 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
     ];
 
     todoCommands.forEach((value)=>{
-        commandsProcessor.registerCommand(value, ({ui})=> {
-            ui.debug(`Should do ${value} but not implemented yet...`);
+        commandsProcessor.registerCommand(value, ({uiDispatcher})=> {
+            uiDispatcher.debug(`Should do ${value} but not implemented yet...`);
         });
     });
     
