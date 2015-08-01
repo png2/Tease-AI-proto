@@ -5,7 +5,7 @@ var fs = require('fs');
 /**
  * All the things managing the images, videos or audio
  */
-module.exports.register = function({commandsProcessor, uiDispatcher}) {
+module.exports.register = function({commandsProcessor, commandFiltersProcessor, uiDispatcher}) {
 
     uiDispatcher.on("displayImage", storeLastDisplayedImage);
 
@@ -39,6 +39,7 @@ module.exports.register = function({commandsProcessor, uiDispatcher}) {
 
     imagesCommands.forEach((imageCommand)=>{
         commandsProcessor.registerCommand(imageCommand[0], createImageCommand(imageCommand));
+        commandFiltersProcessor.registerCommand(imageCommand[0], createImageCommandFilter(imageCommand));
     });
 
     var videosCommands = [
@@ -104,6 +105,16 @@ function createImageCommand(imageCommand) {
             uiDispatcher.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
         } else {
             uiDispatcher.debug(`Invalid parameters for @${imageCommand[0]}`);
+        }
+    };
+}
+
+function createImageCommandFilter(imageCommand) {
+    return function ({parser,uiDispatcher, settings}) {
+        if(settings.images[imageCommand[1]]) {
+            uiDispatcher.on("displayImage", FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
+        } else {
+            parser.ignoreLine();
         }
     };
 }
