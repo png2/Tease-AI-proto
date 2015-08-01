@@ -42,6 +42,32 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
         commandFiltersProcessor.registerCommand(imageCommand[0], createImageCommandFilter(imageCommand));
     });
 
+    var videoCommands = [
+        ['VideoBlowjob', 'bowjob'],
+        ['VideoFemdom', 'femdom'],
+        ['VideoFemsub', 'femsub'],
+        ['VideoGeneral', 'general'],
+        ['VideoHardcore', 'hardcore'],
+        ['VideoLesbian', 'lesbian'],
+        ['VideoSoftcore', 'softcore']
+    ];
+
+    videoCommands.forEach((videoCommand) => {
+        commandFiltersProcessor.registerCommand(videoCommand[0], createVideoCommandFilter(videoCommand));
+    });
+
+    var dommeVideoCommands = [
+        ['VideoBlowjobDomme', 'blowjob'],
+        ['VideoFemdomDomme', 'femdom'],
+        ['VideoHardcoreDomme', 'hardcore'],
+        ['VideoLesbianDomme', 'lesbian'],
+        ['VideoSoftcoreDomme', 'softcore']
+    ];
+
+    dommeVideoCommands.forEach((videoCommand) => {
+        commandFiltersProcessor.registerCommand(videoCommand[0], createVideoCommandFilter(videoCommand));
+    });
+
     var videosCommands = [
         ['PlayJOIVideo','joi'],
         ['PlayCHVideo','cockhero']
@@ -120,8 +146,9 @@ function createImageCommandFilter(imageCommand) {
 }
 
 function createVideoCommand(videoCommand) {
-    return function({parser, uiDispatcher, settings}, params) {
+    return function({parser, uiDispatcher, settings, state}, params) {
         if(params.length === 0) {
+            state.temp.videoType = videoCommand[1];
             triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
         } else {
             uiDispatcher.debug(`Invalid parameters for @${videoCommand[0]}`);
@@ -129,9 +156,16 @@ function createVideoCommand(videoCommand) {
     };
 }
 
+function createVideoCommandFilter(videoCommand) {
+    return function({state}) {
+        return state.temp.videoType == videoCommand[1];
+    };
+}
+
 function triggerAndWaitForCompletion(parser,uiDispatcher,event, file) {
     parser.wait();
     uiDispatcher.triggerAsync(event,() => {
+        delete state.temp.videoType;
         parser.resume();
     },file);
 }
