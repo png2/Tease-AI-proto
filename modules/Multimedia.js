@@ -56,33 +56,33 @@ function storeLastDisplayedImage(path,callback) {
     if(callback) callback();
 }
 
-function showImage(scriptParser, ui, settings, state, params) {
+function showImage({uiDispatcher, settings}, params) {
     if(params.length == 0) {
-        ui.trigger("displayImage", FileUtil.getRandomImageFromDirectory(settings.images.general));
+        uiDispatcher.trigger("displayImage", FileUtil.getRandomImageFromDirectory(settings.images.general));
     } else if(params.length === 1) {
-        ui.trigger("displayImage",path.join(settings.appPath,"Images",params[0]));
+        uiDispatcher.trigger("displayImage",path.join(settings.appPath,"Images",params[0]));
     } else {
-        ui.debug(`Invalid parameters for @ShowImage`);
+        uiDispatcher.debug(`Invalid parameters for @ShowImage`);
     }
 }
 
-function playVideo(scriptParser, ui, settings, state, params) {
+function playVideo({parser, uiDispatcher, settings}, params) {
     if(params.length === 1) {
-        triggerAndWaitForCompletion(scriptParser,ui,"playVideo",path.join(settings.appPath,"Video",params[0]));
+        triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo",path.join(settings.appPath,"Video",params[0]));
     } else {
-        ui.debug(`Invalid parameters for @PlayVideo`);
+        uiDispatcher.debug(`Invalid parameters for @PlayVideo`);
     }
 }
 
-function playAudio(scriptParser, ui, settings, state, params) {
+function playAudio({parser, uiDispatcher, settings}, params) {
     if(params.length === 1) {
-        triggerAndWaitForCompletion(scriptParser,ui,"playAudio",path.join(settings.appPath,"Audio",params[0]));
+        triggerAndWaitForCompletion(parser,uiDispatcher,"playAudio",path.join(settings.appPath,"Audio",params[0]));
     } else {
-        ui.debug(`Invalid parameters for @PlayAudio`);
+        uiDispatcher.debug(`Invalid parameters for @PlayAudio`);
     }
 }
 
-function deleteLastDisplayedImage(scriptParser, ui, settings, state, params) {
+function deleteLastDisplayedImage({state}) {
     if(state.temp.lastDisplayedImage) {
         fs.unlink(state.temp.lastDisplayedImage,function(){});
     } else {
@@ -90,37 +90,37 @@ function deleteLastDisplayedImage(scriptParser, ui, settings, state, params) {
     }
 }
 
-function activateLockImage(scriptParser, ui, settings, state, params) {
+function activateLockImage({state}) {
     state.temp.lockImage = true;
 }
 
-function deactivateLockImage(scriptParser, ui, settings, state, params) {
+function deactivateLockImage({state}) {
     state.temp.lockImage = false;
 }
 
 function createImageCommand(imageCommand) {
-    return (scriptParser, ui, settings, state, params) => {
+    return function ({uiDispatcher, settings}, params) {
         if(params.length === 0) {
-            ui.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
+            uiDispatcher.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
         } else {
-            ui.debug(`Invalid parameters for @${imageCommand[0]}`);
+            uiDispatcher.debug(`Invalid parameters for @${imageCommand[0]}`);
         }
     };
 }
 
 function createVideoCommand(videoCommand) {
-    return (scriptParser, ui, settings, state, params)=> {
+    return function({parser, uiDispatcher, settings}, params) {
         if(params.length === 0) {
-            triggerAndWaitForCompletion(scriptParser,ui,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
+            triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
         } else {
-            ui.debug(`Invalid parameters for @${videoCommand[0]}`);
+            uiDispatcher.debug(`Invalid parameters for @${videoCommand[0]}`);
         }
     };
 }
 
-function triggerAndWaitForCompletion(scriptParser,ui,event, file) {
-    scriptParser.wait();
-    ui.triggerAsync(event,() => {
-        scriptParser.resume();
+function triggerAndWaitForCompletion(parser,uiDispatcher,event, file) {
+    parser.wait();
+    uiDispatcher.triggerAsync(event,() => {
+        parser.resume();
     },file);
 }

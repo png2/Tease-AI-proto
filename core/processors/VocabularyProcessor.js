@@ -31,7 +31,11 @@ export class VocabularyProcessor {
     applyVocabularyFilter(filterName, params = []) {
         if(this.filters.has(filterName)) {
             this.uiDispatcher.debug(`Applying Filter '${filterName}' with params : ${params.length==0?'no params':params.join(",")}`);
-            return this.filters.get(filterName)(this, this.settings, this.state, params);
+            return this.filters.get(filterName)({
+                parser:this,
+                settings:this.settings,
+                state:this.state
+            }, params);
         } else {
             return `#${filterName}`;
             // apply default filter when its done

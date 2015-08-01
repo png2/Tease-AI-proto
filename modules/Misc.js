@@ -31,17 +31,17 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
     vocabularyProcessor.registerVocabularyFilter("GreetSub", getGreetSub);
 };
 
-function ignoreLine(scriptParser, ui, settings, state, params) {
-    scriptParser.doNotDisplayLineText();
+function ignoreLine({parser}) {
+    parser.doNotDisplayLineText();
 }
 
-function waitForSeconds(scriptParser, ui, settings, state, params) {
+function waitForSeconds({parser, ui}, params) {
     if(params.length === 1) {
         let seconds = parseInt(params[0],10);
         if(!isNaN(seconds)) {
-            scriptParser.wait();
+            parser.wait();
             setTimeout(()=>{
-                scriptParser.resume();
+                parser.resume();
             },seconds*1000);
         } else {
             ui.debug(`Invalid number of seconds : ${params[0]}`)
@@ -51,56 +51,56 @@ function waitForSeconds(scriptParser, ui, settings, state, params) {
     }
 }
 
-function endScript(scriptParser, ui, settings, state, params) {
-    scriptParser.endScript();
+function endScript({parser}) {
+    parser.endScript();
 }
 
-function goToTeaseEnding(scriptParser, ui, settings, state, params) {
-    scriptParser.endTease();
+function goToTeaseEnding({parser}) {
+    parser.endTease();
 }
 
-function endTease(scriptParser, ui, settings, state, params) {
-    scriptParser.endSession();
+function endTease({parser}) {
+    parser.endSession();
 }
 
-function decideOrgasm(scriptParser, ui, settings, state, params) {
+function decideOrgasm({parser, settings}) {
     if(RandomUtil.isLucky(settings.ranges.orgasmChance[settings.domme.orgasmChance])) {
         if(RandomUtil.isLucky(settings.ranges.ruinChance[settings.domme.ruinChance])) {
-            scriptParser.goto("Orgasm Ruin");
+            parser.goto("Orgasm Ruin");
         }else {
-            scriptParser.goto("Orgasm Allow");
+            parser.goto("Orgasm Allow");
         }
     } else {
-        scriptParser.goto("Orgasm Deny")
+        parser.goto("Orgasm Deny")
     }
 }
 
-function activateAFKMode(scriptParser, ui, settings, state, params) {
-    scriptParser.wait();
-    ui.registerInputListener("AFK","",999,() => {});
+function activateAFKMode({parser, uiDispatcher}) {
+    parser.wait();
+    uiDispatcher.registerInputListener("AFK","",999,() => {});
 }
 
-function deactivateAFKMode(scriptParser, ui, settings, state, params) {
-    ui.unregisterInputListener("AFK");
-    scriptParser.resume();
+function deactivateAFKMode({parser, uiDispatcher}) {
+    uiDispatcher.unregisterInputListener("AFK");
+    parser.resume();
 }
 
-function activateRapidText(scriptParser, ui, settings, state, params) {
+function activateRapidText({state}) {
     state.temp.rapidText = true;
 }
 
-function deactivateRapidText(scriptParser, ui, settings, state, params) {
+function deactivateRapidText({state}) {
     state.temp.rapidText = false;
 }
 
-function getGeneralTime(vocabularyProcessor, settings,state,params) {
+function getGeneralTime() {
     var currentHour = new Date().getHours();
     if(currentHour > 3 && currentHour < 11) return "this morning";
     if(currentHour < 18) return "today";
     return "tonight";
 }
 
-function getGreetSub(vocabularyProcessor, settings,state,params) {
+function getGreetSub({vocabularyProcessor}) {
     var currentHour = new Date().getHours();
     if(currentHour > 3 && currentHour < 11) return vocabularyProcessor.processVocabularyFilters("#GoodMorningSub");
     if(currentHour < 18) return vocabularyProcessor.processVocabularyFilters("#GoodAftenoonSub");

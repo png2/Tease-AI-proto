@@ -14,13 +14,13 @@ export class CommandFiltersProcessor extends CommandsProcessor{
     }
 
     registerFilter(filterName,filter) {
-        super.registerCommand(filterName,(parser, ui, settings, state, params)=>{
+        super.registerCommand(filterName,({parser, settings, state, params})=>{
             if(!filter(settings, state, params)) {
                 parser.ignoreLine();
             }
         });
 
-        super.registerCommand(`Not${filterName}`,(parser, ui, settings, state, params)=>{
+        super.registerCommand(`Not${filterName}`,({parser, settings, state, params})=>{
             if(filter(settings, state, params)) {
                 parser.ignoreLine();
             }

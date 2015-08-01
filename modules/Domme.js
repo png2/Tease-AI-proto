@@ -17,30 +17,30 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
 
 };
 
-function levelUp(scriptParser, ui, settings, state, params) {
+function levelUp({settings}) {
     if(settings.domme.level < 5) {
         settings.domme.level++;
     }
 }
 
-function getDommeLevel(settings, state, params) {
+function getDommeLevel({settings}) {
     return settings.domme.level;
 }
 
-function levelDown(scriptParser, ui, settings, state, params) {
+function levelDown({settings}) {
     if(settings.domme.level > 0) {
         settings.domme.level--;
     }
 }
 
-function getDommeOrgasmRate(vocabularyProcessor, settings,state,params) {
+function getDommeOrgasmRate({settings}) {
     return settings.domme.orgasmChance + ' Allows';
 }
 
-function getDommeRuinRate(vocabularyProcessor, settings,state,params) {
+function getDommeRuinRate({settings}) {
     return settings.domme.ruinChance + ' Allows';
 }
 
-function getDommeHonorific(vocabularyProcessor, settings,state,params) {
+function getDommeHonorific({settings}) {
     return settings.sub.honorific;
 }

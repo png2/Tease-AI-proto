@@ -25,20 +25,20 @@ module.exports.register = function({commandsProcessor, state}) {
 };
 
 function createTokenCommand(tokenCommand) {
-    return (scriptParser, ui, settings, state, params)=> {
+    return ({state})=> {
         state.persistent.tokens += tokenCommand[1];
     };
 }
 
-function addToken(scriptParser, ui, settings, state, params) {
+function addToken({uiDispatcher, state}, params) {
     if(params.length === 1) {
         let tokens = parseInt(params[0],10);
         if(!isNaN(tokens)) {
             state.persistent.tokens += tokens;
         } else {
-            ui.debug(`Invalid number of tokens : ${params[0]}`)
+            uiDispatcher.debug(`Invalid number of tokens : ${params[0]}`)
         }
     } else {
-        ui.debug('Invalid number of parameters for @AddTokens');
+        uiDispatcher.debug('Invalid number of parameters for @AddTokens');
     }
 }

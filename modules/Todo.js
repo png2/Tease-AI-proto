@@ -44,16 +44,11 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'CheckTnA',
         'CheckVideo',
         'StopTnA',
-        'StrokeFaster',
-        'StrokeFastest',
-        'StrokeSlower',
-        'StrokeSlowest',
-        'StrokeSpeedMax',
         'InterruptLongEdge'
     ];
 
     todoCommands.forEach((value)=>{
-        commandsProcessor.registerCommand(value, (scriptParser, ui, settings, state, params)=> {
+        commandsProcessor.registerCommand(value, ({ui})=> {
             ui.debug(`Should do ${value} but not implemented yet...`);
         });
     });
@@ -99,7 +94,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
     ];
 
     todoVocab.forEach((value)=>{
-        vocabularyProcessor.registerVocabularyFilter(value, (settings, state, params)=> {
+        vocabularyProcessor.registerVocabularyFilter(value, ()=> {
             return `${value}`;
         });
     });

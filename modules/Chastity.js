@@ -7,10 +7,10 @@ module.exports.register = function({commandsProcessor}) {
     commandsProcessor.registerCommand('ChastityOff', chastityOff);
 };
 
-function chastityOn(scriptParser, ui, settings, state, params) {
+function chastityOn({state}) {
     state.chastity = true;
 }
 
-function chastityOff(scriptParser, ui, settings, state, params) {
+function chastityOff({state}) {
     state.chastity = false;
 }

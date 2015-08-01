@@ -44,12 +44,12 @@ export class Session {
 
         Session._loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state);
 
-        //scriptParser.parseFile(file);
-        listParser.parseFiles([
+        scriptParser.parseFile(file);
+        /*listParser.parseFiles([
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
-        ]);
+        ]);*/
 
         return state;
     }

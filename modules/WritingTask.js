@@ -15,70 +15,70 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
     vocabularyProcessor.registerVocabularyFilter("SubWritingTaskMax", getWritingTaskMax);
 };
 
-function createWritingTask(scriptParser, ui, settings, state, params) {
+function createWritingTask({parser, uiDispatcher, settings}, params) {
     if(params.length == 1) {
         var writingTask = generateWritingTask(settings, params[0]);
 
         // Stop the parser while the user is doing the task
-        scriptParser.wait();
+        parser.wait();
 
         // Send the task info to the UI
-        ui.trigger("writingTaskStart",writingTask);
+        uiDispatcher.trigger("writingTaskStart",writingTask);
 
         // Listen on ALL the inputs with the higher priority to stop the program from answering to anything else than the line writing
-        ui.registerInputListener("writingTask", "", 999, generateWritingTaskProcessor(scriptParser,ui,writingTask));
+        uiDispatcher.registerInputListener("writingTask", "", 999, generateWritingTaskProcessor(parser,uiDispatcher,writingTask));
     } else {
-        ui.debug("Wrong number of params for Writing Task");
+        uiDispatcher.debug("Wrong number of params for Writing Task");
     }
 }
 
 
-function getWritingTaskMin(vocabularyProcessor, settings,state,params) {
+function getWritingTaskMin({settings}) {
     return settings.sub.writingTask.min;
 }
 
-function getWritingTaskMax(vocabularyProcessor, settings,state,params) {
+function getWritingTaskMax({settings}) {
     return settings.sub.writingTask.max;
 }
 
 /**
  * Generate the callback to process the user input.
  * This is needed to maintain the current context in the listener.
- * @param scriptParser
- * @param ui
+ * @param parser
+ * @param uiDispatcher
  * @param writingTask
  * @returns {Function} The listener to give to registerInputListener
  */
-function generateWritingTaskProcessor(scriptParser,ui,writingTask) {
+function generateWritingTaskProcessor(parser,uiDispatcher,writingTask) {
     return function(text) {
         // Check if the text matches the line requested
         if(text == writingTask.text) {
             writingTask.success++;
             // let the UI know it's been a correct line
-            ui.trigger("writingTaskStartCorrect",writingTask);
+            uiDispatcher.trigger("writingTaskStartCorrect",writingTask);
             // check if he is done with the task
             if(writingTask.success >= writingTask.linesToWrite) {
                 // let the UI know that the task is done
-                ui.trigger("writingTaskDone",writingTask);
+                uiDispatcher.trigger("writingTaskDone",writingTask);
                 // Cleanup the input listener
-                ui.unregisterInputListener("writingTask");
+                uiDispatcher.unregisterInputListener("writingTask");
                 // resume the parsing
-                scriptParser.resume();
+                parser.resume();
             }
         } else {
             writingTask.failures++;
             // let the UI know it's been a failure
-            ui.trigger("writingTaskFailure",writingTask);
+            uiDispatcher.trigger("writingTaskFailure",writingTask);
             // check if the task is failed
             if(writingTask.failures >= writingTask.failuresAllowed) {
                 // le the UI know the user has failed the task
-                ui.trigger("writingTaskFailed",writingTask);
+                uiDispatcher.trigger("writingTaskFailed",writingTask);
                 // clean up the input listener
-                ui.unregisterInputListener("writingTask");
+                uiDispatcher.unregisterInputListener("writingTask");
                 // Goto the default failure target
-                scriptParser.goto("Failed Writing Task");
+                parser.goto("Failed Writing Task");
                 // resume the parsing
-                scriptParser.resume();
+                parser.resume();
             }
         }
     };

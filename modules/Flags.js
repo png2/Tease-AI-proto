@@ -14,7 +14,7 @@ module.exports.register = function({commandsProcessor, state}) {
     commandsProcessor.registerCommand('CheckFlag', checkFlag);
 };
 
-function createNewFlag(scriptParser, ui, settings, state, params) {
+function createNewFlag({ui, state}, params) {
     if(params.length === 1) {
         state.persistent.flags.add(params[0]);
     } else {
@@ -22,7 +22,7 @@ function createNewFlag(scriptParser, ui, settings, state, params) {
     }
 }
 
-function createNewTemporaryFlag(scriptParser, ui, settings, state, params) {
+function createNewTemporaryFlag({ui, state}, params) {
     if(params.length === 1) {
         state.temp.flags.add(params[0]);
     } else {
@@ -30,7 +30,7 @@ function createNewTemporaryFlag(scriptParser, ui, settings, state, params) {
     }
 }
 
-function deleteFlag(scriptParser, ui, settings, state, params) {
+function deleteFlag({uiDispatcher, state}, params) {
     if(params.length === 1) {
         if(state.temp.flags.has(params[0])) {
             state.temp.flags.delete(params[0])
@@ -39,24 +39,24 @@ function deleteFlag(scriptParser, ui, settings, state, params) {
             state.persistent.flags.delete(params[0])
         }
     } else {
-        ui.debug("Missing mandatory argument for @DeleteFlag");
+        uiDispatcher.debug("Missing mandatory argument for @DeleteFlag");
     }
 }
 
-function checkFlag(scriptParser, ui, settings, state, params) {
+function checkFlag({parser, uiDispatcher, state}, params) {
     if(params.length > 0) {
         for(let i = params.length-1;i>0;i--) {
             let value = params[i];
             if(state.temp.flags.has(value)) {
-                scriptParser.goto(value);
+                parser.goto(value);
                 break;
             }
             if(state.persistent.flags.has(value)) {
-                scriptParser.goto(value);
+                parser.goto(value);
                 break;
             }
         }
     } else {
-        ui.debug("Missing mandatory argument(s) for @CheckFlag");
+        uiDispatcher.debug("Missing mandatory argument(s) for @CheckFlag");
     }
 }
