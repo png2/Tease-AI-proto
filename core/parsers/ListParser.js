@@ -8,8 +8,9 @@ var lineReader = require('line-reader');
  *
  */
 export class ListParser {
-    constructor(commandFiltersProcessor, uiDispatcher) {
+    constructor(commandFiltersProcessor, vocabularyProcessor, uiDispatcher) {
         this.commandFiltersProcessor = commandFiltersProcessor;
+        this.vocabularyProcessor = vocabularyProcessor;
         this.uiDispatcher = uiDispatcher;
         this.ignoredLine = false;
 
@@ -54,6 +55,7 @@ export class ListParser {
     _parseLineGroup(lines) {
         var processedLines = [];
         lines.forEach((line) => {
+            line = this.vocabularyProcessor.processVocabularyFilters(line);
             processedLines.push(this.commandFiltersProcessor.processCommands(line));
         });
 
