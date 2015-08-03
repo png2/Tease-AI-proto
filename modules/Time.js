@@ -23,11 +23,11 @@ function getGeneralTime() {
     return "tonight";
 }
 
-function getGreetSub({vocabularyProcessor}) {
+function getGreetSub() {
     var currentHour = new Date().getHours();
-    if(currentHour > 3 && currentHour < 11) return vocabularyProcessor.processVocabularyFilters("#GoodMorningSub");
-    if(currentHour < 18) return vocabularyProcessor.processVocabularyFilters("#GoodAftenoonSub");
-    return vocabularyProcessor.processVocabularyFilters("#GoodEveningSub");
+    if(currentHour > 3 && currentHour < 11) return "#GoodMorningSub";
+    if(currentHour < 18) return "#GoodAftenoonSub";
+    return "#GoodEveningSub";
 }
 
 function createFilterDate(day, month) {
