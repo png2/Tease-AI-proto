@@ -20,9 +20,10 @@ module.exports.register = function({commandsProcessor}) {
     commandsProcessor.registerCommand('GotoDommeRuin', goToDommeRuin);
 };
 
-function goToTarget({scriptParser, uiDispatcher}, params) {
+function goToTarget({parser, uiDispatcher}, params) {
     if (params.length > 0) {
-        scriptParser.goto(params[0]);
+        parser.goto(params[0]);
+        return true;
     } else {
         uiDispatcher.debug("Goto command without any parameter, ignored...")
     }
@@ -33,6 +34,7 @@ function createGoToTargetIfLucky(chance) {
         if (params.length > 0) {
             if(RandomUtil.isLucky(chance)) {
                 scriptParser.goto(params[0]);
+                return true;
             }
         } else {
             ui.debug("Chance command without any parameter, ignored...")
@@ -42,16 +44,20 @@ function createGoToTargetIfLucky(chance) {
 
 function goToDommeLevel({parser, settings}) {
     parser.goto(`DommeLevel${settings.domme.level}`);
+    return true;
 }
 
 function goToDommeApathy({parser, settings}) {
     parser.goto(`ApathyLevel${settings.domme.apathy}`);
+    return true;
 }
 
 function goToDommeOrgasm({parser, settings}) {
     parser.goto(`${settings.domme.orgasmChance} Allows`);
+    return true;
 }
 
 function goToDommeRuin({parser, settings}) {
     parser.goto(`${settings.domme.ruinChance} Allows`);
+    return true;
 }

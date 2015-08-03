@@ -35,6 +35,7 @@ function waitForSeconds({parser, ui}, params) {
             setTimeout(()=>{
                 parser.resume();
             },seconds*1000);
+            return true;
         } else {
             ui.debug(`Invalid number of seconds : ${params[0]}`)
         }
@@ -45,14 +46,17 @@ function waitForSeconds({parser, ui}, params) {
 
 function endScript({parser}) {
     parser.endScript();
+    return true;
 }
 
 function goToTeaseEnding({parser}) {
     parser.endTease();
+    return true;
 }
 
 function endTease({parser}) {
     parser.endSession();
+    return true;
 }
 
 function activateAFKMode({parser, uiDispatcher}) {

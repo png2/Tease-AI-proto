@@ -27,6 +27,8 @@ function createWritingTask({parser, uiDispatcher, settings}, params) {
 
         // Listen on ALL the inputs with the higher priority to stop the program from answering to anything else than the line writing
         uiDispatcher.registerInputListener("writingTask", "", 999, generateWritingTaskProcessor(parser,uiDispatcher,writingTask));
+
+        return true;
     } else {
         uiDispatcher.debug("Wrong number of params for Writing Task");
     }

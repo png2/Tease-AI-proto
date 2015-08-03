@@ -96,6 +96,7 @@ function showImage({uiDispatcher, settings}, params) {
 function playVideo({parser, uiDispatcher, settings}, params) {
     if(params.length === 1) {
         triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo",path.join(settings.appPath,"Video",params[0]));
+        return true;
     } else {
         uiDispatcher.debug(`Invalid parameters for @PlayVideo`);
     }
@@ -104,6 +105,7 @@ function playVideo({parser, uiDispatcher, settings}, params) {
 function playAudio({parser, uiDispatcher, settings}, params) {
     if(params.length === 1) {
         triggerAndWaitForCompletion(parser,uiDispatcher,"playAudio",path.join(settings.appPath,"Audio",params[0]));
+        return true;
     } else {
         uiDispatcher.debug(`Invalid parameters for @PlayAudio`);
     }
@@ -129,6 +131,7 @@ function createImageCommand(imageCommand) {
     return function ({uiDispatcher, settings}, params) {
         if(params.length === 0) {
             uiDispatcher.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
+            return true;
         } else {
             uiDispatcher.debug(`Invalid parameters for @${imageCommand[0]}`);
         }
@@ -150,6 +153,7 @@ function createVideoCommand(videoCommand) {
         if(params.length === 0) {
             state.temp.videoType = videoCommand[1];
             triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
+            return true;
         } else {
             uiDispatcher.debug(`Invalid parameters for @${videoCommand[0]}`);
         }

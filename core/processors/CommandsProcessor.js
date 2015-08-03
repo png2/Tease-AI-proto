@@ -26,7 +26,7 @@ export class CommandsProcessor {
     applyCommand(commandName,params = []) {
         if(this.commands.has(commandName)) {
             this.uiDispatcher.debug(`Applying commmand '${commandName}' with params : ${params.length==0?'no params':params.join(",")}`);
-            this.commands.get(commandName)({
+            return this.commands.get(commandName)({
                 parser:this.scriptParser,
                 uiDispatcher:this.uiDispatcher,
                 settings:this.settings,
@@ -55,6 +55,7 @@ export class CommandsProcessor {
      * @returns {String} the line cleaned up without the command. If the command is preceded by a space, it is deleted, if it is followed by a space it is kept in the returning string
      */
     processCommands(line) {
+        var ignoreFollowingCommands = false;
         return line.replace(/( ?)@([\w-]+)($| |\(([^\)]+)\)?)( ?)/g,(match,
                                                                      precedingSpace,
                                                                      commandName,
@@ -62,10 +63,12 @@ export class CommandsProcessor {
                                                                      commandParameters="",
                                                                      followingSpace = commandParametersWithParenthesis
         ) => {
-            if(commandParameters.trim() !== "") {
-                this.applyCommand(commandName, commandParameters.split(','));
-            } else {
-                this.applyCommand(commandName);
+            if(!ignoreFollowingCommands) {
+                if (commandParameters.trim() !== "") {
+                    ignoreFollowingCommands = this.applyCommand(commandName, commandParameters.split(','));
+                } else {
+                    ignoreFollowingCommands = this.applyCommand(commandName);
+                }
             }
             return followingSpace;
         });

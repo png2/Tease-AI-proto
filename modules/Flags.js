@@ -51,13 +51,14 @@ function checkFlag({parser, uiDispatcher, state}, params) {
             let value = params[i];
             if(state.temp.flags.has(value)) {
                 parser.goto(value);
-                break;
+                return true;
             }
             if(state.persistent.flags.has(value)) {
                 parser.goto(value);
-                break;
+                return true;
             }
         }
+        return false;
     } else {
         uiDispatcher.debug("Missing mandatory argument(s) for @CheckFlag");
     }

@@ -21,6 +21,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
      * - state : the state. See above
      * It's other parameters are :
      * - params : The params of the command or an empty table if there is no parameter
+     * The function returns true if the program should ignore any command after this one
      */
     commandsProcessor.registerCommand('test',testCommand);
 

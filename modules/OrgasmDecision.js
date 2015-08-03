@@ -21,13 +21,16 @@ function decideOrgasm({parser, settings, state}) {
         if(RandomUtil.isLucky(settings.ranges.ruinChance[settings.domme.ruinChance])) {
             state.temp.orgasmRuined = true;
             parser.goto("Orgasm Ruin");
+            return true;
         }else {
             state.temp.orgasmAllowed  = true;
             parser.goto("Orgasm Allow");
+            return true;
         }
     } else {
         state.temp.orgasmDenied = true;
         parser.goto("Orgasm Deny")
+        return true;
     }
 }
 
