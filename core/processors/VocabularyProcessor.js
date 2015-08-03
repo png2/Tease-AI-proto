@@ -1,4 +1,5 @@
 import {ListParser} from '../parsers/ListParser';
+import {RandomUtil} from '../../utils/RandomUtil';
 
 var fs = require('fs');
 var path = require('path');
@@ -8,13 +9,12 @@ var path = require('path');
  * A vocabulary filter is in the form #Filter or #Filter(param,param,...)
  */
 export class VocabularyProcessor {
-    constructor(ui, commandFilterProcessor, settings, state) {
+    constructor(ui, settings, state) {
         this.filters = new Map();
         this.uiDispatcher = ui;
         this.settings = settings;
         this.state = state;
-
-        this.listParser = new ListParser(commandFilterProcessor, this, settings);
+        this._cachedVocabulary = new Map();
     }
 
     /**
@@ -35,20 +35,22 @@ export class VocabularyProcessor {
      * @param params The params passed to the filter
      * @returns {string} The filtered value or #{filterName} if no filter is found
      */
-    applyVocabularyFilter(filterName, params = []) {
+    applyVocabularyFilter(filterName, parser, params = []) {
         if(this.filters.has(filterName)) {
             this.uiDispatcher.debug(`Applying Filter '${filterName}' with params : ${params.length==0?'no params':params.join(",")}`);
-            return this.filters.get(filterName)({
-                parser:this,
+            var filteredLine = this.filters.get(filterName)({
+                parser:parser,
                 settings:this.settings,
                 state:this.state
             }, params);
+            if(filteredLine.indexOf('#')>=0) {
+                return this.processVocabularyFilters(filteredLine,parser);
+            }
+            return filteredLine;
         } else {
-            var vocabFile = path.join(this.settings.appPath, 'Scripts/png Wicked Tease/Vocabulary/', `#${filterName}.txt`);
-            if(fs.existsSync(vocabFile)) {
-                //return this.listParser.getSingleLineFromFile(vocabFile,(line)=>{
-                return `${filterName}`;
-                //});
+            if(this._cachedVocabulary.has(`#${filterName}.txt`)) {
+                var vocabParser = this._cachedVocabulary.get(`#${filterName}.txt`);
+                return vocabParser.readRandomLine();
             } else {
                 return `${filterName}`;
                 // apply default filter when its done
@@ -62,9 +64,9 @@ export class VocabularyProcessor {
      * @param line The line to process
      * @returns {string} The line with all the filters replaced by their filtered values
      */
-    processVocabularyFilters(line) {
-        line = this._processVocabularyFiltersWithParams(line);
-        line = this._processVocabularyFiltersWithoutParams(line);
+    processVocabularyFilters(line, parser) {
+        line = this._processVocabularyFiltersWithParams(line, parser);
+        line = this._processVocabularyFiltersWithoutParams(line, parser);
         return line;
     }
 
@@ -72,9 +74,9 @@ export class VocabularyProcessor {
      * process filters with parameters : #Filter(param)
      * @private
      */
-    _processVocabularyFiltersWithParams(line) {
+    _processVocabularyFiltersWithParams(line, parser) {
         return line.replace(/#([\w-]+)\(([^\)]+)\)/g,(match,filterName,filterParameters) => {
-            return this.applyVocabularyFilter(filterName,filterParameters.split(','));
+            return this.applyVocabularyFilter(filterName,parser, filterParameters.split(','));
         });
     }
 
@@ -82,9 +84,28 @@ export class VocabularyProcessor {
      * Process filters without parameters #Filter
      * @private
      */
-    _processVocabularyFiltersWithoutParams(line) {
+    _processVocabularyFiltersWithoutParams(line, parser) {
         return line.replace(/#([\w-]+)/g,(match,filterName) => {
-            return this.applyVocabularyFilter(filterName);
+            return this.applyVocabularyFilter(filterName, parser);
         });
+    }
+
+    preloadVocabulary(commandFilterProcessor, preloadingDone) {
+        var vocabFilesDir = path.join(this.settings.appPath, 'Scripts/png Wicked Tease/Vocabulary/');
+        var promisedLoaders = [];
+        fs.readdirSync(vocabFilesDir).forEach((file)=>{
+            file = path.join(vocabFilesDir,file);
+            var stat = fs.statSync(file);
+            if (stat.isFile()) {
+                promisedLoaders.push(new Promise((resolve,reject) =>{
+                    var listParser = new ListParser(commandFilterProcessor, this, this.settings);
+                    this._cachedVocabulary.set(path.basename(file),listParser);
+                    listParser.loadFile(file,()=>{
+                        resolve();
+                    });
+                }));
+            }
+        });
+        Promise.all(promisedLoaders).then(preloadingDone).catch((e)=>{console.log(e);});
     }
 }
