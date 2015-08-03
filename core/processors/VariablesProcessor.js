@@ -7,10 +7,6 @@ export class VariablesProcessor {
         this.variables = {};
     }
 
-    setScriptParser(scriptParser) {
-        this.scriptParser = scriptParser;
-    }
-
     /**
      * Set a variable value
      * @param variableName The name of the variable
@@ -34,11 +30,11 @@ export class VariablesProcessor {
      * @param line The line to process
      * @returns {*} The line cleaned up from the variable instructions
      */
-    processVariables(line) {
+    processVariables(line, parser) {
         line = this._processSetVariables(line);
         line = this._processChangeVariables(line);
         line = this._processShowVariables(line);
-        line = this._processIf(line);
+        line = this._processIf(line, parser);
         return line;
     }
 
@@ -101,7 +97,7 @@ export class VariablesProcessor {
      * Process @If[var](=|==|<>|>|>=|<|<=)[value]Then(target)
      * @private
      */
-    _processIf(line) {
+    _processIf(line, parser) {
 
         return line.replace(/@If\[([^\]]+)\](=|>|<|<=|>=|==|<>)\[([^\]]+)\]Then\(([^\)]+)\)/g,(
             match,
@@ -114,22 +110,22 @@ export class VariablesProcessor {
             switch(operator) {
                 case '=':
                 case '==':
-                    if(currentValue === expectedValue) this.scriptParser.goto(target);
+                    if(currentValue === expectedValue) parser.goto(target);
                     break;
                 case '<>':
-                    if(currentValue !== expectedValue) this.scriptParser.goto(target);
+                    if(currentValue !== expectedValue) parser.goto(target);
                     break;
                 case '>':
-                    if(currentValue > expectedValue) this.scriptParser.goto(target);
+                    if(currentValue > expectedValue) parser.goto(target);
                     break;
                 case '<':
-                    if(currentValue < expectedValue) this.scriptParser.goto(target);
+                    if(currentValue < expectedValue) parser.goto(target);
                     break;
                 case '<=':
-                    if(currentValue <= expectedValue) this.scriptParser.goto(target);
+                    if(currentValue <= expectedValue) parser.goto(target);
                     break;
                 case '>=':
-                    if(currentValue >= expectedValue) this.scriptParser.goto(target);
+                    if(currentValue >= expectedValue) parser.goto(target);
                     break;
                 default:
                     throw `Invalid operator : ${operator}`;

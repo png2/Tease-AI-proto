@@ -15,10 +15,6 @@ export class ScriptParser  {
         this.state = state;
 
         this.temporaryInputListeners = [];
-
-        this.commandsProcessor.setScriptParser(this);
-        this.variablesProcesor.setScriptParser(this);
-        this.answerProcessor.setScriptParser(this);
     }
 
     /**
@@ -99,10 +95,10 @@ export class ScriptParser  {
             return;
         }
 
-        line = this.vocabularyProcessor.processVocabularyFilters(line);
-        line = this.variablesProcesor.processVariables(line);
+        line = this.vocabularyProcessor.processVocabularyFilters(line, this);
+        line = this.variablesProcesor.processVariables(line, this);
         line = this.commandsProcessor.cleanupRemainingSquareBrackets(line);
-        line = this.commandsProcessor.processCommands(line);
+        line = this.commandsProcessor.processCommands(line, this);
 
         line = line.trim();
         if(this._shouldDisplayLine(line)) {

@@ -14,20 +14,16 @@ export class CommandsProcessor {
         this.state = state;
     }
 
-    setScriptParser(scriptParser) {
-        this.scriptParser = scriptParser;
-    }
-
     /**
      * Execute the code attached to a command
      * @param commandName The name of the command
      * @param params The params to give to the command if any
      */
-    applyCommand(commandName,params = []) {
+    applyCommand(commandName,parser, params = []) {
         if(this.commands.has(commandName)) {
             this.uiDispatcher.debug(`Applying commmand '${commandName}' with params : ${params.length==0?'no params':params.join(",")}`);
             return this.commands.get(commandName)({
-                parser:this.scriptParser,
+                parser:parser,
                 uiDispatcher:this.uiDispatcher,
                 settings:this.settings,
                 state:this.state
@@ -54,7 +50,7 @@ export class CommandsProcessor {
      * @param line The line to process
      * @returns {String} the line cleaned up without the command. If the command is preceded by a space, it is deleted, if it is followed by a space it is kept in the returning string
      */
-    processCommands(line) {
+    processCommands(line, parser) {
         var ignoreFollowingCommands = false;
         return line.replace(/( ?)@([\w-]+)($| |\(([^\)]+)\)?)( ?)/g,(match,
                                                                      precedingSpace,
@@ -65,9 +61,9 @@ export class CommandsProcessor {
         ) => {
             if(!ignoreFollowingCommands) {
                 if (commandParameters.trim() !== "") {
-                    ignoreFollowingCommands = this.applyCommand(commandName, commandParameters.split(','));
+                    ignoreFollowingCommands = this.applyCommand(commandName, parser, commandParameters.split(','));
                 } else {
-                    ignoreFollowingCommands = this.applyCommand(commandName);
+                    ignoreFollowingCommands = this.applyCommand(commandName, parser);
                 }
             }
             return followingSpace;

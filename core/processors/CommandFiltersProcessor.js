@@ -9,20 +9,20 @@ export class CommandFiltersProcessor extends CommandsProcessor{
         super(ui,settings,state);
     }
 
-    setListParser(listParser) {
-        super.setScriptParser(listParser);
-    }
-
     registerFilter(filterName,filter) {
         super.registerCommand(filterName,({parser, settings, state}, params)=>{
             if(!filter({settings:settings, state:state}, params)) {
+                this.uiDispatcher.debug(`ignore : ${filterName}`);
                 parser.ignoreLine();
+                return true;
             }
         });
 
         super.registerCommand(`Not${filterName}`,({parser, settings, state}, params)=>{
             if(filter({settings:settings, state:state}, params)) {
+                this.uiDispatcher.debug(`ignore : Not${filterName}`);
                 parser.ignoreLine();
+                return true;
             }
         });
     }

@@ -12,14 +12,6 @@ export class AnswerProcessor {
     }
 
     /**
-     * Attach the current parser
-     * @param scriptParser
-     */
-    setScriptParser(scriptParser) {
-        this.scriptParser = scriptParser;
-    }
-
-    /**
      * Check if the line contains dialog related instructions
      * @param line The line to process
      * @returns {boolean} Return true if the line contains dialog related instructions
@@ -34,14 +26,14 @@ export class AnswerProcessor {
      * Process the dialog instructions in the line
      * @param line The line
      */
-    processAnswers(line) {
+    processAnswers(line,parser) {
         if (line.startsWith("[")) {
-            this._processAnswerPattern(line);
-            this.scriptParser._readNextLine();
+            this._processAnswerPattern(line, parser);
+            parser._readNextLine();
         } else if (line.startsWith("@DifferentAnswer")) {
-            this._processDifferentAnswer(line);
+            this._processDifferentAnswer(line,parser);
         } else if (line.startsWith("@AcceptAnswer")) {
-            this._processAcceptAnswer(line);
+            this._processAcceptAnswer(line, parser);
         }
     }
 
@@ -50,12 +42,12 @@ export class AnswerProcessor {
      * Ex : [yes]Oh you agree...
      * @private
      */
-    _processAnswerPattern(line) {
+    _processAnswerPattern(line, parser) {
         line.replace(/^\[([^\]]+)\](.*)/, (match, patterns, endOfLine) => {
             if (endOfLine.match("@LoopAnswer")) {
-                this._processAnswerWithLoopAnswer(patterns, endOfLine);
+                this._processAnswerWithLoopAnswer(patterns, endOfLine, parser);
             } else {
-                this._processAnswer(patterns, endOfLine);
+                this._processAnswer(patterns, endOfLine, parser);
             }
         });
     }
@@ -64,55 +56,55 @@ export class AnswerProcessor {
      * Process the answer line if the line does not contain a @LoopAnswer command
      * @private
      */
-    _processAnswer(patterns,endOfLine) {
+    _processAnswer(patterns,endOfLine,parser) {
         ((scriptParser,uiDispatcher, patterns, endOfLine) => {
             this.uiDispatcher.registerTemporaryInputListener(patterns, 100, (text) => {
                 uiDispatcher.cleanUpTemporaryInputListeners();
                 scriptParser._parseLine(endOfLine);
                 return false;
             });
-        })(this.scriptParser, this.uiDispatcher, patterns, endOfLine);
+        })(parser, this.uiDispatcher, patterns, endOfLine);
     }
 
     /**
      * Process the answer line if the line contains a @loopAnswer command
      * @private
      */
-    _processAnswerWithLoopAnswer(patterns, endOfLine) {
+    _processAnswerWithLoopAnswer(patterns, endOfLine, parser) {
         ((scriptParser, patterns, endOfLine) => {
             this.uiDispatcher.registerTemporaryInputListener(patterns, 100, (text) => {
                 scriptParser._currentLine--;
                 scriptParser._parseLine(endOfLine);
                 return false;
             });
-        })(this.scriptParser, patterns, endOfLine.replace("@LoopAnswer", ""));
+        })(parser, patterns, endOfLine.replace("@LoopAnswer", ""));
     }
 
     /**
      * Process the lines starting with @DifferentAnswer
      * @private
      */
-    _processDifferentAnswer(line) {
+    _processDifferentAnswer(line, parser) {
         ((scriptParser, endOfLine) => {
             this.uiDispatcher.registerTemporaryInputListener("", 99, (text) => {
                 scriptParser._currentLine--;
                 scriptParser._parseLine(endOfLine);
                 return false;
             });
-        })(this.scriptParser, line.replace("@DifferentAnswer ", ""));
+        })(parser, line.replace("@DifferentAnswer ", ""));
     }
 
     /**
      * Process the lines starting with @AcceptAnswer
      * @private
      */
-    _processAcceptAnswer(line) {
+    _processAcceptAnswer(line, parser) {
         ((scriptParser,uiDispatcher, endOfLine) => {
             this.uiDispatcher.registerTemporaryInputListener("", 99, (text) => {
                 uiDispatcher.cleanUpTemporaryInputListeners();
                 scriptParser._parseLine(endOfLine);
                 return false;
             });
-        })(this.scriptParser,this.uiDispatcher, line.replace("@AcceptAnswer ", ""));
+        })(parser,this.uiDispatcher, line.replace("@AcceptAnswer ", ""));
     }
 }
