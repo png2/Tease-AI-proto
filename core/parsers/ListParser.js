@@ -17,6 +17,10 @@ export class ListParser {
         commandFiltersProcessor.setListParser(this);
     }
 
+    parseFile(file) {
+        parseFiles([file]);
+    }
+
     /**
      * Parse the list of files. The files will be loaded in memory while they are parsed.
      * @param files The files to parse
