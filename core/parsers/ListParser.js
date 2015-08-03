@@ -42,6 +42,7 @@ export class ListParser {
     }
 
     startTaunting() {
+        this.uiDispatcher.debug('-- Start taunting --');
         this._next();
     }
 
@@ -49,7 +50,7 @@ export class ListParser {
      * Stop the taunting
      * @param stoppedCallback
      */
-    stop(stoppedCallback) {
+    stop(stoppedCallback = function(){}) {
         this._stopCallback = stoppedCallback;
     }
 
@@ -62,6 +63,7 @@ export class ListParser {
 
     _next() {
         if(this._stopCallback) {
+            this.uiDispatcher.debug('-- Stop taunting --');
             this._stopCallback();
             return;
         }
