@@ -1,13 +1,20 @@
+import {ListParser} from '../parsers/ListParser';
+
+var fs = require('fs');
+var path = require('path');
+
 /**
  * Process all the vocabulary filters related things
  * A vocabulary filter is in the form #Filter or #Filter(param,param,...)
  */
 export class VocabularyProcessor {
-    constructor(ui,settings, state) {
+    constructor(ui, commandFilterProcessor, settings, state) {
         this.filters = new Map();
         this.uiDispatcher = ui;
         this.settings = settings;
         this.state = state;
+
+        this.listParser = new ListParser(commandFilterProcessor, this, settings);
     }
 
     /**
@@ -37,9 +44,16 @@ export class VocabularyProcessor {
                 state:this.state
             }, params);
         } else {
-            return `#${filterName}`;
-            // apply default filter when its done
-            //throw `Unknown filter : ${filterName}`;
+            var vocabFile = path.join(this.settings.appPath, 'Scripts/png Wicked Tease/Vocabulary/', `#${filterName}.txt`);
+            if(fs.existsSync(vocabFile)) {
+                //return this.listParser.getSingleLineFromFile(vocabFile,(line)=>{
+                return `${filterName}`;
+                //});
+            } else {
+                return `${filterName}`;
+                // apply default filter when its done
+                //throw `Unknown filter : ${filterName}`;
+            }
         }
     }
 

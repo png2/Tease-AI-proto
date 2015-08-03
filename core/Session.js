@@ -27,7 +27,7 @@ export class Session {
 
         var commandsProcessor = new CommandsProcessor(uiDispatcher,settings,state);
         var commandFiltersProcessor = new CommandFiltersProcessor(uiDispatcher,settings,state);
-        var vocabularyProcessor = new VocabularyProcessor(uiDispatcher,settings,state);
+        var vocabularyProcessor = new VocabularyProcessor(uiDispatcher,commandFiltersProcessor,settings,state);
         var variablesProcessor = new VariablesProcessor();
         var answerProcessor = new AnswerProcessor(uiDispatcher, settings);
 
