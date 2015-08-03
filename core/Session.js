@@ -48,20 +48,19 @@ export class Session {
         Session._loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state);
 
         vocabularyProcessor.preloadVocabulary(commandFiltersProcessor,()=>{
-            scriptParser.parseFile(file);
+            if(file) scriptParser.parseFile(file);
+            else {
+            listParser.loadFiles([
+                    'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
+                    'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
+                    'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
+                ]);
+
+                setTimeout(()=>{
+                    listParser.stop();
+                },30000);
+            }
         });
-
-        /*listParser.loadFiles([
-           'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
-           'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
-           'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
-        ]);
-
-        setTimeout(()=>{
-            listParser.stop(() => {
-                console.log('waiting for more');
-            });
-        },30000);*/
 
         return state;
     }
