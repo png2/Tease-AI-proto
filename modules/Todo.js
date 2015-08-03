@@ -127,6 +127,8 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'RuinTaunt',
         'SelfOld',
         'SelfYoung',
+        'SubOld',
+        'SubYoung',
         'ShowBlogImage',
         'ShowDislikedImage',
         'ShowLikedImage',
@@ -164,8 +166,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
     ];
 
     filters.forEach((filter)=>{
-        commandFiltersProcessor.registerFilter(filter,()=>{
-            console.log(`ignore : ${filter}`);
+        commandFiltersProcessor.registerFilter(filter,({})=>{
             return false;
         });
     });
