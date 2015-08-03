@@ -27,7 +27,7 @@ export class Session {
 
         var commandsProcessor = new CommandsProcessor(uiDispatcher,settings,state);
         var commandFiltersProcessor = new CommandFiltersProcessor(uiDispatcher,settings,state);
-        var vocabularyProcessor = new VocabularyProcessor(uiDispatcher,commandFiltersProcessor,settings,state);
+        var vocabularyProcessor = new VocabularyProcessor(uiDispatcher,settings,state);
         var variablesProcessor = new VariablesProcessor();
         var answerProcessor = new AnswerProcessor(uiDispatcher, settings);
 
@@ -47,8 +47,11 @@ export class Session {
 
         Session._loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state);
 
-        scriptParser.parseFile(file);
-        /*listParser.parseFiles([
+        vocabularyProcessor.preloadVocabulary(commandFiltersProcessor,()=>{
+            scriptParser.parseFile(file);
+        });
+
+        /*listParser.loadFiles([
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
            'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
@@ -58,7 +61,7 @@ export class Session {
             listParser.stop(() => {
                 console.log('waiting for more');
             });
-        },30000); */
+        },30000);*/
 
         return state;
     }
@@ -71,6 +74,7 @@ export class Session {
         FileUtil.walk('./modules',filePath => {
             var module = require(filePath);
             if(module && module.register) {
+                uiDispatcher.debug(`load module ${filePath}`);
                 module.register({
                     commandsProcessor:commandsProcessor,
                     vocabularyProcessor:vocabularyProcessor,
@@ -83,5 +87,6 @@ export class Session {
                 console.log(`the module ${filePath} is not valid or do not have a 'register' export`)
             }
         });
+        uiDispatcher.debug('all modules loaded');
     }
 }
