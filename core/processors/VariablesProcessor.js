@@ -28,6 +28,7 @@ export class VariablesProcessor {
     /**
      * Process the variable related instructions in the line
      * @param line The line to process
+     * @param parser The parser used to fetch this line
      * @returns {*} The line cleaned up from the variable instructions
      */
     processVariables(line, parser) {

@@ -62,6 +62,7 @@ export class VocabularyProcessor {
     /**
      * Process all the filters in the line
      * @param line The line to process
+     * @param parser The parser used to fetch this line
      * @returns {string} The line with all the filters replaced by their filtered values
      */
     processVocabularyFilters(line, parser) {

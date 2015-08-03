@@ -25,6 +25,7 @@ export class AnswerProcessor {
     /**
      * Process the dialog instructions in the line
      * @param line The line
+     * @param parser The parser used to fetch this line
      */
     processAnswers(line,parser) {
         if (line.startsWith("[")) {

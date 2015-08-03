@@ -22,6 +22,7 @@ export class ListParser {
     /**
      * Parse the list of files. The files will be loaded in memory while they are parsed.
      * @param files The files to parse
+     * @param callback The function called once the loading is done. If none is given, the loader will call startTaunting(). The callback doesn't take any parameter
      */
     loadFiles(files,callback) {
         this._lines = [];
@@ -41,6 +42,9 @@ export class ListParser {
         }).catch((e)=>{console.log(e);});
     }
 
+    /**
+     * Start taunting the user using random lines from the files loaded in this parser
+     */
     startTaunting() {
         this.uiDispatcher.debug('-- Start taunting --');
         this._next();
@@ -70,17 +74,22 @@ export class ListParser {
 
         console.log("-------");
         setTimeout(()=>{
-            this.displayLines(this.readRandomLineGroup());
+            this._displayLines(this.readRandomLineGroup());
         },5000);
     }
 
+    /**
+     * Read a random line from the files loaded by this parser
+     * @returns {string} a line from the files
+     */
     readRandomLine() {
         return this.readRandomLineGroup()[0];
     }
 
     /**
-     * Read the next line of the file
-     * @private
+     * Read a randome line group from the files loaded by this parser
+     * It's used for files containing several lines linked together like stroking_2 or stroking_3
+     * @returns {array} An array of lines from the files
      */
     readRandomLineGroup() {
         var lines = this._lines[RandomUtil.getRandomInteger(0,this._lines.length-1)];
@@ -102,11 +111,11 @@ export class ListParser {
         }
     }
 
-    displayLines(lines) {
+    _displayLines(lines) {
         var line = lines.shift();
         this.uiDispatcher.displayText(line, ()=> {
             if(lines.length > 0) {
-                this.displayLines(lines);
+                this._displayLines(lines);
             } else {
                 this._next();
             }

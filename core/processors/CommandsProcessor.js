@@ -48,6 +48,7 @@ export class CommandsProcessor {
     /**
      * Process all the commands found in the line
      * @param line The line to process
+     * @param parser The parser used to fetch this line
      * @returns {String} the line cleaned up without the command. If the command is preceded by a space, it is deleted, if it is followed by a space it is kept in the returning string
      */
     processCommands(line, parser) {
