@@ -91,7 +91,7 @@ function holdTheEdge(commandFiltersProcessor, vocabularyProcessor, uiDispatcher,
  */
 function createEdgeTauntingParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher, settings) {
     var edgeTauntsParser = new ListParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher);
-    edgeTauntsParser.parseFile(path.join(settings.appPath, 'Scripts/png Wicked Tease/Stroke/Edge/Edge.txt'));
+    edgeTauntsParser.loadFile(path.join(settings.appPath, 'Scripts/png Wicked Tease/Stroke/Edge/Edge.txt'));
     return edgeTauntsParser;
 }
 /**
@@ -104,7 +104,7 @@ function createEdgeTauntingParser(commandFiltersProcessor, vocabularyProcessor, 
  */
 function createHoldTheEdgeTauntingParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher, settings) {
     var edgeTauntsParser = new ListParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher);
-    edgeTauntsParser.parseFile(path.join(settings.appPath, 'Scripts/png Wicked Tease/Stroke/HoldTheEdge/holdTheEdge.txt'));
+    edgeTauntsParser.loadFile(path.join(settings.appPath, 'Scripts/png Wicked Tease/Stroke/HoldTheEdge/holdTheEdge.txt'));
     return edgeTauntsParser;
 }
 /**
