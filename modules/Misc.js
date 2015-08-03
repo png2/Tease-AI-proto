@@ -1,10 +1,11 @@
 /**
  * All the misc commands and filters, mostly system stuff like @End, @Wait, etc.
  */
-module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
-    commandsProcessor.registerCommand('NullResponse', ignoreLine);
+module.exports.register = function({commandsProcessor, commandFiltersProcessor, vocabularyProcessor}) {
+    commandsProcessor.registerCommand('NullResponse', ignoreLineCommand);
 
-    commandsProcessor.registerCommand('Info', ignoreLine);
+    commandsProcessor.registerCommand('Info', ignoreLineCommandAndStop);
+    commandFiltersProcessor.registerFilter('Info', ignoreLineFilter);
 
     commandsProcessor.registerCommand('Wait', waitForSeconds);
 
@@ -23,8 +24,17 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor}) {
     commandsProcessor.registerCommand('RapidTextOff', deactivateRapidText);
 };
 
-function ignoreLine({parser}) {
+function ignoreLineCommand({parser}) {
     parser.doNotDisplayLineText();
+}
+
+function ignoreLineCommandAndStop(args,params) {
+    ignoreLineCommand(args,params)
+    return true;
+}
+
+function ignoreLineFilter() {
+    return false;
 }
 
 function waitForSeconds({parser, ui}, params) {
