@@ -123,6 +123,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'FirstRound',
         'InterruptLongEdge',
         'LongEdge',
+        'NewBlogImage',
         'RuinTaunt',
         'SelfOld',
         'SelfYoung',
