@@ -18,15 +18,15 @@ module.exports.register = function({vocabularyProcessor, commandFiltersProcessor
 
 function getGeneralTime() {
     var currentHour = new Date().getHours();
-    if(currentHour > 3 && currentHour < 11) return "this morning";
-    if(currentHour < 18) return "today";
+    if(currentHour > 3 && currentHour <= 11) return "this morning";
+    if(currentHour > 11 && currentHour < 18) return "today";
     return "tonight";
 }
 
 function getGreetSub() {
     var currentHour = new Date().getHours();
-    if(currentHour > 3 && currentHour < 11) return "#GoodMorningSub";
-    if(currentHour < 18) return "#GoodAftenoonSub";
+    if(currentHour > 3 && currentHour <= 11) return "#GoodMorningSub";
+    if(currentHour > 11 && currentHour < 18) return "#GoodAfternoonSub";
     return "#GoodEveningSub";
 }
 
