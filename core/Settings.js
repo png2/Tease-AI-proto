@@ -38,7 +38,8 @@ export class Settings {
             writingTask:{
                 min:1,
                 max:5
-            }
+            },
+            petNames: ['slave','stroker','sub','pet']
         };
         // Images options and paths
         this.images ={
