@@ -45,7 +45,7 @@ export class VariablesProcessor {
      */
     _processShowVariables(line) {
         return line.replace(/@ShowVar\[([^\]]+)\]/g, (match, variableName) => {
-            return getValue(variableName);
+            return this.getValue(variableName);
         });
     }
 
@@ -55,7 +55,7 @@ export class VariablesProcessor {
      */
     _processSetVariables(line) {
         return line.replace(/@SetVar\[([^\]]+)\]=\[([^\]]+)\]/g, (match, variableName, variableValue) => {
-            setValue(variableName, this._parseVariableValue(variableValue));
+            this.setValue(variableName, this._parseVariableValue(variableValue));
             return "";
         });
     }
@@ -89,7 +89,7 @@ export class VariablesProcessor {
                     break;
             }
 
-            setValue(variableName, calculatedValue);
+            this.setValue(variableName, calculatedValue);
             return "";
         });
     }
@@ -106,7 +106,7 @@ export class VariablesProcessor {
             operator,
             variableExpectedValue,
             target) => {
-            var currentValue = getValue(variableName);
+            var currentValue = this.getValue(variableName);
             var expectedValue = this._parseVariableValue(variableExpectedValue);
             switch(operator) {
                 case '=':
@@ -145,7 +145,7 @@ export class VariablesProcessor {
         if(!isNaN(numericValue)) {
             return numericValue;
         } else {
-            return getValue(value);
+            return this.getValue(value);
         }
     }
 }
