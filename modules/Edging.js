@@ -13,7 +13,7 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
 };
 
 function createEdgeCommand(commandFiltersProcessor, vocabularyProcessor) {
-    return function edge({parser,uiDispatcher, settings}) {
+    return function({parser,uiDispatcher, settings}) {
         var holdChance = calculateHoldingChance(settings);
 
         if(RandomUtil.isLucky(holdChance)) {
@@ -91,7 +91,7 @@ function holdTheEdge(commandFiltersProcessor, vocabularyProcessor, uiDispatcher,
  */
 function createEdgeTauntingParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher, settings) {
     var edgeTauntsParser = new ListParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher);
-    edgeTauntsParser.loadFile(path.join(settings.appPath, 'Scripts/', this.settings.domme.directory ,'/Stroke/Edge/Edge.txt'));
+    edgeTauntsParser.loadFile(path.join(settings.appPath, 'Scripts/', settings.domme.directory ,'/Stroke/Edge/Edge.txt'));
     return edgeTauntsParser;
 }
 /**
@@ -104,7 +104,7 @@ function createEdgeTauntingParser(commandFiltersProcessor, vocabularyProcessor, 
  */
 function createHoldTheEdgeTauntingParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher, settings) {
     var edgeTauntsParser = new ListParser(commandFiltersProcessor, vocabularyProcessor, uiDispatcher);
-    edgeTauntsParser.loadFile(path.join(settings.appPath, 'Scripts/', this.settings.domme.directory ,'/Stroke/HoldTheEdge/holdTheEdge.txt'));
+    edgeTauntsParser.loadFile(path.join(settings.appPath, 'Scripts/', settings.domme.directory ,'/Stroke/HoldTheEdge/holdTheEdge.txt'));
     return edgeTauntsParser;
 }
 /**
