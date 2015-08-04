@@ -92,7 +92,7 @@ export class VocabularyProcessor {
     }
 
     preloadVocabulary(commandFilterProcessor, preloadingDone) {
-        var vocabFilesDir = path.join(this.settings.appPath, 'Scripts/png Wicked Tease/Vocabulary/');
+        var vocabFilesDir = path.join(this.settings.appPath, 'Scripts/', this.settings.domme.directory  ,'/Vocabulary/');
         var promisedLoaders = [];
         fs.readdirSync(vocabFilesDir).forEach((file)=>{
             file = path.join(vocabFilesDir,file);

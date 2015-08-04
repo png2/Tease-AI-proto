@@ -8,6 +8,7 @@ export class Settings {
         this.debug = true; // display debugs info
         // Dom informations
         this.domme = {
+            directory: 'png Wicked Tease',
             level:1,
             apathy:1,
             orgasmChance:'Never',
