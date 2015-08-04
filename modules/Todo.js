@@ -127,6 +127,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'RuinTaunt',
         'SelfOld',
         'SelfYoung',
+        'SubName',
         'SubOld',
         'SubYoung',
         'ShowBlogImage',
