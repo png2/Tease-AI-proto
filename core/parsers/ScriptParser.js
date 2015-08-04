@@ -91,7 +91,7 @@ export class ScriptParser  {
         if(this.answerProcessor.isAnswerLine(line)) {
             this.wait();
             this.doNotDisplayLineText();
-            this.answerProcessor.processAnswers(line);
+            this.answerProcessor.processAnswers(line, this);
             return;
         }
 
