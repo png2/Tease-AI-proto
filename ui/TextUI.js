@@ -37,7 +37,7 @@ export class TextUI {
      */
     _attachListeners() {
         this.uiDispatcher.registerTextToDisplayListener((message,callback)=> {
-            var minWait = 100, maxWait = 1000;
+            var minWait = 5000, maxWait = 5000;
             if(this.state.temp.rapidText) {
                 minWait = 1000;
                 maxWait = 1000;
