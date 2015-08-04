@@ -74,13 +74,11 @@ function endTease({parser}) {
 }
 
 function activateAFKMode({parser, uiDispatcher}) {
-    parser.wait();
     uiDispatcher.registerInputListener("AFK","",999,() => {});
 }
 
 function deactivateAFKMode({parser, uiDispatcher}) {
     uiDispatcher.unregisterInputListener("AFK");
-    parser.resume();
 }
 
 function activateRapidText({state}) {
