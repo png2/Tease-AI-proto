@@ -1,3 +1,5 @@
+import {RandomUtil} from '../utils/RandomUtil';
+
 /**
  * All the misc commands and filters, mostly system stuff like @End, @Wait, etc.
  */
@@ -22,6 +24,8 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
     commandsProcessor.registerCommand('RapidTextOn', activateRapidText);
 
     commandsProcessor.registerCommand('RapidTextOff', deactivateRapidText);
+
+    vocabularyProcessor.registerVocabularyFilter('PetName',petNameVocab);
 };
 
 function ignoreLineCommand({parser}) {
@@ -85,4 +89,8 @@ function activateRapidText({state}) {
 
 function deactivateRapidText({state}) {
     state.temp.rapidText = false;
+}
+
+function petNameVocab({settings}) {
+    return settings.sub.petNames[RandomUtil.getRandomInteger(0,3)];
 }
