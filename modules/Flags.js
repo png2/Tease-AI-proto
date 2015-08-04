@@ -65,7 +65,7 @@ function checkFlag({parser, uiDispatcher, state}, params) {
 }
 
 function filterFlag({state},params) {
-    if(params.length == 0) {
+    if(params.length == 1) {
         return state.persistent.flags.has(params[0])
             || state.temp.flags.has(params[0]);
     } else {
