@@ -23,13 +23,22 @@ export class Session {
      */
     static start(uiDispatcher,settings,file) {
         var state = new State();
-        var cycler = new Cycler();
 
         var commandsProcessor = new CommandsProcessor(uiDispatcher,settings,state);
         var commandFiltersProcessor = new CommandFiltersProcessor(uiDispatcher,settings,state);
         var vocabularyProcessor = new VocabularyProcessor(uiDispatcher,settings,state);
         var variablesProcessor = new VariablesProcessor();
         var answerProcessor = new AnswerProcessor(uiDispatcher, settings);
+
+        var cycler = new Cycler(commandsProcessor,
+                                variablesProcessor,
+                                vocabularyProcessor,
+                                answerProcessor,
+                                commandFiltersProcessor,
+                                uiDispatcher,
+                                settings,
+                                state);
+
 
         var scriptParser = new ScriptParser(
                                 commandsProcessor,
@@ -40,25 +49,12 @@ export class Session {
                                 uiDispatcher,
                                 state);
 
-        var listParser = new ListParser(
-            commandFiltersProcessor,
-            vocabularyProcessor,
-            uiDispatcher);
-
         Session._loadModules(commandsProcessor, vocabularyProcessor, commandFiltersProcessor, uiDispatcher, settings, state);
 
         vocabularyProcessor.preloadVocabulary(commandFiltersProcessor,()=>{
             if(file) scriptParser.parseFile(file);
             else {
-            listParser.loadFiles([
-                    'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_1.txt',
-                    'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_2.txt',
-                    'D:/milo/Tease AI Open Beta/Scripts/png Wicked Tease/Stroke/StrokeTaunts_3.txt'
-                ]);
-
-                setTimeout(()=>{
-                    listParser.stop();
-                },30000);
+                cycler.start();
             }
         });
 
