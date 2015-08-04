@@ -20,7 +20,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
     }
 
     for(let apathy = 1; apathy <= 5; apathy++) {
-        commandFiltersProcessor.registerFilter(`DommeApathy${apathy}`,createDommeApathyFilter(apathy));
+        commandFiltersProcessor.registerFilter(`ApathyLevel${apathy}`,createDommeApathyFilter(apathy));
     }
 
     commandFiltersProcessor.registerFilter('AlwaysAllowsOrgasm',createOrgasmRateFilter('Always'));
