@@ -30,10 +30,10 @@ function goToTarget({parser, uiDispatcher}, params) {
 }
 
 function createGoToTargetIfLucky(chance) {
-    return function goToTargetIfLucky({scriptParser, ui}, params) {
+    return function goToTargetIfLucky({parser, ui}, params) {
         if (params.length > 0) {
             if(RandomUtil.isLucky(chance)) {
-                scriptParser.goto(params[0]);
+                parser.goto(params[0]);
                 return true;
             }
         } else {
