@@ -100,7 +100,7 @@ export class ListParser {
         var processedLines = [];
         lines.forEach((line) => {
             line = this.vocabularyProcessor.processVocabularyFilters(line, this);
-            processedLines.push(this.commandFiltersProcessor.processCommands(line,this));
+            processedLines.push(this.commandFiltersProcessor.processFilters(line,this));
         });
 
         if(!this._ignoredLine) {
@@ -113,6 +113,7 @@ export class ListParser {
 
     _displayLines(lines) {
         var line = lines.shift();
+        line = this.commandFiltersProcessor.processCommands(line,this);
         this.uiDispatcher.displayText(line, ()=> {
             if(lines.length > 0) {
                 this._displayLines(lines);

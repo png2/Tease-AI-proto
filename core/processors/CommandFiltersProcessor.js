@@ -7,10 +7,12 @@ export class CommandFiltersProcessor extends CommandsProcessor{
 
     constructor(ui,settings, state) {
         super(ui,settings,state);
+
+        this.filterProcessor = new CommandsProcessor(ui,settings,state);
     }
 
     registerFilter(filterName,filter) {
-        super.registerCommand(filterName,({parser, settings, state}, params)=>{
+        this.filterProcessor.registerCommand(filterName,({parser, settings, state}, params)=>{
             if(!filter({settings:settings, state:state}, params)) {
                 this.uiDispatcher.debug(`ignore : ${filterName}`);
                 parser.ignoreLine();
@@ -18,13 +20,17 @@ export class CommandFiltersProcessor extends CommandsProcessor{
             }
         });
 
-        super.registerCommand(`Not${filterName}`,({parser, settings, state}, params)=>{
+        this.filterProcessor.registerCommand(`Not${filterName}`,({parser, settings, state}, params)=>{
             if(filter({settings:settings, state:state}, params)) {
                 this.uiDispatcher.debug(`ignore : Not${filterName}`);
                 parser.ignoreLine();
                 return true;
             }
         });
+    }
+
+    processFilters(line, parser) {
+        return this.filterProcessor.processCommands(line,parser,false);
     }
 
 }
