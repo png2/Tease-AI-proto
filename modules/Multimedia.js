@@ -93,18 +93,18 @@ function showImage({uiDispatcher, settings}, params) {
     }
 }
 
-function playVideo({parser, uiDispatcher, settings}, params) {
+function playVideo({parser, uiDispatcher, settings,state}, params) {
     if(params.length === 1) {
-        triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo",path.join(settings.appPath,"Video",params[0]));
+        triggerAndWaitForCompletion(parser,uiDispatcher,state,"playVideo",path.join(settings.appPath,"Video",params[0]));
         return true;
     } else {
         uiDispatcher.debug(`Invalid parameters for @PlayVideo`);
     }
 }
 
-function playAudio({parser, uiDispatcher, settings}, params) {
+function playAudio({parser, uiDispatcher, settings,state}, params) {
     if(params.length === 1) {
-        triggerAndWaitForCompletion(parser,uiDispatcher,"playAudio",path.join(settings.appPath,"Audio",params[0]));
+        triggerAndWaitForCompletion(parser,uiDispatcher,state,"playAudio",path.join(settings.appPath,"Audio",params[0]));
         return true;
     } else {
         uiDispatcher.debug(`Invalid parameters for @PlayAudio`);
@@ -152,7 +152,7 @@ function createVideoCommand(videoCommand) {
     return function({parser, uiDispatcher, settings, state}, params) {
         if(params.length === 0) {
             state.temp.videoType = videoCommand[1];
-            triggerAndWaitForCompletion(parser,uiDispatcher,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
+            triggerAndWaitForCompletion(parser,uiDispatcher,state,"playVideo", FileUtil.getRandomVideoFromDirectory(settings.videos[videoCommand[1]]));
             return true;
         } else {
             uiDispatcher.debug(`Invalid parameters for @${videoCommand[0]}`);
@@ -166,7 +166,7 @@ function createVideoCommandFilter(videoCommand) {
     };
 }
 
-function triggerAndWaitForCompletion(parser,uiDispatcher,event, file) {
+function triggerAndWaitForCompletion(parser,uiDispatcher,state,event, file) {
     parser.wait();
     uiDispatcher.triggerAsync(event,() => {
         delete state.temp.videoType;
