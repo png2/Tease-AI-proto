@@ -72,7 +72,17 @@ export class Settings {
                 120,
                 180,
                 240
-            ]
+            ],
+            teaseLength:{
+                min:10,
+                max:30,
+                decideByLevel:false
+            },
+            tauntLength:{
+                min:1,
+                max:5,
+                decideByLevel:false
+            }
         }
     }
 }

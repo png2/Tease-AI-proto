@@ -1,6 +1,7 @@
 import {ScriptParser} from './parsers/ScriptParser';
 import {ListParser} from './parsers/ListParser';
 import {FileUtil} from '../utils/FileUtil';
+import {RandomUtil} from '../utils/RandomUtil';
 
 var path = require('path');
 
@@ -28,6 +29,8 @@ export class Cycler {
         this.settings = settings;
         this.state = state;
         this._currentStep = '';
+
+        this._sessionEndTimeTs = Date.now() + this._calculateCycleDuration();
     }
 
     /**
@@ -42,7 +45,6 @@ export class Cycler {
      * Go to the next step of the cycle
      */
     next() {
-        console.log('call next');
         switch(this._currentStep) {
             case 'start':
                 this.skipToTaunts();
@@ -51,10 +53,14 @@ export class Cycler {
                 this.skipToModule();
                 break;
             case 'module':
-                this.skipToLink();
+                if(this._sessionEndTimeTs >= Date.now) {
+                    this.skipToEnd();
+                } else {
+                    this.skipToLink();
+                }
                 break;
             case 'link':
-                this.skipToEnd();
+                this.skipToTaunts();
                 break;
         }
     }
@@ -87,7 +93,7 @@ export class Cycler {
                 listParser.stop(()=>{
                     this.next();
                 })
-            },30000);
+            },this._calculateTauntTime());
     }
 
     /**
@@ -133,5 +139,59 @@ export class Cycler {
         var startFile = FileUtil.getRandomFileFromDirectory(path.join(this.settings.appPath,'/Scripts/',this.settings.domme.directory,dir),FileUtil.createChastityScriptFilter(this.state),false);
         var parser = new ScriptParser(this.commandsProcessor,this.variablesProcessor, this.vocabularyProcessor, this.answerProcessor, this, this.uiDispatcher, this.state);
         parser.parseFile(startFile);
+    }
+
+    _calculateTauntTime() {
+        var duration = 0;
+        if(this.settings.ranges.tauntLength.decideByLevel) {
+            switch(this.settings.domme.level) {
+                case 1:
+                    duration = RandomUtil.getRandomInteger(1,2);
+                    break;
+                case 2:
+                    duration = RandomUtil.getRandomInteger(1,3);
+                    break;
+                case 3:
+                    duration = RandomUtil.getRandomInteger(3,5);
+                    break;
+                case 4:
+                    duration = RandomUtil.getRandomInteger(4,7);
+                    break;
+                case 5:
+                    duration = RandomUtil.getRandomInteger(5,10);
+                    break;
+            }
+        } else {
+            duration = RandomUtil.getRandomInteger(this.settings.ranges.tauntLength.min,this.settings.ranges.tauntLength.max);
+        }
+        this.uiDispatcher.debug(`Taunting duration : ${duration} minutes`);
+        return duration * 60 * 1000
+    }
+
+    _calculateCycleDuration() {
+        var duration = 0;
+        if(this.settings.ranges.teaseLength.decideByLevel) {
+            switch(this.settings.domme.level) {
+                case 1:
+                    duration = RandomUtil.getRandomInteger(10,15);
+                    break;
+                case 2:
+                    duration = RandomUtil.getRandomInteger(15,20);
+                    break;
+                case 3:
+                    duration = RandomUtil.getRandomInteger(20,30);
+                    break;
+                case 4:
+                    duration = RandomUtil.getRandomInteger(30,45);
+                    break;
+                case 5:
+                    duration = RandomUtil.getRandomInteger(45,60);
+                    break;
+            }
+        } else {
+            duration = RandomUtil.getRandomInteger(this.settings.ranges.teaseLength.min,this.settings.ranges.teaseLength.max);
+        }
+        this.uiDispatcher.debug(`Session duration : ${duration} minutes`);
+        return duration * 60 * 1000
     }
 }
