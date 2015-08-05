@@ -38,7 +38,7 @@ export class VocabularyProcessor {
     applyVocabularyFilter(filterName, parser, params = []) {
         if(this.filters.has(filterName)) {
             this.uiDispatcher.debug(`Applying Filter '${filterName}' with params : ${params.length==0?'no params':params.join(",")}`);
-            var filteredLine = this.filters.get(filterName)({
+            var filteredLine = "" + this.filters.get(filterName)({
                 parser:parser,
                 settings:this.settings,
                 state:this.state
