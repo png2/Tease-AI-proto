@@ -130,7 +130,12 @@ function deactivateLockImage({state}) {
 function createImageCommand(imageCommand) {
     return function ({uiDispatcher, settings}, params) {
         if(params.length === 0) {
-            uiDispatcher.on("displayImage",FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
+            var imgPath = settings.images[imageCommand[1]];
+            if(imgPath && imgPath != "") {
+                uiDispatcher.on("displayImage", FileUtil.getRandomImageFromDirectory(imgPath));
+            } else {
+                uiDispatcher.debug(`No path set for @${imageCommand[0]}`);
+            }
             return true;
         } else {
             uiDispatcher.debug(`Invalid parameters for @${imageCommand[0]}`);
@@ -140,8 +145,9 @@ function createImageCommand(imageCommand) {
 
 function createImageCommandFilter(imageCommand) {
     return function ({parser,uiDispatcher, settings}) {
-        if(settings.images[imageCommand[1]]) {
-            uiDispatcher.on("displayImage", FileUtil.getRandomImageFromDirectory(settings.images[imageCommand[1]]));
+        var imgPath = settings.images[imageCommand[1]];
+        if(imgPath && imgPath != "") {
+            uiDispatcher.on("displayImage", FileUtil.getRandomImageFromDirectory(imgPath));
         } else {
             parser.ignoreLine();
         }
