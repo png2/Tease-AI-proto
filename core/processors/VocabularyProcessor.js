@@ -48,8 +48,8 @@ export class VocabularyProcessor {
             }
             return filteredLine;
         } else {
-            if(this._cachedVocabulary.has(`#${filterName}.txt`)) {
-                var vocabParser = this._cachedVocabulary.get(`#${filterName}.txt`);
+            if(this._cachedVocabulary.has(`${filterName}`)) {
+                var vocabParser = this._cachedVocabulary.get(`${filterName}`);
                 return vocabParser.readRandomLine();
             } else {
                 return `${filterName}`;
@@ -100,7 +100,7 @@ export class VocabularyProcessor {
             if (stat.isFile()) {
                 promisedLoaders.push(new Promise((resolve,reject) =>{
                     var listParser = new ListParser(commandFilterProcessor, this, this.settings);
-                    this._cachedVocabulary.set(path.basename(file),listParser);
+                    this._cachedVocabulary.set(path.basename(file).slice(1,-4),listParser);
                     listParser.loadFile(file,()=>{
                         resolve();
                     });
