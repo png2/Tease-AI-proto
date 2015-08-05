@@ -14,7 +14,7 @@ I'm using nodejs with the ES6 syntax
 5. run `node start.js path/to/your/file`
 
 For now it only support one file at a time that's what you give it in parameter
-If you don't give any parameter the domme will taunts you for 30 seconds
+If you don't give any parameter it will start a cycle
 
 ## How far is in development?
 Not very far...
@@ -25,14 +25,11 @@ You still have a basic text interface to interact with the scripts for testing p
 For now the parser used for the start, modules, links and end scripts is done
 The parser for the list files si done and the taunting mechanism works
 The vocabulary from files is also implemented
+The cycler that goes through start->taunts->modules->link->end is done
 
 The interrupts are NOT done
 The task generator is NOT done
 There is nothing to fetch pictures on remote blogs
-
-And more importantly, the code for going to the cycle start->taunts->modules->link->end is not done yet
-
-That means you can only parse one script at a time
 
 The good news is that most of the @Commands are implemented already
 
@@ -46,7 +43,7 @@ If you want to see more complex ones go see modules/flags.js and modules/writing
 
 ## What's next
 
-I plan to work on the cycler next then implement as many of the instructions as possible
+I plan to work on the interrupts next then implement as many of the instructions as possible
 
 And give me feedback on [milovana](https://milovana.com/forum/viewtopic.php?f=2&t=15776)
 
