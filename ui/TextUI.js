@@ -38,11 +38,19 @@ export class TextUI {
     _attachListeners() {
         this.uiDispatcher.registerTextToDisplayListener((message,callback)=> {
             var minWait = 5000, maxWait = 5000;
+
+            if(this._awaitingMessage) {
+                clearTimeout(this._awaitingMessage);
+                minWait = 0;
+                maxWait = 0;
+            }
+
             if(this.state.temp.rapidText) {
                 minWait = 1000;
                 maxWait = 1000;
             }
-            setTimeout(()=> {
+            this._awaitingMessage = setTimeout(()=> {
+                this._awaitingMessage = undefined;
                 console.log(`Domme: ${message}`);
                 if (!!callback) callback();
             }, RandomUtil.getRandomInteger(minWait, maxWait));
