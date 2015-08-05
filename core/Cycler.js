@@ -53,7 +53,7 @@ export class Cycler {
                 this.skipToModule();
                 break;
             case 'module':
-                if(this._sessionEndTimeTs >= Date.now) {
+                if(this._sessionEndTimeTs >= Date.now()) {
                     this.skipToEnd();
                 } else {
                     this.skipToLink();
