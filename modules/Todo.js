@@ -134,6 +134,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'ShowDislikedImage',
         'ShowLikedImage',
         'ShowTaggedImage',
+        'ShowImage',
         'SubCircumcised',
         'SubNotCircumcised',
         'SubNotPierced',
