@@ -47,7 +47,7 @@ export class FileUtil {
     /**
      * Get a random file from a directory. Recursive by default
      * @param directory The directory to browse
-     * @param filter A filter that will be matched against the filename. only the files respecting the filter can be selected
+     * @param filter A filter that will be matched against the filename. only the files respecting the filter can be selected. Or a function that will be called to filter the file name
      * @param recursive Should parse the content recursively (true) or not (false)
      * @returns {string} The complete path of the video
      */
@@ -55,17 +55,32 @@ export class FileUtil {
         var files = fs.readdirSync(directory);
         files = files.filter(function(name) {
             var filePath = path.join(directory, name);
-            var extension = path.extname(filePath);
-            if(extension.match(filter)) {
-                return true;
-            } else if(extension === "") {
-                var stat = fs.statSync(filePath);
-                return stat.isDirectory();
+            if(typeof(filter) == 'function') {
+                return filter(filePath);
+            } else {
+                var extension = path.extname(filePath);
+                if(extension.match(filter)) {
+                    return true;
+                } else if(extension === "") {
+                    var stat = fs.statSync(filePath);
+                    return stat.isDirectory();
+                }
             }
             return false;
         });
         return findRandomFile(files,directory,filter, recursive);
+    }
 
+    static createChastityScriptFilter(state) {
+        if(state.chastity) {
+            return function(filepath) {
+                return filepath.endsWith("_CHASTITY.txt");
+            };
+        } else {
+            return function(filepath) {
+                return !filepath.endsWith("_CHASTITY.txt");
+            };
+        }
     }
 }
 

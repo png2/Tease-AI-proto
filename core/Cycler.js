@@ -69,11 +69,19 @@ export class Cycler {
             this.commandFiltersProcessor,
             this.vocabularyProcessor,
             this.uiDispatcher);
-            listParser.loadFiles([
-                path.join(baseTauntsDir,'StrokeTaunts_1.txt'),
-                path.join(baseTauntsDir,'StrokeTaunts_2.txt'),
-                path.join(baseTauntsDir,'StrokeTaunts_3.txt')
-            ]);
+            if(this.state.chastity) {
+                listParser.loadFiles([
+                    path.join(baseTauntsDir, 'ChastityTaunts_1.txt'),
+                    path.join(baseTauntsDir, 'ChastityTaunts_2.txt'),
+                    path.join(baseTauntsDir, 'ChastityTaunts_3.txt')
+                ]);
+            } else {
+                listParser.loadFiles([
+                    path.join(baseTauntsDir, 'StrokeTaunts_1.txt'),
+                    path.join(baseTauntsDir, 'StrokeTaunts_2.txt'),
+                    path.join(baseTauntsDir, 'StrokeTaunts_3.txt')
+                ]);
+            }
 
             setTimeout(()=>{
                 listParser.stop(()=>{
@@ -122,7 +130,7 @@ export class Cycler {
     }
 
     _parseRandomScriptInDir(dir) {
-        var startFile = FileUtil.getRandomFileFromDirectory(path.join(this.settings.appPath,'/Scripts/',this.settings.domme.directory,dir),'.txt',false);
+        var startFile = FileUtil.getRandomFileFromDirectory(path.join(this.settings.appPath,'/Scripts/',this.settings.domme.directory,dir),FileUtil.createChastityScriptFilter(this.state),false);
         var parser = new ScriptParser(this.commandsProcessor,this.variablesProcessor, this.vocabularyProcessor, this.answerProcessor, this, this.uiDispatcher, this.state);
         parser.parseFile(startFile);
     }
