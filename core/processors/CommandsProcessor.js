@@ -49,9 +49,10 @@ export class CommandsProcessor {
      * Process all the commands found in the line
      * @param line The line to process
      * @param parser The parser used to fetch this line
+     * @param replace Disable the feature that delete the command from the parsed line even if it's unknown
      * @returns {String} the line cleaned up without the command. If the command is preceded by a space, it is deleted, if it is followed by a space it is kept in the returning string
      */
-    processCommands(line, parser) {
+    processCommands(line, parser, replace = true) {
         var ignoreFollowingCommands = false;
         return line.replace(/( ?)@([\w-]+)($| |\(([^\)]+)\)?)( ?)/g,(match,
                                                                      precedingSpace,
@@ -61,10 +62,14 @@ export class CommandsProcessor {
                                                                      followingSpace = commandParametersWithParenthesis
         ) => {
             if(!ignoreFollowingCommands) {
-                if (commandParameters.trim() !== "") {
-                    ignoreFollowingCommands = this.applyCommand(commandName, parser, commandParameters.split(','));
-                } else {
-                    ignoreFollowingCommands = this.applyCommand(commandName, parser);
+                if(this.commands.has(commandName)) {
+                    if (commandParameters.trim() !== "") {
+                        ignoreFollowingCommands = this.applyCommand(commandName, parser, commandParameters.split(','));
+                    } else {
+                        ignoreFollowingCommands = this.applyCommand(commandName, parser);
+                    }
+                } else if(!replace) {
+                    return match;
                 }
             }
             return followingSpace;
