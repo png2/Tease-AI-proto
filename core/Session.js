@@ -22,7 +22,7 @@ export class Session {
      * @returns {State} Return the state of the session so that the UI can use it
      */
     static start(uiDispatcher,settings,file) {
-        var state = new State();
+        var state = new State(settings);
 
         var commandsProcessor = new CommandsProcessor(uiDispatcher,settings,state);
         var commandFiltersProcessor = new CommandFiltersProcessor(uiDispatcher,settings,state);

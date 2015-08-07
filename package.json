@@ -2,7 +2,8 @@
   "name": "proto-teaseai",
   "version": "0.0.1",
   "dependencies": {
-    "line-reader": "^0.2.4"
+    "line-reader": "^0.2.4",
+    "observed": "^1.1.1"
   },
   "devDependencies": {
     "babel": "*",
@@ -10,7 +11,7 @@
     "jest-cli": "*"
   },
   "scripts": {
-    "start":"node start.js ",
+    "start": "node start.js ",
     "test": "jest"
   },
   "jest": {

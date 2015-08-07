@@ -1,3 +1,7 @@
+var path = require('path');
+var fs = require('fs');
+var observed = require('observed');
+
 /**
  * The current state of the session
  * It contains predefined states used by the core
@@ -6,7 +10,9 @@
  * All the properties added to <code>temp</code> will be lost once the session ends
  */
 export class State {
-    constructor() {
+    constructor(settings) {
+        this.settings = settings;
+
         /**
          * Activate rapidText mode
          * @type {boolean}
@@ -27,5 +33,29 @@ export class State {
          * @type {{}}
          */
         this.temp = {};
+
+        this._loadSavedState();
+    }
+
+    _createSaveStateCallback() {
+        var state = this;
+        return function(event) {
+            console.log(state.persistent,event);
+            var file = path.join(state.settings.appPath, 'Scripts', state.settings.domme.directory, 'System/state.json');
+            fs.writeFile(file, JSON.stringify(state.persistent, null, 4), function (err) {
+                if (err) {
+                    console.log(`Error while saving the state : ${err}`);
+                }
+            });
+        };
+    }
+
+    _loadSavedState() {
+        var file = path.join(this.settings.appPath, 'Scripts', this.settings.domme.directory, 'System/state.json');
+        var content = fs.readFileSync(file).toString();
+        this.persistent = JSON.parse(content);
+
+        //noinspection JSUnresolvedFunction
+        observed(this.persistent).on('change', this._createSaveStateCallback());
     }
 }
