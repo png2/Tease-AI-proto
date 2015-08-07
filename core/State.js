@@ -14,16 +14,6 @@ export class State {
         this.settings = settings;
 
         /**
-         * Activate rapidText mode
-         * @type {boolean}
-         */
-        this.rapidText = false;
-        /**
-         * The sub is in chastiry
-         * @type {boolean}
-         */
-        this.chastity = false;
-        /**
          * All the persistent custom states
          * @type {{}}
          */

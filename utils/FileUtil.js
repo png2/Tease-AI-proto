@@ -72,7 +72,7 @@ export class FileUtil {
     }
 
     static createChastityScriptFilter(state) {
-        if(state.chastity) {
+        if(state.persistent.chastity) {
             return function(filepath) {
                 return filepath.endsWith("_CHASTITY.txt");
             };

@@ -1,7 +1,9 @@
 /**
  * All Chastity related things
  */
-module.exports.register = function({commandsProcessor, commandFiltersProcessor}) {
+module.exports.register = function({commandsProcessor, commandFiltersProcessor, state}) {
+    if(!state.persistent.chastity) state.persistent.chastity = false;
+
     commandsProcessor.registerCommand('ChastityOn', chastityOn);
 
     commandsProcessor.registerCommand('ChastityOff', chastityOff);
@@ -16,11 +18,11 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor})
 };
 
 function chastityOn({state}) {
-    state.chastity = true;
+    state.persistent.chastity = true;
 }
 
 function chastityOff({state}) {
-    state.chastity = false;
+    state.persistent.chastity = false;
 }
 
 function filterHasChastity({settings}) {
@@ -28,7 +30,7 @@ function filterHasChastity({settings}) {
 }
 
 function filterInChastity({state}) {
-    return state.chastity;
+    return state.persistent.chastity;
 }
 
 function filterChastityPrinceAlbert({settings}) {

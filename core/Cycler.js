@@ -76,7 +76,7 @@ export class Cycler {
             this.commandFiltersProcessor,
             this.vocabularyProcessor,
             this.uiDispatcher);
-            if(this.state.chastity) {
+            if(this.state.persistent.chastity) {
                 listParser.loadFiles([
                     path.join(baseTauntsDir, 'ChastityTaunts_1.txt'),
                     path.join(baseTauntsDir, 'ChastityTaunts_2.txt'),
