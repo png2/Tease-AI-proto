@@ -2,6 +2,7 @@ import {ScriptParser} from './parsers/ScriptParser';
 import {ListParser} from './parsers/ListParser';
 import {FileUtil} from '../utils/FileUtil';
 import {RandomUtil} from '../utils/RandomUtil';
+import {Constants} from './Constants';
 
 var path = require('path');
 
@@ -28,7 +29,7 @@ export class Cycler {
         this.uiDispatcher = uiDispatcher;
         this.settings = settings;
         this.state = state;
-        this._currentStep = '';
+        this.state.temp.currentStep = '';
 
         this._sessionEndTimeTs = Date.now() + this._calculateCycleDuration();
     }
@@ -45,21 +46,21 @@ export class Cycler {
      * Go to the next step of the cycle
      */
     next() {
-        switch(this._currentStep) {
-            case 'start':
+        switch(this.state.temp.currentStep) {
+            case Constants.STATES.START:
                 this.skipToTaunts();
                 break;
-            case 'taunts':
+            case Constants.STATES.TAUNTING:
                 this.skipToModule();
                 break;
-            case 'module':
+            case Constants.STATES.MODULE:
                 if(this._sessionEndTimeTs >= Date.now()) {
                     this.skipToEnd();
                 } else {
                     this.skipToLink();
                 }
                 break;
-            case 'link':
+            case Constants.STATES.LINK:
                 this.skipToTaunts();
                 break;
         }
@@ -69,7 +70,7 @@ export class Cycler {
      * Force the cycle to move to taunts
      */
     skipToTaunts() {
-        this._currentStep = 'taunts';
+        this.state.temp.currentStep = Constants.STATES.TAUNTING;
         var baseTauntsDir = path.join(this.settings.appPath,'Scripts',this.settings.domme.directory,'Stroke');
         var listParser = new ListParser(
             this.commandFiltersProcessor,
@@ -100,7 +101,7 @@ export class Cycler {
      * Force the cycle to move to a random starting script
      */
     skipToStart() {
-        this._currentStep = 'start';
+        this.state.temp.currentStep = Constants.STATES.START;
         this._parseRandomScriptInDir('Stroke/Start');
     }
 
@@ -108,7 +109,7 @@ export class Cycler {
      * Force the cycle to move to a random module
      */
     skipToModule() {
-        this._currentStep = 'module';
+        this.state.temp.currentStep = Constants.STATES.MODULE;
         this._parseRandomScriptInDir('Modules');
     }
 
@@ -116,7 +117,7 @@ export class Cycler {
      * Force the cycle to move to a random link
      */
     skipToLink() {
-        this._currentStep = 'link';
+        this.state.temp.currentStep = Constants.STATES.LINK;
         this._parseRandomScriptInDir('Stroke/Link');
     }
 
@@ -124,7 +125,7 @@ export class Cycler {
      * Force the cycle to move to a random ending script
      */
     skipToEnd() {
-        this._currentStep = 'end';
+        this.state.temp.currentStep = Constants.STATES.END;
         this._parseRandomScriptInDir('Stroke/End');
     }
 
@@ -136,8 +137,18 @@ export class Cycler {
     }
 
     _parseRandomScriptInDir(dir) {
-        var startFile = FileUtil.getRandomFileFromDirectory(path.join(this.settings.appPath,'/Scripts/',this.settings.domme.directory,dir),FileUtil.createChastityScriptFilter(this.state),false);
-        var parser = new ScriptParser(this.commandsProcessor,this.variablesProcessor, this.vocabularyProcessor, this.answerProcessor, this, this.uiDispatcher, this.state);
+        var startFile = FileUtil.getRandomFileFromDirectory(
+            path.join(this.settings.appPath,'/Scripts/',this.settings.domme.directory,dir),
+            FileUtil.createChastityScriptFilter(this.state),
+            false);
+        var parser = new ScriptParser(
+            this.commandsProcessor,
+            this.variablesProcessor,
+            this.vocabularyProcessor,
+            this.answerProcessor,
+            this,
+            this.uiDispatcher,
+            this.state);
         parser.parseFile(startFile);
     }
 
