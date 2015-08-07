@@ -52,10 +52,12 @@ export class State {
 
     _loadSavedState() {
         var file = path.join(this.settings.appPath, 'Scripts', this.settings.domme.directory, 'System/state.json');
-        var content = fs.readFileSync(file).toString();
-        this.persistent = JSON.parse(content);
+        if(fs.existsSync(file)) {
+            var content = fs.readFileSync(file).toString();
+            this.persistent = JSON.parse(content);
 
-        //noinspection JSUnresolvedFunction
-        observed(this.persistent).on('change', this._createSaveStateCallback());
+            //noinspection JSUnresolvedFunction
+            observed(this.persistent).on('change', this._createSaveStateCallback());
+        }
     }
 }
