@@ -2,8 +2,8 @@
  * The flag system management
  */
 module.exports.register = function({commandsProcessor, commandFiltersProcessor, state}) {
-    state.persistent.flags = new Set();
-    state.temp.flags = new Set();
+    if(!state.persistent.flags) state.persistent.flags = {};
+    state.temp.flags = {};
 
     commandsProcessor.registerCommand('SetFlag', createNewFlag);
 
@@ -18,7 +18,8 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
 
 function createNewFlag({ui, state}, params) {
     if(params.length === 1) {
-        state.persistent.flags.add(params[0]);
+        var flagName = params[0];
+        state.persistent.flags[flagName] = 1;
     } else {
         ui.debug("Missing mandatory argument for @SetFlag");
     }
@@ -26,7 +27,7 @@ function createNewFlag({ui, state}, params) {
 
 function createNewTemporaryFlag({ui, state}, params) {
     if(params.length === 1) {
-        state.temp.flags.add(params[0]);
+        state.temp.flags[params[0]] = 1;
     } else {
         ui.debug("Missing mandatory argument for @TempFlag");
     }
@@ -34,11 +35,11 @@ function createNewTemporaryFlag({ui, state}, params) {
 
 function deleteFlag({uiDispatcher, state}, params) {
     if(params.length === 1) {
-        if(state.temp.flags.has(params[0])) {
-            state.temp.flags.delete(params[0])
+        if(params[0] in state.temp.flags) {
+            delete state.temp.flags[params[0]];
         }
-        if(state.persistent.flags.has(params[0])) {
-            state.persistent.flags.delete(params[0])
+        if(params[0] in state.persistent.flags) {
+            delete state.persistent.flags[params[0]];
         }
     } else {
         uiDispatcher.debug("Missing mandatory argument for @DeleteFlag");
@@ -47,13 +48,13 @@ function deleteFlag({uiDispatcher, state}, params) {
 
 function checkFlag({parser, uiDispatcher, state}, params) {
     if(params.length > 0) {
-        for(let i = params.length-1;i>0;i--) {
+        for(let i = params.length-1;i>=0;i--) {
             let value = params[i];
-            if(state.temp.flags.has(value)) {
+            if(value in state.temp.flags) {
                 parser.goto(value);
                 return true;
             }
-            if(state.persistent.flags.has(value)) {
+            if(value in state.persistent.flags) {
                 parser.goto(value);
                 return true;
             }
@@ -66,8 +67,8 @@ function checkFlag({parser, uiDispatcher, state}, params) {
 
 function filterFlag({state},params) {
     if(params.length == 1) {
-        return state.persistent.flags.has(params[0])
-            || state.temp.flags.has(params[0]);
+        return params[0] in state.persistent.flags
+            || params[0] in state.temp.flags;
     } else {
         console.log('Filter flag needs only one argument');
     }
