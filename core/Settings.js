@@ -1,3 +1,5 @@
+import {Constants} from './Constants';
+
 /**
  * Contains all the settings of the application
  * Each sub object should correspond to a tab/group of option in the UI
@@ -11,8 +13,8 @@ export class Settings {
             directory: 'png Wicked Tease',
             level:1,
             apathy:1,
-            orgasmChance:'Never',
-            ruinChance:'Never',
+            orgasmChance:Constants.ALLOW_STATES.NEVER,
+            ruinChance:Constants.ALLOW_STATES.NEVER,
             crazy: false
         };
         // Sub informations

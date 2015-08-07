@@ -1,3 +1,5 @@
+import {Constants} from '../core/Constants'
+
 /**
  * All the things directly related to the Domme
  */
@@ -23,17 +25,17 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         commandFiltersProcessor.registerFilter(`ApathyLevel${apathy}`,createDommeApathyFilter(apathy));
     }
 
-    commandFiltersProcessor.registerFilter('AlwaysAllowsOrgasm',createOrgasmRateFilter('Always'));
-    commandFiltersProcessor.registerFilter('NeverAllowsOrgasm',createOrgasmRateFilter('Never'));
-    commandFiltersProcessor.registerFilter('OftenAllowsOrgasm',createOrgasmRateFilter('Often'));
-    commandFiltersProcessor.registerFilter('RarelyAllowsOrgasm',createOrgasmRateFilter('Rarely'));
-    commandFiltersProcessor.registerFilter('SometimesAllowsOrgasm',createOrgasmRateFilter('Sometimes'));
+    commandFiltersProcessor.registerFilter('AlwaysAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.ALWAYS));
+    commandFiltersProcessor.registerFilter('NeverAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.NEVER));
+    commandFiltersProcessor.registerFilter('OftenAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.OFTEN));
+    commandFiltersProcessor.registerFilter('RarelyAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.RARELY));
+    commandFiltersProcessor.registerFilter('SometimesAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.SOMETIMES));
 
-    commandFiltersProcessor.registerFilter('AlwaysAllowsRuin',createRuinRateFilter('Always'));
-    commandFiltersProcessor.registerFilter('NeverAllowsRuin',createRuinRateFilter('Never'));
-    commandFiltersProcessor.registerFilter('OftenAllowsRuin',createRuinRateFilter('Often'));
-    commandFiltersProcessor.registerFilter('RarelyAllowsRuin',createRuinRateFilter('Rarely'));
-    commandFiltersProcessor.registerFilter('SometimesAllowsRuin',createRuinRateFilter('Sometimes'));
+    commandFiltersProcessor.registerFilter('AlwaysAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.ALWAYS));
+    commandFiltersProcessor.registerFilter('NeverAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.NEVER));
+    commandFiltersProcessor.registerFilter('OftenAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.OFTEN));
+    commandFiltersProcessor.registerFilter('RarelyAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.RARELY));
+    commandFiltersProcessor.registerFilter('SometimesAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.SOMETIMES));
 };
 
 function levelUp({settings}) {
