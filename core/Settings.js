@@ -10,11 +10,15 @@ export class Settings {
         this.debug = true; // display debugs info
         // Dom informations
         this.domme = {
-            age:20,
             apathy:1,
             avgCockSize:{
                 min:6,
                 max:8
+            },
+            birthday:{
+                day:1,
+                month:1,
+                year:1995
             },
             crazy:false,
             cupSize:Constants.CUP_SIZES.C,

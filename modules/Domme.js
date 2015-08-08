@@ -1,4 +1,5 @@
-import {Constants} from '../core/Constants'
+import {Constants} from '../core/Constants';
+import {TimeUtil} from '../utils/TimeUtil';
 
 /**
  * All the things directly related to the Domme
@@ -22,7 +23,7 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
     });
 
     vocabularyProcessor.registerVocabularyFilter("DomAge", ({settings}) => {
-        return settings.domme.age;
+        return TimeUtil.getAge(settings.domme.birthday);
     });
 
     vocabularyProcessor.registerVocabularyFilter("DomCup", ({settings}) => {
@@ -113,11 +114,11 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
     });
 
     commandFiltersProcessor.registerFilter('SelfYoung', ({settings}) => {
-        return settings.domme.age < settings.domme.selfAgePerception.min;
+        return TimeUtil.getAge(settings.domme.birthday) < settings.domme.selfAgePerception.min;
     });
 
     commandFiltersProcessor.registerFilter('SelfOld', ({settings}) => {
-        return settings.domme.age > settings.domme.selfAgePerception.max;
+        return TimeUtil.getAge(settings.domme.birthday) > settings.domme.selfAgePerception.max;
     });
 };
 
