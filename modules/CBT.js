@@ -96,6 +96,7 @@ function doCBT(cbtFileBaseName, parser, uiDispatcher, commandFiltersProcessor, v
                     state.temp.cbt.round++;
                 });
             } else if(state.temp.cbt.round > settings.domme.level) {
+                uiDispatcher.unregisterInputListener('CBT');
                 parser.resume();
             }
         });
