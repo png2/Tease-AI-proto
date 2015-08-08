@@ -9,13 +9,73 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
 
     commandsProcessor.registerCommand('DommeLevelDown', levelDown);
 
-    vocabularyProcessor.registerVocabularyFilter("DomLevel", getDommeLevel);
+    vocabularyProcessor.registerVocabularyFilter("DomLevel", ({settings}) => {
+        return settings.domme.level;
+    });
 
     vocabularyProcessor.registerVocabularyFilter("DomOrgasmRate", getDommeOrgasmRate);
 
     vocabularyProcessor.registerVocabularyFilter("DomRuinRate", getDommeRuinRate);
 
-    vocabularyProcessor.registerVocabularyFilter("DomHonorific", getDommeHonorific);
+    vocabularyProcessor.registerVocabularyFilter("DomHonorific", ({settings}) => {
+        return settings.sub.honorific;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomAge", ({settings}) => {
+        return settings.domme.age;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomCup", ({settings}) => {
+        return settings.domme.cupSize;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomEyes", ({settings}) => {
+        return settings.domme.eyes.color;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomHair", ({settings}) => {
+        return settings.domme.hair.color;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomAvgCockMax", ({settings}) => {
+        return settings.domme.avgCockSize.max;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomAvgCockMin", ({settings}) => {
+        return settings.domme.avgCockSize.min;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomLargeCockMin", ({settings}) => {
+        return settings.domme.avgCockSize.max + 1;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomSmallCockMax", ({settings}) => {
+        return settings.domme.avgCockSize.min - 1;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomMood", ({settings}) => {
+        return settings.domme.mood;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomSelfAgeMin", ({settings}) => {
+        return settings.domme.selfAgePerception.min;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomSelfAgeMax", ({settings}) => {
+        return settings.domme.selfAgePerception.max;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomSubAgeMin", ({settings}) => {
+        return settings.domme.subAgePerception.min;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomSubAgeMax", ({settings}) => {
+        return settings.domme.subAgePerception.max;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter("DomName", ({settings}) => {
+        return settings.domme.name;
+    });
 
     for(let level = 1; level <= 5; level++) {
         commandFiltersProcessor.registerFilter(`DommeLevel${level}`,createDommeLevelFilter(level));
@@ -25,17 +85,40 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         commandFiltersProcessor.registerFilter(`ApathyLevel${apathy}`,createDommeApathyFilter(apathy));
     }
 
-    commandFiltersProcessor.registerFilter('AlwaysAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.ALWAYS));
-    commandFiltersProcessor.registerFilter('NeverAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.NEVER));
-    commandFiltersProcessor.registerFilter('OftenAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.OFTEN));
-    commandFiltersProcessor.registerFilter('RarelyAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.RARELY));
-    commandFiltersProcessor.registerFilter('SometimesAllowsOrgasm',createOrgasmRateFilter(Constants.ALLOW_STATES.SOMETIMES));
+    for(var state in Constants.ALLOW_STATES) {
+        if(Constants.ALLOW_STATES.hasOwnProperty(state)) {
+            var stateValue = Constants.ALLOW_STATES[state];
+            commandFiltersProcessor.registerFilter(`${stateValue}AllowsOrgasm`, createOrgasmRateFilter(stateValue));
+            commandFiltersProcessor.registerFilter(`${stateValue}AllowsRuin`, createRuinRateFilter(stateValue));
+        }
+    }
 
-    commandFiltersProcessor.registerFilter('AlwaysAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.ALWAYS));
-    commandFiltersProcessor.registerFilter('NeverAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.NEVER));
-    commandFiltersProcessor.registerFilter('OftenAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.OFTEN));
-    commandFiltersProcessor.registerFilter('RarelyAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.RARELY));
-    commandFiltersProcessor.registerFilter('SometimesAllowsRuin',createRuinRateFilter(Constants.ALLOW_STATES.SOMETIMES));
+    for(var size in Constants.CUP_SIZES) {
+        if(Constants.CUP_SIZES.hasOwnProperty(size)) {
+            var sizeValue = Constants.CUP_SIZES[size];
+            commandFiltersProcessor.registerFilter(`${sizeValue}Cup`, createCupSizeFilter(sizeValue));
+        }
+    }
+
+    commandFiltersProcessor.registerFilter('Crazy', ({settings}) => {
+        return settings.domme.crazy;
+    });
+
+    commandFiltersProcessor.registerFilter('Supremacist', ({settings}) => {
+        return settings.domme.supremacist;
+    });
+
+    commandFiltersProcessor.registerFilter('Vulgar', ({settings}) => {
+        return settings.domme.vulgar;
+    });
+
+    commandFiltersProcessor.registerFilter('SelfYoung', ({settings}) => {
+        return settings.domme.age < settings.domme.selfAgePerception.min;
+    });
+
+    commandFiltersProcessor.registerFilter('SelfOld', ({settings}) => {
+        return settings.domme.age > settings.domme.selfAgePerception.max;
+    });
 };
 
 function levelUp({settings}) {
@@ -62,10 +145,6 @@ function getDommeRuinRate({settings}) {
     return settings.domme.ruinChance + ' Allows';
 }
 
-function getDommeHonorific({settings}) {
-    return settings.sub.honorific;
-}
-
 function createDommeLevelFilter(level) {
     return function({settings}) {
         return settings.domme.level == level;
@@ -80,12 +159,18 @@ function createDommeApathyFilter(apathy) {
 
 function createOrgasmRateFilter(rate) {
     return function({settings}) {
-        return settings.domme.orgasmChance.toLowerCase() == rate.toLowerCase();
+        return settings.domme.orgasmChance == rate;
     }
 }
 
 function createRuinRateFilter(rate) {
     return function({settings}) {
-        return settings.domme.ruinChance.toLowerCase() == rate.toLowerCase();
+        return settings.domme.ruinChance == rate;
+    }
+}
+
+function createCupSizeFilter(cupSize) {
+    return function({settings}) {
+        return settings.domme.cupSize == cupSize;
     }
 }

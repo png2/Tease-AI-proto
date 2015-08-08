@@ -10,38 +10,73 @@ export class Settings {
         this.debug = true; // display debugs info
         // Dom informations
         this.domme = {
-            directory: 'png Wicked Tease',
-            level:1,
+            age:20,
             apathy:1,
+            avgCockSize:{
+                min:6,
+                max:8
+            },
+            crazy:false,
+            cupSize:Constants.CUP_SIZES.C,
+            eyes:{
+                color:'green'
+            },
+            directory: 'png Wicked Tease',
+            hair:{
+                color:'blonde',
+                length:Constants.HAIR_LENGTH.LONG
+            },
+            level:1,
+            mood:1,
+            name:'Domme',
             orgasmChance:Constants.ALLOW_STATES.NEVER,
             ruinChance:Constants.ALLOW_STATES.NEVER,
-            crazy: false
+            selfAgePerception:{
+                min:28,
+                max:49
+            },
+            subAgePerception:{
+                min:28,
+                max:49
+            },
+            supremacist:false,
+            vulgar:false
         };
         // Sub informations
         this.sub = {
+            birthday:{
+                day:1,
+                month:1,
+                year:1980
+            },
+            circumcised:false,
+            cockSize:6,
+            eyes:{
+                color:'brown'
+            },
+            forceCapitalizedHonorific: true,
+            forceHonorific: true,
+            hair:{
+                color:'brown'
+            },
+            hasChastity: false,
+            hasChastityPA: false,
+            hasChastitySpikes: false,
+            holdingEdgeMax: 0,
+            honorific: 'mistress',
             keySentences:{
                 yes: 'yes, yeah, yep, yup, sure, of course, absolutely, you know it, definitely',
                 no: 'no, nah, nope, not',
                 greeting: 'hello, hi, hey, heya, good morning, good afternoon, good evening',
                 thankYou: 'thank you, thanks, thank you very much, thanks a lot'
             },
-            honorific: 'mistress',
-            forceHonorific: true,
-            forceCapitalizedHonorific: true,
-            hasChastity: false,
-            hasChastityPA: false,
-            hasChastitySpikes: false,
-            holdingEdgeMax: 0,
-            birthday:{
-                day:1,
-                month:1,
-                year:1980
-            },
+            name:'sub',
+            petNames: ['slave','stroker','sub','pet'],
+            pierced:false,
             writingTask:{
                 min:1,
                 max:5
-            },
-            petNames: ['slave','stroker','sub','pet']
+            }
         };
         // Images options and paths
         this.images ={

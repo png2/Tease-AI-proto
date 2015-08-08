@@ -29,6 +29,26 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
     commandsProcessor.registerCommand('RapidTextOff', deactivateRapidText);
 
     vocabularyProcessor.registerVocabularyFilter('PetName',petNameVocab);
+
+    vocabularyProcessor.registerVocabularyFilter('RANDNumberLow',({settings})=>{
+        var value = RandomUtil.getRandomInteger(1,5) * settings.domme.level;
+        if(value > 10) value = 5 * Math.round(value/5);
+        if(value < 3) value = 3;
+        return value;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter('RANDNumberHigh',({settings})=>{
+        var value = RandomUtil.getRandomInteger(5,20) * settings.domme.level;
+        if(value > 10) value = 5 * Math.round(value/5);
+        return value;
+    });
+
+    vocabularyProcessor.registerVocabularyFilter('RANDNumber',({settings})=>{
+        var value = RandomUtil.getRandomInteger(1,10) * settings.domme.level;
+        if(value > 10) value = 5 * Math.round(value/5);
+        return value;
+    });
+
 };
 
 function ignoreLineCommand({parser}) {
