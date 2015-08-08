@@ -72,8 +72,6 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         '4MinuteHold',
         '5MinuteHold',
         '60MinuteHold',
-        'BeforeTease',
-        'FirstRound',
         'InterruptLongEdge',
         'LongEdge',
         'NewBlogImage',

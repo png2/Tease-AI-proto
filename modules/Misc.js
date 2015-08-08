@@ -49,6 +49,14 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
         return value;
     });
 
+    commandFiltersProcessor.registerFilter('BeforeTease',({state}) => {
+        return state.temp.cycler && state.temp.cycler.round == 0;
+    });
+
+    commandFiltersProcessor.registerFilter('FirstRound',({state}) => {
+        return state.temp.cycler && state.temp.cycler.round == 1;
+    });
+
 };
 
 function ignoreLineCommand({parser}) {

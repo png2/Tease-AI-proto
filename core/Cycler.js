@@ -29,7 +29,10 @@ export class Cycler {
         this.uiDispatcher = uiDispatcher;
         this.settings = settings;
         this.state = state;
-        this.state.temp.currentStep = '';
+        this.state.temp.cycler = {
+            round: 0,
+            step: ''
+        };
 
         this._sessionEndTimeTs = Date.now() + this._calculateCycleDuration();
     }
@@ -46,7 +49,7 @@ export class Cycler {
      * Go to the next step of the cycle
      */
     next() {
-        switch(this.state.temp.currentStep) {
+        switch(this.state.temp.cycler.step) {
             case Constants.CYCLE_STATES.START:
                 this.skipToTaunts();
                 break;
@@ -70,7 +73,8 @@ export class Cycler {
      * Force the cycle to move to taunts
      */
     skipToTaunts() {
-        this.state.temp.currentStep = Constants.CYCLE_STATES.TAUNTING;
+        this.state.temp.cycler.round++;
+        this.state.temp.cycler.step = Constants.CYCLE_STATES.TAUNTING;
         var baseTauntsDir = path.join(this.settings.appPath,'Scripts',this.settings.domme.directory,'Stroke');
         var listParser = new ListParser(
             this.commandFiltersProcessor,
@@ -101,7 +105,7 @@ export class Cycler {
      * Force the cycle to move to a random starting script
      */
     skipToStart() {
-        this.state.temp.currentStep = Constants.CYCLE_STATES.START;
+        this.state.temp.cycler.step = Constants.CYCLE_STATES.START;
         this._parseRandomScriptInDir('Stroke/Start');
     }
 
@@ -109,7 +113,7 @@ export class Cycler {
      * Force the cycle to move to a random module
      */
     skipToModule() {
-        this.state.temp.currentStep = Constants.CYCLE_STATES.MODULE;
+        this.state.temp.cycler.step = Constants.CYCLE_STATES.MODULE;
         this._parseRandomScriptInDir('Modules');
     }
 
@@ -117,7 +121,7 @@ export class Cycler {
      * Force the cycle to move to a random link
      */
     skipToLink() {
-        this.state.temp.currentStep = Constants.CYCLE_STATES.LINK;
+        this.state.temp.cycler.step = Constants.CYCLE_STATES.LINK;
         this._parseRandomScriptInDir('Stroke/Link');
     }
 
@@ -125,7 +129,7 @@ export class Cycler {
      * Force the cycle to move to a random ending script
      */
     skipToEnd() {
-        this.state.temp.currentStep = Constants.CYCLE_STATES.END;
+        this.state.temp.cycler.step = Constants.CYCLE_STATES.END;
         this._parseRandomScriptInDir('Stroke/End');
     }
 
