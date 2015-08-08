@@ -30,7 +30,6 @@ export class State {
     _createSaveStateCallback() {
         var state = this;
         return function(event) {
-            console.log(state.persistent,event);
             var file = path.join(state.settings.appPath, 'Scripts', state.settings.domme.directory, 'System/state.json');
             fs.writeFile(file, JSON.stringify(state.persistent, null, 4), function (err) {
                 if (err) {
