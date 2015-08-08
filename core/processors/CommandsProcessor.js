@@ -54,7 +54,7 @@ export class CommandsProcessor {
      */
     processCommands(line, parser, replace = true) {
         var ignoreFollowingCommands = false;
-        return line.replace(/( ?)@([\w-]+)($| |\(([^\)]+)\)?)( ?)/g,(match,
+        return line.replace(/( ?)@([\w+-]+)($| |\(([^\)]+)\)?)( ?)/g,(match,
                                                                      precedingSpace,
                                                                      commandName,
                                                                      commandParametersWithParenthesis,
