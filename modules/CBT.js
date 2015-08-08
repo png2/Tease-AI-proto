@@ -10,7 +10,17 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
     commandsProcessor.registerCommand("CBT", createCBTCommand(commandFiltersProcessor, vocabularyProcessor));
     commandsProcessor.registerCommand("CBTCock", createCBTCockCommand(commandFiltersProcessor, vocabularyProcessor));
     commandsProcessor.registerCommand("CBTBalls", createCBTBallsCommand(commandFiltersProcessor, vocabularyProcessor));
+
+    for(var i = 1;i<=5;i++) {
+        commandFiltersProcessor.registerFilter(`CBTLevel${i}`,createCBTLevelFilter(i));
+    }
 };
+
+function createCBTLevelFilter(level) {
+    return function({settings}) {
+        return settings.sub.cbt.level == level;
+    };
+}
 
 function createCBTCommand(commandFiltersProcessor, vocabularyProcessor) {
     return function({parser,uiDispatcher, settings, state}) {
