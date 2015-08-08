@@ -22,10 +22,11 @@ export class Settings {
             },
             crazy:false,
             cupSize:Constants.CUP_SIZES.C,
+            directory: 'png Wicked Tease',
             eyes:{
                 color:'green'
             },
-            directory: 'png Wicked Tease',
+            freckles: false,
             hair:{
                 color:'blonde',
                 length:Constants.HAIR_LENGTH.LONG
@@ -34,6 +35,7 @@ export class Settings {
             mood:1,
             name:'Domme',
             orgasmChance:Constants.ALLOW_STATES.NEVER,
+            pubicHair:Constants.PUBIC_HAIR_STYLES.SHAVED,
             ruinChance:Constants.ALLOW_STATES.NEVER,
             selfAgePerception:{
                 min:28,
@@ -44,6 +46,7 @@ export class Settings {
                 max:49
             },
             supremacist:false,
+            tattoos: false,
             vulgar:false
         };
         // Sub informations

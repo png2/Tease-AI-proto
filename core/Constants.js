@@ -28,6 +28,13 @@ export const Constants = {
         MEDIUM:'Medium',
         LONG:'Long',
         VERY_LONG:'Very Long'
+    },
+    PUBIC_HAIR_STYLES:{
+        SHAVED:'Shaved',
+        SPARSE:'Sparse',
+        TRIMMED:'Trimmed',
+        NATURAL:'Natural',
+        HAIRY:'Hairy'
     }
 
 };
