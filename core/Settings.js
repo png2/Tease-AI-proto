@@ -26,7 +26,7 @@ export class Settings {
                 color:'blonde',
                 length:Constants.HAIR_LENGTH.LONG
             },
-            level:1,
+            level:3,
             mood:1,
             name:'Domme',
             orgasmChance:Constants.ALLOW_STATES.NEVER,
@@ -48,6 +48,11 @@ export class Settings {
                 day:1,
                 month:1,
                 year:1980
+            },
+            cbt:{
+                allowCockTorture:true,
+                allowBallsTorture:true,
+                level:1
             },
             circumcised:false,
             cockSize:6,
