@@ -133,10 +133,15 @@ export class ScriptParser  {
     }
 
     /**
-     * Resume the parsing
+     * Resume the parsing from where it stopped.
+     * If the parser has been stopped by a call to endScript(), this function reset its states so it can resume properly
      */
     resume() {
-        this._wait = false;
+        if(this._endScript) {
+            this._resetStates();
+        } else {
+            this._wait = false;
+        }
         this._next();
     }
 
@@ -187,7 +192,8 @@ export class ScriptParser  {
         this._queue = null;
         this._ignoredLine = false;
         this._nextTarget = null;
-        this._wait = false;
+        this._wait = false;N
+        this._endScript = false;
     }
 
     /**

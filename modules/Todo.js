@@ -21,8 +21,6 @@ module.exports.register = function({commandsProcessor, vocabularyProcessor, comm
         'EdgeToRuinNoHoldSecret',
         'EdgeToRuinSecret',
         'EdgingDecide',
-        'BookmarkModule',
-        'BookmarkLink',
         'PlayCensorshipSucks',
         'PlayAvoidTheEdge',
         'ResumeAvoidTheEdge',

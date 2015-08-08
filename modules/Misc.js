@@ -57,6 +57,14 @@ module.exports.register = function({commandsProcessor, commandFiltersProcessor, 
         return state.temp.cycler && state.temp.cycler.round == 1;
     });
 
+    commandsProcessor.registerCommand('BookmarkModule', ({parser,state}) => {
+        state.temp.cycler.bookmarkModule = parser;
+    });
+
+    commandsProcessor.registerCommand('BookmarkLink', ({parser,state}) => {
+        state.temp.cycler.bookmarkLink = parser;
+    });
+
 };
 
 function ignoreLineCommand({parser}) {

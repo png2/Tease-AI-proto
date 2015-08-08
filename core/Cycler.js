@@ -57,7 +57,7 @@ export class Cycler {
                 this.skipToModule();
                 break;
             case Constants.CYCLE_STATES.MODULE:
-                if(this._sessionEndTimeTs >= Date.now()) {
+                if(this._shouldEndSession()) {
                     this.skipToEnd();
                 } else {
                     this.skipToLink();
@@ -114,7 +114,12 @@ export class Cycler {
      */
     skipToModule() {
         this.state.temp.cycler.step = Constants.CYCLE_STATES.MODULE;
-        this._parseRandomScriptInDir('Modules');
+        if(this.state.temp.cycler.bookmarkModule) {
+            this.state.temp.cycler.bookmarkModule.resume();
+            delete this.state.temp.cycler.bookmarkModule;
+        } else {
+            this._parseRandomScriptInDir('Modules');
+        }
     }
 
     /**
@@ -122,7 +127,12 @@ export class Cycler {
      */
     skipToLink() {
         this.state.temp.cycler.step = Constants.CYCLE_STATES.LINK;
-        this._parseRandomScriptInDir('Stroke/Link');
+        if(this.state.temp.cycler.bookmarkLink) {
+            this.state.temp.cycler.bookmarkLink.resume();
+            delete this.state.temp.cycler.bookmarkLink;
+        } else {
+            this._parseRandomScriptInDir('Stroke/Link');
+        }
     }
 
     /**
@@ -208,5 +218,11 @@ export class Cycler {
         }
         this.uiDispatcher.debug(`Session duration : ${duration} minutes`);
         return duration * 60 * 1000
+    }
+
+    _shouldEndSession() {
+        return !this.state.temp.cycler.bookmarkModule
+            && !this.state.temp.cycler.bookmarkLink
+            && this._sessionEndTimeTs <= Date.now();
     }
 }
