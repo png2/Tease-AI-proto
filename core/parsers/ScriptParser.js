@@ -40,6 +40,9 @@ export class ScriptParser  {
      * @private
      */
     _next() {
+        if(this._queue) {
+            this.uiDispatcher.displayText(this._queue.line,this._queue.callback);
+        }
         if(this._endScript) {
             this.cycler.next();
         } else if(this._nextTarget != null) {
@@ -111,6 +114,18 @@ export class ScriptParser  {
     }
 
     /**
+     * Display a line after the current one has been processed
+     * @param line The line to display
+     * @param callback the callback called after the line has been displayed
+     */
+    queue(line,callback) {
+        this._queue = {
+            line: line,
+            callback: callback
+        };
+    }
+
+    /**
      * Block the parser until <code>resume()</code> is called
      */
     wait() {
@@ -169,6 +184,7 @@ export class ScriptParser  {
      * @private
      */
     _resetStates() {
+        this._queue = null;
         this._ignoredLine = false;
         this._nextTarget = null;
         this._wait = false;

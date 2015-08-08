@@ -17,13 +17,17 @@ function createCBTCommand(commandFiltersProcessor, vocabularyProcessor) {
         if(settings.sub.cbt.allowBallsTorture && settings.sub.cbt.allowBallsTorture) {
             if(RandomUtil.isLucky(50)) {
                 doCBTCock(parser, uiDispatcher, commandFiltersProcessor, vocabularyProcessor, settings, state);
+                return true;
             } else {
                 doCBTBalls(parser, uiDispatcher, commandFiltersProcessor, vocabularyProcessor, settings, state);
+                return true;
             }
         } else if(settings.sub.cbt.allowBallsTorture) {
             doCBTBalls(parser, uiDispatcher, commandFiltersProcessor, vocabularyProcessor, settings, state);
+            return true;
         } else if(settings.sub.cbt.allowCockTorture) {
             doCBTCock(parser, uiDispatcher, commandFiltersProcessor, vocabularyProcessor, settings, state);
+            return true;
         } else {
             uiDispatcher.debug("No CBT allowed :(");
         }
@@ -34,6 +38,7 @@ function createCBTCockCommand(commandFiltersProcessor, vocabularyProcessor) {
     return function ({parser,uiDispatcher, settings, state}) {
         if(settings.sub.cbt.allowCockTorture) {
             doCBTCock(parser, uiDispatcher, commandFiltersProcessor, vocabularyProcessor, settings, state);
+            return true;
         } else {
             uiDispatcher.debug("No CBT Cock allowed :(");
         }
@@ -44,6 +49,7 @@ function createCBTBallsCommand(commandFiltersProcessor, vocabularyProcessor) {
     return function ({parser,uiDispatcher, settings, state}) {
         if(settings.sub.cbt.allowBallsTorture) {
             doCBTBalls(parser, uiDispatcher, commandFiltersProcessor, vocabularyProcessor, settings, state);
+            return true;
         } else {
             uiDispatcher.debug("No CBT Balls allowed :(");
         }
@@ -84,7 +90,7 @@ function doCBT(cbtFileBaseName, parser, uiDispatcher, commandFiltersProcessor, v
             }
         });
 
-        uiDispatcher.displayText(cbtFirstTauntsParser.readRandomLine(),()=>{
+        parser.queue(cbtFirstTauntsParser.readRandomLine(),()=>{
             state.temp.cbt.awaitAnswer = true;
             state.temp.cbt.round++;
         });
